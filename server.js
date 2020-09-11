@@ -2,14 +2,14 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser")
 
 const adminController = require("./controllers/admin");
 const emailController = require("./controllers/email");
 
 //database connection
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
