@@ -1,0 +1,16 @@
+#footer {
+    height: 20vh;
+    width: 100%;
+    background-color: #8EE4AF;
+    padding-top: 2rem;
+}
+#footer-title{
+    background-color: #8EE4AF;
+}
+.footer-content {
+    background-color: #8EE4AF;
+}
+#footer-row {
+    margin: 0 auto;
+    background-color: #8EE4AF;
+}
