@@ -10,7 +10,7 @@ const adminController = require("./controllers/admin");
 const emailController = require("./controllers/email");
 
 //database connection
-// mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://bootcamp:bootcamp@cluster0.ssrhv.mongodb.net/portfolio?retryWrites=true&w=majority",{useNewUrlParser: true, useUnifiedTopology: true});
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -28,10 +28,10 @@ app.use([adminController, emailController]);
 app.use((req, res) => {
     switch (process.env.NODE_ENV) {
       case 'dev':
-      res.sendFile(path.join(__dirname, '../client/public/index.html'))
+      res.sendFile(path.join(__dirname, './client/public/index.html'))
         break;
       case 'production':
-        res.sendFile(path.join(__dirname, "../client/build/index.html"));
+        res.sendFile(path.join(__dirname, "./client/build/index.html"));
       default:
         break;
     }
