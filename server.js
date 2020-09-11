@@ -2,32 +2,18 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 const express = require("express");
 const app = express();
-const moment = require('moment');
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser")
 
 const http = require("http");
 const socketIo = require("socket.io");
 const server = http.createServer(app);
-const io = socketIo(server);
-
-const db = require("./models")
 
 const adminController = require("./controllers/admin");
 const emailController = require("./controllers/email");
 
 //database connection
 mongoose.connect("mongodb://localhost:27017/portfolio", { useNewUrlParser: true, useUnifiedTopology: true });
-
-//starting session with socket.io
-io.on("connection", (socket) => {
-    // console.log("New client connected");
-});
-
-let start = setInterval(async () => {
-  const response = moment().format('MMMM Do YYYY, h:mm:ss a');
-  io.emit("getDate", response)
-}, 1000);
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -53,8 +39,6 @@ app.use((req, res) => {
         break;
     }
   });
-//attach socket.io to be used for the routes, example -> req.app.io.emit("....",{})
-app.io = io;
 
 // Server
 const startServer = async () => {

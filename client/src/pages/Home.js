@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import io from "socket.io-client";
 import profilePic from "../images/profilePic.jpg"
 import { SocialIcon } from 'react-social-icons';
 
@@ -8,14 +7,6 @@ const Home = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-    useEffect(() => {
-        const socket = io();
-        socket.on("getDate", (message) => {
-            console.log(message)
-        })
-        return () => socket.disconnect();
-    }, []);
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
