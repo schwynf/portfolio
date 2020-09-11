@@ -9,7 +9,6 @@ import Admin from "./pages/Admin"
 function App() {
   return (
     <Router>
-      <div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/portfolio" component={Portfolio} />
@@ -17,7 +16,6 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route component={Home} />
         </Switch>
-      </div>
     </Router>
   );
 }
