@@ -5,10 +5,6 @@ const app = express();
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser")
 
-const http = require("http");
-const socketIo = require("socket.io");
-const server = http.createServer(app);
-
 const adminController = require("./controllers/admin");
 const emailController = require("./controllers/email");
 
@@ -43,7 +39,7 @@ app.use((req, res) => {
 // Server
 const startServer = async () => {
 
-    server.listen(PORT, () => {
+    app.listen(PORT, () => {
         // eslint-disable-next-line no-console
         console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:3000/ in your browser.`);
     });
