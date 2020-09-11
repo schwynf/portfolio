@@ -9,7 +9,7 @@ const adminController = require("./controllers/admin");
 const emailController = require("./controllers/email");
 
 //database connection
-mongoose.connect("mongodb://localhost:27017/portfolio", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
