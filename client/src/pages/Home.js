@@ -25,7 +25,7 @@ const Home = () => {
         <>
             <div className="container">
                 <div className="text-light mt-5">Schwyn Francis</div>
-                <div className="row mt-5 text-light">
+                <div className="row text-light">
                     <div className="col-lg-4"></div>
                     <div className="col-lg-4">
                         <div className="text-center">
@@ -48,7 +48,7 @@ const Home = () => {
                             <br></br>
                             <br></br>
                             <div>
-                                <a className="text-danger" href="/portfolio">PORTFOLIO----------------------></a>
+                                <a className="text-danger" href="/portfolio">༼ つ ◕_◕ ༽つPORTFOLIO----------------------></a>
                             </div>
                             <br></br>
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
