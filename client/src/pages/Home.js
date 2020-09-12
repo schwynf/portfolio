@@ -24,22 +24,22 @@ const Home = () => {
     return (
         <>
             <div className="container">
-                <div className="text-light">Schwyn Francis</div>
+                <div className="text-light mt-5">Schwyn Francis</div>
                 <div className="row mt-5 text-light">
-                    <div className="col-sm-4"></div>
-                    <div className="col-sm-4">
+                    <div className="col-lg-4"></div>
+                    <div className="col-lg-4">
                         <div className="text-center">
                             <img src={profilePic} style={{ width: "15rem" }} className="img-thumbnail img-fluid shadow-lg rounded-circle" alt="Profile Img"></img>
                             <p>
-                                <cite>"I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it." ~Bill Gates</cite>
+                                <cite>"I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it." <br></br>~Bill Gates</cite>
                             </p>
                         </div>
                     </div>
-                    <div className="col-sm-4"></div>
+                    <div className="col-lg-4"></div>
                 </div>
                 <div className="row">
-                    <div className="col-sm-4"></div>
-                    <div className="col-sm-4">
+                    <div className="col-lg-4"></div>
+                    <div className="col-lg-4">
                         <div className="text-center" style={{ backgroundColor: "grey", height: "14rem" }}>
                             Full Stack Web Developer <br></br>
                         ......................................
@@ -58,7 +58,7 @@ const Home = () => {
                             <br></br>
                         </div>
                     </div>
-                    <div className="col-sm-4"></div>
+                    <div className="col-lg-4"></div>
                 </div>
             </div>
 
@@ -97,6 +97,10 @@ const Home = () => {
                                 <div className="form-group">
                                     <label for="recipient-name" className="col-form-label">Name:</label>
                                     <input type="text" className="form-control" id="recipient-name"></input>
+                                </div>
+                                <div className="form-group">
+                                    <label for="recipient-name" className="col-form-label">Email:</label>
+                                    <input type="text" className="form-control" id="recipient-email"></input>
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" className="col-form-label">Message:</label>
