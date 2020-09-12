@@ -24,8 +24,8 @@ const Home = () => {
     return (
         <>
             <div className="container">
-                <div className="text-light mt-5">Schwyn Francis</div>
-                <div className="row text-light">
+                <div className="text-light mt-3">Schwyn Francis</div>
+                <div className="row text-light mt-2">
                     <div className="col-lg-4"></div>
                     <div className="col-lg-4">
                         <div className="text-center">
@@ -48,7 +48,7 @@ const Home = () => {
                             <br></br>
                             <br></br>
                             <div>
-                                <a className="text-danger" href="/portfolio">༼ つ ◕_◕ ༽つPORTFOLIO----------------------></a>
+                                <a className="text-warning" href="/portfolio">༼ つ ◕_◕ ༽つPORTFOLIO----------------------></a>
                             </div>
                             <br></br>
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
