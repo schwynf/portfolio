@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
 import profilePic from "../images/profilePic.jpg"
+import PortfolioCard from "../component/PorfolioCard"
 
 const Portfolio = () => {
 
@@ -34,27 +35,17 @@ const Portfolio = () => {
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
-                                    <img src={profilePic} style={{ height: "18rem" }} className="card-img-top img-thumbnail img-fluid" alt="Bubble Sort"></img>
-                                    <div className="card-body text-dark">
-                                        <h5 className="card-title">Bubble Sort</h5>
-                                        <p className="card-text">A visual tool to help comprehend the bubble sort algorithm.</p>
-                                        <a href="./bubble_sort.html" target="_blank" className="btn btn-primary">Try it out!</a>
-                                    </div>
+                                    <PortfolioCard image={profilePic} title="Trivia-Pro" text="Easy application to create and execute quiz"></PortfolioCard>
                                 </div>
                             </div>
-                            <div class="col-xl-2"><cite>"Bubbles sort was amazing"<br></br>~Kalee<br></br><br></br><br></br>
+                            <div class="col-xl-2"><cite>"WOW!"<br></br>~Kalee<br></br><br></br><br></br>
                                 <div class="text-right">
-                                    "Computer Cheats!"<br></br>Phil~
+                                    "Perfect app for managing passwords!"<br></br>Phil~
                              </div></cite>
                             </div>
                             <div className="col-xl-5">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
-                                    <img src={profilePic} style={{ height: "18rem" }} className="card-img-top img-thumbnail img-fluid" alt="Bubble Sort"></img>
-                                    <div className="card-body text-dark">
-                                        <h5 className="card-title">Bubble Sort</h5>
-                                        <p className="card-text">A visual tool to help comprehend the bubble sort algorithm.</p>
-                                        <a href="./bubble_sort.html" target="_blank" className="btn btn-primary">Try it out!</a>
-                                    </div>
+                                <PortfolioCard image={profilePic} title="LOCK'D" text="Password manager application. Create an user and have fun!"></PortfolioCard>
                                 </div>
                             </div>
                         </div>
@@ -65,27 +56,17 @@ const Portfolio = () => {
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-4 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
-                                    <img src={profilePic} style={{ height: "18rem" }} className="card-img-top img-thumbnail img-fluid" alt="Bubble Sort"></img>
-                                    <div className="card-body text-dark">
-                                        <h5 className="card-title">Bubble Sort</h5>
-                                        <p className="card-text">A visual tool to help comprehend the bubble sort algorithm.</p>
-                                        <a href="./bubble_sort.html" target="_blank" className="btn btn-primary">Try it out!</a>
-                                    </div>
+                                <PortfolioCard image={profilePic} title="Project Manager" text="Manage your projects in one spot!"></PortfolioCard>
                                 </div>
                             </div>
-                            <div class="col-xl-4"><cite>"Bubbles sort was amazing"<br></br>~Kalee<br></br><br></br><br></br>
+                            <div class="col-xl-4"><cite>"Finally I'm organized!"<br></br>~Kalee<br></br><br></br><br></br>
                                 <div class="text-right">
-                                    "Computer Cheats!"<br></br>Phil~
+                                    "I got my budget under control!"<br></br>Phil~
                              </div></cite>
                             </div>
                             <div className="col-xl-4">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
-                                    <img src={profilePic} style={{ height: "18rem" }} className="card-img-top img-thumbnail img-fluid" alt="Bubble Sort"></img>
-                                    <div className="card-body text-dark">
-                                        <h5 className="card-title">Bubble Sort</h5>
-                                        <p className="card-text">A visual tool to help comprehend the bubble sort algorithm.</p>
-                                        <a href="./bubble_sort.html" target="_blank" className="btn btn-primary">Try it out!</a>
-                                    </div>
+                                <PortfolioCard image={profilePic} title="Expense Tracker" text="Keep your budget in check!"></PortfolioCard>
                                 </div>
                             </div>
                         </div>

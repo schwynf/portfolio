@@ -10,7 +10,7 @@ const adminController = require("./controllers/admin");
 const emailController = require("./controllers/email");
 
 //database connection
-mongoose.connect("mongodb+srv://bootcamp:bootcamp@cluster0.ssrhv.mongodb.net/portfolio?retryWrites=true&w=majority",{useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect("mongodb+srv://bootcamp:bootcamp@cluster0.ssrhv.mongodb.net/portfolio?retryWrites=true&w=majority",{useNewUrlParser: true, useUnifiedTopology: true});
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
