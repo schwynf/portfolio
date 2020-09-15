@@ -27,7 +27,16 @@ router.post("/email", async function (req, res, next) {
    } catch (error) {
        console.log(error)
    }
-})
+});
+
+router.post("/message", async function (req, res, next) {
+    try {
+     let data = await db.Email.create(req.body);
+     res.json(data);
+    } catch (error) {
+        console.log(error)
+    }
+ });
 
 router.get("/email", async function (req, res, next) {
     passport.authenticate("swagggg", async function (err, mongoUser, info) {
