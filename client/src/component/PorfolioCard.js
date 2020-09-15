@@ -7,7 +7,7 @@ const PortfolioCard = (props) => {
             <div className="card-body text-dark">
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">{props.text}</p>
-                <a href={props.link} target="_blank" className="btn btn-primary">Try it out!</a>
+                <a href={props.site} target="_blank" className="btn btn-outline-primary">Try it out!</a>
             </div>
         </>
     )

@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import profilePic from "../images/profilePic.jpg"
+import triviaPic from "../images/Trivia-Pro.jpg"
+import lockPic from "../images/LOCKD.jpg"
+import managerPic from "../images/logo_spinner.png"
+import budgetPic from "../images/budget.png"
 import PortfolioCard from "../component/PorfolioCard"
 
 const Portfolio = () => {
@@ -18,7 +22,7 @@ const Portfolio = () => {
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
-                                    <PortfolioCard image={profilePic} title="Trivia-Pro" text="Easy application to create and execute quiz"></PortfolioCard>
+                                    <PortfolioCard image={triviaPic} title="Trivia-Pro" text="Easy application to create and execute quiz" site="https://schwynf.github.io/Trivia-Pro/"></PortfolioCard>
                                 </div>
                             </div>
                             <div class="col-xl-2"><cite>"WOW!"<br></br>~Kalee<br></br><br></br><br></br>
@@ -28,7 +32,7 @@ const Portfolio = () => {
                             </div>
                             <div className="col-xl-5">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
-                                <PortfolioCard image={profilePic} title="LOCK'D" text="Password manager application. Create an user and have fun!"></PortfolioCard>
+                                <PortfolioCard image={lockPic} title="LOCK'D" text="Password manager application. Create an user and have fun!" site="https://universal-storage.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +43,7 @@ const Portfolio = () => {
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-4 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
-                                <PortfolioCard image={profilePic} title="Project Manager" text="Manage your projects in one spot!"></PortfolioCard>
+                                <PortfolioCard image={managerPic} title="Project Manager" text="Manage your projects in one spot!" site="https://project-management-app-1.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
                             <div class="col-xl-4"><cite>"Finally I'm organized!"<br></br>~Kalee<br></br><br></br><br></br>
@@ -49,7 +53,7 @@ const Portfolio = () => {
                             </div>
                             <div className="col-xl-4">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
-                                <PortfolioCard image={profilePic} title="Expense Tracker" text="Keep your budget in check!"></PortfolioCard>
+                                <PortfolioCard image={budgetPic} title="Expense Tracker" text="Keep your budget in check!" site="https://budget-data.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
                         </div>
