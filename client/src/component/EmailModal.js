@@ -49,7 +49,7 @@ const EmailModal = () => {
                         </div>
                         <div class="modal-footer">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button disabled={!(email && name && message)} onClick={handleFormSubmit} type="button" className="btn btn-primary">Send message</button>
+                            <button disabled={!(email && name && message)} onClick={handleFormSubmit} type="button" className="btn btn-primary" data-dismiss="modal">Send message</button>
                         </div>
                     </div>
                 </div>
