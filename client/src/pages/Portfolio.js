@@ -4,6 +4,8 @@ import triviaPic from "../images/Trivia-Pro.jpg"
 import lockPic from "../images/LOCKD.jpg"
 import managerPic from "../images/logo_spinner.png"
 import budgetPic from "../images/budget.png"
+import videoPic from "../images/video.gif"
+import soonPic from "../images/soon.jpeg"
 import PortfolioCard from "../component/PorfolioCard"
 
 const Portfolio = () => {
@@ -59,6 +61,27 @@ const Portfolio = () => {
                             <div className="col-xl-4">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
                                 <PortfolioCard image={budgetPic} title="Expense Tracker" text="Keep your budget in check!" site="https://budget-data.herokuapp.com/"></PortfolioCard>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-xl-12">
+                        <div className="row mb-5 mt-4">
+                            <div className="col-xl-5 mb-1">
+                                <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
+                                    <PortfolioCard image={videoPic} title="Dashboard Generator" text="CLI for creating an employee dashboard for any business!" site="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR"></PortfolioCard>
+                                </div>
+                            </div>
+                            <div class="col-xl-2"><cite>"quick and easy!"<br></br>~Justin<br></br><br></br><br></br>
+                                <div class="text-right">
+                                    "It's been 2 days!"<br></br>Quinn~
+                             </div></cite>
+                            </div>
+                            <div className="col-xl-5">
+                                <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
+                                <PortfolioCard image={soonPic} title="Coming Soon" text="Still planning my next move. Come back soon!" site="https://universal-storage.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
                         </div>
