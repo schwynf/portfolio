@@ -19,8 +19,8 @@ let userSeed =
 
 let start = async ()=> {
   console.time()
-  await db.User.deleteMany({})
-  let data = await db.User.create(userSeed);
+  await db.Admin.deleteMany({})
+  let data = await db.Admin.create(userSeed);
   console.log(data);
   console.timeEnd()
   process.exit(0);
