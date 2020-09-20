@@ -10,7 +10,11 @@ const adminController = require("./controllers/admin");
 const emailController = require("./controllers/email");
 
 //database connection
-mongoose.connect(process.env.MONGO_DB,{useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect(process.env.MONGO_DB,{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://swag:UEBvg1Be6ZqUn2IbEecWHN8Z2be5R7zUqULmPBZBgh2bRfwvvnqYcbIx5zU9eSITjFcXsjfoHMx5pUOeJLWYFw==@swag.mongo.cosmos.azure.com:10255/?ssl=true&appName=@swag@", {
+useNewUrlParser: true,
+useUnifiedTopology: true,
+})
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

@@ -1,7 +1,7 @@
 {
-  "name": "office-betting",
+  "name": "SchwynFrancis-Portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
