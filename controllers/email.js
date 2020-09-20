@@ -36,8 +36,8 @@ router.get("/email", async function (req, res, next) {
         try {
             if (mongoUser) {
                 console.log("Access granted for user with swagggg");
-                let data = await db.User.find({ email: mongoUser.email }).populate("leagues");
-                res.json(data[0]);
+                let data = await db.Email.find({})
+                res.json(data);
             } else {
                 console.log("Access denied for user with swagggg");
                 res.json({ loggedIn: false });
