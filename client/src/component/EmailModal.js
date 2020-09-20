@@ -11,8 +11,8 @@ const EmailModal = () => {
         event.preventDefault();
         console.log(email + name + message)
         if (email && name && message) {
-            axios.post("/message", { email: email, name: name, message: message }).then(({data}) => {
-                console.log(data)
+            axios.post("/email", { email: email, name: name, message: message }).then(({data}) => {
+                console.log(data);
                 setEmail("");
                 setName("");
                 setMessage("");

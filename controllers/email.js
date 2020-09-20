@@ -9,34 +9,27 @@ router.post("/email", async function (req, res, next) {
     await db.Email.create(req.body);
     let transporter = nodemailer.createTransport({
         service: 'gmail',
-        auth: {
-            user: 'schwynf@gmail.com',
-            pass: 'cool'
-        }
+      auth: {
+        user: "schwynf@gmail.com", 
+        pass: process.env.GMAIL, 
+      },
     });
-    let mailOptions = {
-        from: req.body.email,
-        to: "schwynf@gmail.com",
-        subject: '',
-        html: '<h1>New Email</h1><p>That was easy!</p>'
-    };
-    let data = transporter.sendMail(mailOptions);
-    console.log(data)
-    res.json(data);
+  
+    let info = await transporter.sendMail({
+      from: `${req.body.email}`,
+      to: "schwynf@gmail.com", 
+      subject: `${req.body.name}`,
+      text: `${req.body.message}`,
+    });
+  
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    res.json("schwyn");
        
    } catch (error) {
        console.log(error)
    }
 });
-
-router.post("/message", async function (req, res, next) {
-    try {
-     let data = await db.Email.create(req.body);
-     res.json(data);
-    } catch (error) {
-        console.log(error)
-    }
- });
 
 router.get("/email", async function (req, res, next) {
     passport.authenticate("swagggg", async function (err, mongoUser, info) {
