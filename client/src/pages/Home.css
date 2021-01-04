@@ -1,0 +1,55 @@
+.container {
+    background-color: black;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top:3rem;
+    margin-bottom:3rem;
+}
+
+.intro{
+    height: 160vh;
+}
+
+#intro-content {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.intro-picture {
+    margin-top: 2rem;
+    background-color: grey;
+    /* background-color:grey; */
+    border: .5rem solid grey;
+}
+
+.intro-text{
+    color: white;
+    padding-top: 3rem;
+}
+
+.what-i-do-content{
+    color: white;
+    height: 20rem;
+}
+
+.interest{
+    color:white;
+}
+
+#pp{
+    padding-right: 8rem;
+}
+
+@media only screen and (max-height:700px){
+    .container{
+        border-radius: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .intro{
+        height: 420vh;
+    }
+    #pp{
+        padding-right: 0rem;
+    }
+}
