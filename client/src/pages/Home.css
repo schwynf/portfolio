@@ -6,9 +6,9 @@
     margin-bottom:3rem;
 }
 
-.intro{
+/* .intro{
     height: 160vh;
-}
+} */
 
 #intro-content {
     padding-top: 5rem;
@@ -46,9 +46,12 @@
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    .intro{
-        height: 420vh;
+    body{
+        background-color: black;
     }
+    /* .intro{
+        height: 420vh;
+    } */
     #pp{
         padding-right: 0rem;
     }
