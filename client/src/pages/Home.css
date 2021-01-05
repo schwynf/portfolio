@@ -20,11 +20,14 @@
     background-color: grey;
     /* background-color:grey; */
     border: .5rem solid grey;
+    width: 21rem;
+    height: 21rem;
 }
 
 .intro-text{
     color: white;
     padding-top: 3rem;
+    text-align: left;
 }
 
 .what-i-do-content{
@@ -38,6 +41,10 @@
 
 #pp{
     padding-right: 8rem;
+}
+
+.icons{
+    text-align: left;
 }
 
 @media only screen and (max-height:700px){
@@ -54,5 +61,27 @@
     } */
     #pp{
         padding-right: 0rem;
+    }
+
+    .intro-text{
+        text-align: center;
+    }
+
+    .intro-picture{
+        margin-top: 1rem;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    #intro-content{
+        padding-top: 2rem;
+    }
+
+    .icons{
+        text-align: center;
+    }
+
+    .ss{
+        margin-bottom: 1rem;
     }
 }

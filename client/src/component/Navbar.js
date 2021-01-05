@@ -5,7 +5,7 @@ import "./Navbar.css"
 const Navbar = () => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark nav-bar">
                 {/* <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" /> */}
                 <a className="navbar-brand" href="#">Schwyn Francis</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
