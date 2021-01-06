@@ -1,29 +1,13 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf';
 
-function PDF() {
-  const [numPages, setNumPages] = useState(1);
-  const [pageNumber, setPageNumber] = useState(1);
+import samplePDF from "../images/Resume-Schwyn-Francis.pdf";
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
-
+export default function PDF() {
   return (
-
-    <>
-    <div>
-      <Document
-        file="../images/Resume-Schwyn-Francis.pdf"
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>Page {pageNumber} of {numPages}</p>
-    </div>
-    </>
-  )
+    <Document file={samplePDF}>
+      <Page pageNumber={1} />
+    </Document>
+  );
 }
-
-export default PDF;
 

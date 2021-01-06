@@ -15,7 +15,7 @@ const Navbar = () => {
                     <div className="navbar-nav">
                         <a className="nav-item nav-link active" href="/">About<span class="sr-only">(current)</span></a>
                         <a className="nav-item nav-link active" href="/portfolio">Portfolio</a>
-                        <a className="nav-item nav-link active" href="#">Resume</a>
+                        <a className="nav-item nav-link active" href="/resume">Resume</a>
                         <a className="nav-item nav-link active" href="#" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Contact</a>
                     </div>
                 </div>
