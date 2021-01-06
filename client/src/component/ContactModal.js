@@ -19,7 +19,7 @@ const ContactModal = () => {
                          Email: schwynf@gmail.com <br></br>
                          Phone: (630)-903-9996
                         </div> */}
-                        <iframe src={PDF}></iframe>
+                        <embed src={PDF} style={{height:"75vh"}}></embed>
 
                     </div>
                 </div>

@@ -13,7 +13,7 @@ const Portfolio = () => {
 
     return (
         <>
-            <div className="container text-warning mt-5 mb-4">
+            <div className="container text-warning">
                 <Navbar></Navbar>
                 <div className="row mt-5">
                     <div className="col-xl-12">

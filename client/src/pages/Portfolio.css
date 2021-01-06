@@ -1,0 +1,8 @@
+@media only screen and (max-height:700px){
+
+    .container{
+        border-radius: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
