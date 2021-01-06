@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
 import PDF from "../images/Resume-Schwyn-Francis.pdf"
+import "./Resume.css"
 
 const Resume = () => {
     return (
@@ -8,8 +9,8 @@ const Resume = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div style={{ height: "2000px" }} className="text-center">
-                            <iframe src={PDF} style={{ width: "100%", height: "100%", border: '0px', allow: "fullscreen" }}></iframe>
+                        <div className=" wrap">
+                            <iframe src={PDF}></iframe>
                         </div>
                     </div>
                 </div>

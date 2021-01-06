@@ -128,7 +128,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <iframe src={PDF} style={{width:"100%", height: "200px", border:'0px',scrolling:"no",allow:"fullscreen"}}></iframe>
                 {/* Email Modal */}
                 <EmailModal></EmailModal>
                 <ContactModal></ContactModal>
