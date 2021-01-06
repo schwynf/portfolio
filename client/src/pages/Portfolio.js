@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "../component/Navbar"
 import profilePic from "../images/profilePic.jpg"
 import triviaPic from "../images/Trivia-Pro.jpg"
 import lockPic from "../images/LOCKD.jpg"
@@ -12,19 +13,9 @@ const Portfolio = () => {
 
     return (
         <>
-            <div className="container text-warning mt-4 mb-4">
-                <div className="row pt-2">
-                    <div style={{width: "100%"}}>
-
-                    <a className="text-warning float-right" href="/">{'<'}----Back</a>
-                    </div>
-                    
-                    <div className="col-sm-12">
-                        <h1>Portfolio</h1>
-                        <div><i className="fa fa-github" style={{ font: "36px", color: "white" }}></i><cite> View source code on my github page </cite><a href="https://github.com/schwynf?tab=repositories" target="_blank">https://github.com/schwynf?tab=repositories.</a></div>
-                    </div>
-                </div>
-                <div className="row">
+            <div className="container text-warning mt-5 mb-4">
+                <Navbar></Navbar>
+                <div className="row mt-5">
                     <div className="col-xl-12">
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">

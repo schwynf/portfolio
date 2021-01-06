@@ -7,8 +7,11 @@ const nodemailer = require('nodemailer');
 router.post("/email", async function (req, res, next) {
    try {
     await db.Email.create(req.body);
+    console.log(process.env.GMAIL)
     let transporter = nodemailer.createTransport({
         service: 'gmail',
+        port: 587,
+        secure: false,
       auth: {
         user: "schwynf@gmail.com", 
         pass: process.env.GMAIL, 
