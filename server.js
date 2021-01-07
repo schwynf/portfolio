@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 // Add routes
-app.use([adminController, emailController]);
+app.use([emailController]);
 app.use((req, res) => {
     switch (process.env.NODE_ENV) {
       case 'dev':
