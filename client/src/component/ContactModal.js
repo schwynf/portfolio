@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"
 import PDF from "../images/Resume-Schwyn-Francis.pdf"
 import "./ContactModal.css"
 
@@ -15,12 +14,7 @@ const ContactModal = () => {
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        {/* <div className="modal-body">
-                         Email: schwynf@gmail.com <br></br>
-                         Phone: (630)-903-9996
-                        </div> */}
                         <embed src={PDF} style={{height:"75vh"}}></embed>
-
                     </div>
                 </div>
             </div>

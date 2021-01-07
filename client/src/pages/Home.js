@@ -5,7 +5,6 @@ import Navbar from "../component/Navbar"
 import profilePic from "../images/profilePic.jpg"
 import ContactModal from "../component/ContactModal"
 import EmailModal from "../component/EmailModal"
-import PDF from "../images/Resume-Schwyn-Francis.pdf"
 import "./Home.css"
 
 const Home = () => {
@@ -30,7 +29,7 @@ const Home = () => {
     };
     
     useEffect(() => {
-
+        //Bday countdown
         var bDay = new Date("sept 4, 2021");
         bDay = bDay.getTime();
         bDay = bDay/1000/60/60/24
@@ -38,7 +37,7 @@ const Home = () => {
         today = today.getTime();
         today = today/1000/60/60/24
         setBirthday(Math.floor(bDay-today));
-
+        //Wedding countdown
         var wDay = new Date("oct 9, 2021");
         wDay = wDay.getTime();
         wDay = wDay/1000/60/60/24
@@ -46,7 +45,7 @@ const Home = () => {
         today = today.getTime();
         today = today/1000/60/60/24
         setWedding(Math.floor(wDay-today));
-
+        //Coding counter
         var cDay = new Date("January, 2019");
         cDay = cDay.getTime();
         cDay = cDay/1000/60/60/24
@@ -54,7 +53,6 @@ const Home = () => {
         today = today.getTime();
         today = today/1000/60/60/24
         setCoding(Math.floor(today-cDay));
-
 
       },[]);
 

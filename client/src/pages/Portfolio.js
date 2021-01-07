@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../component/Navbar"
-import profilePic from "../images/profilePic.jpg"
 import triviaPic from "../images/Trivia-Pro.jpg"
 import lockPic from "../images/LOCKD.jpg"
 import managerPic from "../images/logo_spinner.png"
