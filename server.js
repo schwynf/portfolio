@@ -6,7 +6,6 @@ const path = require('path')
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser")
 
-const adminController = require("./controllers/admin");
 const emailController = require("./controllers/email");
 
 //database connection
