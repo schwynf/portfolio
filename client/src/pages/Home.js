@@ -46,7 +46,7 @@ const Home = () => {
         today = today/1000/60/60/24
         setWedding(Math.floor(wDay-today));
         //Coding counter
-        var cDay = new Date("Jan 7, 2019");
+        var cDay = new Date("jan 7, 2019");
         cDay = cDay.getTime();
         cDay = cDay/1000/60/60/24
         var today = new Date();
