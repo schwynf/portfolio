@@ -5,6 +5,7 @@ import Navbar from "../component/Navbar"
 import profilePic from "../images/profilePic.jpg"
 import ContactModal from "../component/ContactModal"
 import EmailModal from "../component/EmailModal"
+import Zoom from 'react-reveal/Zoom';
 import "./Home.css"
 
 const Home = () => {
@@ -93,35 +94,48 @@ const Home = () => {
                     <div className="col-sm-12 interest"><h3>Fun Facts</h3></div>
                 </div>
                 <div className="row text-white text-center">
-                    <div className="col-sm-3 ss ">
-                        <div className="card bg-dark">
+                    <div className="col-sm-3 ss">
+                        <div className="card bg-dark"  style={{height: "100%"}}>
                             <div className="card-body text-primary">
+
                                 Days Coding
+                                <Zoom duration="1000">
+
                                 <h2 className="text-white">{coding}</h2>
+                                </Zoom>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-3 ss">
-                        <div className="card bg-dark">
+                        <div className="card bg-dark"  style={{height: "100%"}}>
                             <div className="card-body text-primary">
                                 Wedding Countdown
+                                <Zoom duration="2000">
+
                                 <h2 className="text-white">{wedding}</h2>
+                                </Zoom>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-3 ss">
-                        <div className="card bg-dark">
+                        <div className="card bg-dark"  style={{height: "100%"}}>
                             <div className="card-body text-primary">
                                 Website Views
+                                <Zoom duration="3000">
+
                                 <h2 className="text-white">365</h2>
+                                </Zoom>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-3 ss">
-                        <div className="card bg-dark">
+                        <div className="card bg-dark"  style={{height: "100%"}}>
                             <div className="card-body text-primary">
-                                Birthday Countdown
+                                Birthday countdown
+                                <Zoom duration="4000">
+
                                 <h2 className="text-white">{birthday}</h2>
+                                </Zoom>
                             </div>
                         </div>
                     </div>
