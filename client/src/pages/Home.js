@@ -58,6 +58,12 @@ const Home = () => {
       },[]);
 
 
+      const pdf = async () =>{
+         let data = await axios.get("/pdf");
+         console.log(data)
+      }
+
+
 
     return (
         <>
@@ -83,6 +89,7 @@ const Home = () => {
                 {/* What I Do */}
                 <div className="row">
                     <div className="col-sm-12 interest"><h3>What I Do</h3></div>
+                    <button onClick={pdf}>pddf</button>
                 </div>
                 <div className="row text-white">
                     <div className="col-sm-4"><p className="text-primary">Inspiration to Web Dev</p><p>My inspiration for web development came from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After 8+ hrs going through the documentation and turtorial videos, I was hooked. I was turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web dev was my next profession.</p></div>
