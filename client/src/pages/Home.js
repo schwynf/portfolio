@@ -59,8 +59,7 @@ const Home = () => {
 
 
       const pdf = async () =>{
-         let data = await axios.get("/pdf");
-         console.log(data)
+         window.location.href = "/pdf"
       }
 
 
