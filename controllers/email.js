@@ -7,28 +7,28 @@ const path = require('path')
 
 router.post("/email", async function (req, res, next) {
    try {
-    await db.Email.create(req.body);
-    console.log(process.env.GMAIL)
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        port: 587,
-        secure: false,
-      auth: {
-        user: "schwynf@gmail.com", 
-        pass: process.env.GMAIL, 
-      },
-    });
+    let data = await db.Email.create(req.body);
+    // console.log(process.env.GMAIL)
+    // let transporter = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     port: 587,
+    //     secure: false,
+    //   auth: {
+    //     user: "schwynf@gmail.com", 
+    //     pass: process.env.GMAIL, 
+    //   },
+    // });
   
-    let info = await transporter.sendMail({
-      from: `${req.body.email}`,
-      to: "schwynf@gmail.com", 
-      subject: `${req.body.name}`,
-      text: `${req.body.message}`,
-    });
+    // let info = await transporter.sendMail({
+    //   from: `${req.body.email}`,
+    //   to: "schwynf@gmail.com", 
+    //   subject: `${req.body.name}`,
+    //   text: `${req.body.message}`,
+    // });
   
-    console.log("Message sent: %s", info.messageId);
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    res.json("schwyn");
+    // console.log("Message sent: %s", info.messageId);
+    // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    res.json(data);
        
    } catch (error) {
        console.log(error)
