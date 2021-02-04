@@ -9,12 +9,12 @@ import soonPic from "../images/soon.jpeg"
 import PortfolioCard from "../component/PorfolioCard"
 import LazyLoad from 'react-lazyload';
 
-const Loading = () => {
+const Loading = () => (
     <div>
 
         <h5>loading</h5>
     </div>
-}
+)
 
 
 const Portfolio = () => {
