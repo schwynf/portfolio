@@ -9,7 +9,7 @@ import soonPic from "../images/soon.jpeg"
 import PortfolioCard from "../component/PorfolioCard"
 import LazyLoad from 'react-lazyload';
 
-const loading = () => {
+const Loading = () => {
     <div>
 
         <h5>loading</h5>
@@ -71,7 +71,7 @@ const Portfolio = () => {
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
-                                    <LazyLoad height={200} offset={100} placeholder={<loading/>}> 
+                                    <LazyLoad height={200} offset={100} placeholder={<Loading/>}> 
                                     <PortfolioCard image={videoPic} title="Dashboard Generator" text="CLI for creating an employee dashboard for any business!" site="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR"></PortfolioCard>
                                     </LazyLoad>
                                 </div>
