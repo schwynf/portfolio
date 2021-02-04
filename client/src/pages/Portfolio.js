@@ -7,6 +7,15 @@ import budgetPic from "../images/budget.png"
 import videoPic from "../images/video.gif"
 import soonPic from "../images/soon.jpeg"
 import PortfolioCard from "../component/PorfolioCard"
+import LazyLoad from 'react-lazyload';
+
+const loading = () => {
+    <div>
+
+        <h5>loading</h5>
+    </div>
+}
+
 
 const Portfolio = () => {
 
@@ -19,7 +28,8 @@ const Portfolio = () => {
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
-                                    <PortfolioCard image={triviaPic} title="Trivia-Pro" text="Easy application to create, print, and execute quiz!" site="https://schwynf.github.io/Trivia-Pro/"></PortfolioCard>
+                                        <PortfolioCard image={triviaPic} title="Trivia-Pro" text="Easy application to create, print, and execute quiz!" site="https://schwynf.github.io/Trivia-Pro/"></PortfolioCard>
+                                   
                                 </div>
                             </div>
                             <div class="col-xl-2"><cite>"WOW!"<br></br>~Scott<br></br><br></br><br></br>
@@ -29,7 +39,7 @@ const Portfolio = () => {
                             </div>
                             <div className="col-xl-5">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
-                                <PortfolioCard image={lockPic} title="LOCK'D" text="Password manager application for creating and storing!" site="https://universal-storage.herokuapp.com/"></PortfolioCard>
+                                    <PortfolioCard image={lockPic} title="LOCK'D" text="Password manager application for creating and storing!" site="https://universal-storage.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +50,7 @@ const Portfolio = () => {
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-4 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
-                                <PortfolioCard image={managerPic} title="Project Vault" text="Manage your projects in one spot!" site="https://project-management-app-1.herokuapp.com/"></PortfolioCard>
+                                    <PortfolioCard image={managerPic} title="Project Vault" text="Manage your projects in one spot!" site="https://project-management-app-1.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
                             <div class="col-xl-4"><cite>"Finally, I'm organized!"<br></br>~Kalee<br></br><br></br><br></br>
@@ -50,7 +60,7 @@ const Portfolio = () => {
                             </div>
                             <div className="col-xl-4">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
-                                <PortfolioCard image={budgetPic} title="Expense Tracker" text="Keep your budget in check!" site="https://budget-data.herokuapp.com/"></PortfolioCard>
+                                    <PortfolioCard image={budgetPic} title="Expense Tracker" text="Keep your budget in check!" site="https://budget-data.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +71,9 @@ const Portfolio = () => {
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
+                                    <LazyLoad height={200} offset={100} placeholder={<loading/>}> 
                                     <PortfolioCard image={videoPic} title="Dashboard Generator" text="CLI for creating an employee dashboard for any business!" site="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR"></PortfolioCard>
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div class="col-xl-2"><cite>"quick and easy!"<br></br>~Justin<br></br><br></br><br></br>
@@ -71,7 +83,7 @@ const Portfolio = () => {
                             </div>
                             <div className="col-xl-5">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
-                                <PortfolioCard image={soonPic} title="Coming Soon" text="Still planning my next move. Come back soon!" site="https://universal-storage.herokuapp.com/"></PortfolioCard>
+                                    <PortfolioCard image={soonPic} title="Coming Soon" text="Still planning my next move. Come back soon!" site="https://universal-storage.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
                         </div>
