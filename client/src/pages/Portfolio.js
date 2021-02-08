@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import socketIOClient from "socket.io-client";
 import Navbar from "../component/Navbar"
 import triviaPic from "../images/Trivia-Pro.jpg"
 import lockPic from "../images/LOCKD.jpg"
@@ -9,15 +10,25 @@ import soonPic from "../images/soon.jpeg"
 import PortfolioCard from "../component/PorfolioCard"
 import LazyLoad from 'react-lazyload';
 
-const Loading = () => (
-    <div>
-
-        <h5>loading</h5>
-    </div>
-)
-
+let socket;
 
 const Portfolio = () => {
+
+    useEffect(() => {
+        socket = socketIOClient();
+
+        socket.on("activeUsersOnWebsite", (userCount)=>{
+        })
+        return () => {
+            socket.disconnect()
+        };
+    }, []);
+    const Loading = () => (
+        <div>
+    
+            <h1>loading</h1>
+        </div>
+    )
 
     return (
         <>
@@ -32,8 +43,8 @@ const Portfolio = () => {
                                    
                                 </div>
                             </div>
-                            <div class="col-xl-2"><cite>"WOW!"<br></br>~Scott<br></br><br></br><br></br>
-                                <div class="text-right">
+                            <div className="col-xl-2"><cite>"WOW!"<br></br>~Scott<br></br><br></br><br></br>
+                                <div className="text-right">
                                     "Perfect app for managing passwords!"<br></br>Quinn~
                              </div></cite>
                             </div>
@@ -53,8 +64,8 @@ const Portfolio = () => {
                                     <PortfolioCard image={managerPic} title="Project Vault" text="Manage your projects in one spot!" site="https://project-management-app-1.herokuapp.com/"></PortfolioCard>
                                 </div>
                             </div>
-                            <div class="col-xl-4"><cite>"Finally, I'm organized!"<br></br>~Kalee<br></br><br></br><br></br>
-                                <div class="text-right">
+                            <div className="col-xl-4"><cite>"Finally, I'm organized!"<br></br>~Kalee<br></br><br></br><br></br>
+                                <div className="text-right">
                                     "I got my budget under control!"<br></br>Phil~
                              </div></cite>
                             </div>
@@ -76,8 +87,8 @@ const Portfolio = () => {
                                     </LazyLoad>
                                 </div>
                             </div>
-                            <div class="col-xl-2"><cite>"quick and easy!"<br></br>~Justin<br></br><br></br><br></br>
-                                <div class="text-right">
+                            <div className="col-xl-2"><cite>"quick and easy!"<br></br>~Justin<br></br><br></br><br></br>
+                                <div className="text-right">
                                     "It's been 2 days!"<br></br>Quinn~
                              </div></cite>
                             </div>

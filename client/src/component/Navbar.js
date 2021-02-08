@@ -10,7 +10,7 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <a className="nav-item nav-link active" href="/">About<span class="sr-only">(current)</span></a>
+                        <a className="nav-item nav-link active" href="/">About<span className="sr-only">(current)</span></a>
                         <a className="nav-item nav-link active" href="/portfolio">Portfolio</a>
                         <a className="nav-item nav-link active" href="/resume">Tutorial</a>
                     </div>

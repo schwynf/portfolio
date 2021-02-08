@@ -22,7 +22,7 @@ const EmailModal = () => {
 
     return (
         <>
-            <div className="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -34,20 +34,20 @@ const EmailModal = () => {
                         <div className="modal-body">
                             <form>
                                 <div className="form-group">
-                                    <label for="recipient-name" className="col-form-label">Name:</label>
+                                    <label htmlFor="recipient-name" className="col-form-label">Name:</label>
                                     <input onChange={event => setName(event.target.value)} value={name} type="text" className="form-control" id="recipient-name"></input>
                                 </div>
                                 <div className="form-group">
-                                    <label for="recipient-email" className="col-form-label">Email:</label>
+                                    <label htmlFor="recipient-email" className="col-form-label">Email:</label>
                                     <input onChange={event => setEmail(event.target.value)} value={email} type="text" className="form-control" id="recipient-email"></input>
                                 </div>
-                                <div class="form-group">
-                                    <label for="message-text" className="col-form-label">Message:</label>
+                                <div className="form-group">
+                                    <label htmlFor="message-text" className="col-form-label">Message:</label>
                                     <textarea onChange={event => setMessage(event.target.value)} value={message} className="form-control" id="message-text"></textarea>
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
+                        <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button disabled={!(email && name && message)} onClick={handleFormSubmit} type="button" className="btn btn-primary" data-dismiss="modal">Send message</button>
                         </div>

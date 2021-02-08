@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import socketIOClient from "socket.io-client";
 import { SocialIcon } from 'react-social-icons';
 import Navbar from "../component/Navbar"
 import profilePic from "../images/profilePic.jpg"
@@ -8,6 +9,8 @@ import EmailModal from "../component/EmailModal"
 import Zoom from 'react-reveal/Zoom';
 import "./Home.css"
 
+let socket;
+
 const Home = () => {
 
     const [email, setEmail] = useState("");
@@ -15,6 +18,7 @@ const Home = () => {
     const [birthday, setBirthday] = useState(0);
     const [wedding, setWedding] = useState(0);
     const [coding, setCoding] = useState(0);
+    const [acitveUsers, setActiveUsers] = useState(0);
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
@@ -28,39 +32,47 @@ const Home = () => {
             }).catch((error) => { console.log(error) })
         }
     };
-    
+
     useEffect(() => {
         //Bday countdown
         var bDay = new Date("sept 4, 2021");
         bDay = bDay.getTime();
-        bDay = bDay/1000/60/60/24
+        bDay = bDay / 1000 / 60 / 60 / 24
         var today = new Date();
         today = today.getTime();
-        today = today/1000/60/60/24
-        setBirthday(Math.floor(bDay-today));
+        today = today / 1000 / 60 / 60 / 24
+        setBirthday(Math.floor(bDay - today));
         //Wedding countdown
         var wDay = new Date("oct 9, 2021");
         wDay = wDay.getTime();
-        wDay = wDay/1000/60/60/24
+        wDay = wDay / 1000 / 60 / 60 / 24
         var today = new Date();
         today = today.getTime();
-        today = today/1000/60/60/24
-        setWedding(Math.floor(wDay-today));
+        today = today / 1000 / 60 / 60 / 24
+        setWedding(Math.floor(wDay - today));
         //Coding counter
         var cDay = new Date("jan 7, 2019");
         cDay = cDay.getTime();
-        cDay = cDay/1000/60/60/24
+        cDay = cDay / 1000 / 60 / 60 / 24
         var today = new Date();
         today = today.getTime();
-        today = today/1000/60/60/24
-        setCoding(Math.floor(today-cDay));
+        today = today / 1000 / 60 / 60 / 24
+        setCoding(Math.floor(today - cDay));
 
-      },[]);
+        socket = socketIOClient();
+        socket.on('activeUsersOnWebsite', async (activeUserData) => {
+            setActiveUsers(activeUserData);
+        });
+
+        return () => {
+            socket.disconnect();
+        };
+    }, []);
 
 
-      const pdf = async () =>{
-         window.location.href = "/pdf"
-      }
+    const pdf = async () => {
+        window.location.href = "/pdf"
+    }
 
 
 
@@ -79,8 +91,8 @@ const Home = () => {
                         <p id="pp">Experienced professional with a demonstrated history of client facing work and completing team projects. I'm a Junior Web Developer with a Bachelors of Science (B.S) in Biological Sciences. 2+ years of JavaScript experience. I recently earned a Full Stack Web Development certificate from the University of Arizona. Main focus is MERN stack.</p>
                         <div className="icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
-                            <a href="" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo"><SocialIcon bgColor="black" fgColor="white" network="email" /></a>
-                            <a href="/pdf" target="_blank" ><SocialIcon bgColor="black" fgColor="white" network="" /></a>
+                            <a href="" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo"><SocialIcon bgColor="black" fgColor="white" network="email"/></a>
+                            <a href="/pdf" target="_blank"><SocialIcon bgColor="black" fgColor="white" network=""/></a>
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
                         </div>
                     </div>
@@ -100,46 +112,46 @@ const Home = () => {
                 </div>
                 <div className="row text-white text-center">
                     <div className="col-sm-3 ss">
-                        <div className="card bg-dark"  style={{height: "100%"}}>
+                        <div className="card bg-dark" style={{ height: "100%" }}>
                             <div className="card-body text-primary">
 
                                 Days Coding
-                                <Zoom duration="1000">
+                                <Zoom duration={1000}>
 
-                                <h2 className="text-white">{coding}</h2>
+                                    <h2 className="text-white">{coding}</h2>
                                 </Zoom>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-3 ss">
-                        <div className="card bg-dark"  style={{height: "100%"}}>
+                        <div className="card bg-dark" style={{ height: "100%" }}>
                             <div className="card-body text-primary">
                                 Wedding Countdown
-                                <Zoom duration="2000">
+                                <Zoom duration={2000}>
 
-                                <h2 className="text-white">{wedding}</h2>
+                                    <h2 className="text-white">{wedding}</h2>
                                 </Zoom>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-3 ss">
-                        <div className="card bg-dark"  style={{height: "100%"}}>
+                        <div className="card bg-dark" style={{ height: "100%" }}>
                             <div className="card-body text-primary">
-                                Website Views
-                                <Zoom duration="3000">
+                                Active users on website
+                                <Zoom duration={3000}>
 
-                                <h2 className="text-white">365</h2>
+                                    <h2 className="text-white">{acitveUsers}</h2>
                                 </Zoom>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-3 ss">
-                        <div className="card bg-dark"  style={{height: "100%"}}>
+                        <div className="card bg-dark" style={{ height: "100%" }}>
                             <div className="card-body text-primary">
                                 Birthday countdown
-                                <Zoom duration="4000">
+                                <Zoom duration={4000}>
 
-                                <h2 className="text-white">{birthday}</h2>
+                                    <h2 className="text-white">{birthday}</h2>
                                 </Zoom>
                             </div>
                         </div>
@@ -148,7 +160,7 @@ const Home = () => {
                 {/* Email Modal */}
                 <EmailModal></EmailModal>
                 <ContactModal></ContactModal>
-                
+
             </div>
 
         </>

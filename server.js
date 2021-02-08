@@ -8,8 +8,15 @@ const cookieParser = require("cookie-parser")
 
 const emailController = require("./controllers/email");
 
+const http = require("http");
+const socketIo = require("socket.io");
+const server = http.createServer(app);
+const io = socketIo(server);
+
 //database connection
 mongoose.connect(process.env.MONGO_DB,{useNewUrlParser: true, useUnifiedTopology: true});
+
+require("./utils/socketConnection")(io);
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -41,7 +48,7 @@ app.use((req, res) => {
 // Server
 const startServer = async () => {
 
-    app.listen(PORT, () => {
+    server.listen(PORT, () => {
         // eslint-disable-next-line no-console
         console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:3000/ in your browser.`);
     });
