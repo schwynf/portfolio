@@ -7,8 +7,12 @@ import managerPic from "../images/logo_spinner.png"
 import budgetPic from "../images/budget.png"
 import videoPic from "../images/video.gif"
 import soonPic from "../images/soon.jpeg"
+import squaresPic from "../images/squares.JPG"
 import PortfolioCard from "../component/PorfolioCard"
 import LazyLoad from 'react-lazyload';
+import "./Portfolio.css"
+
+
 
 let socket;
 
@@ -79,6 +83,7 @@ const Portfolio = () => {
                 </div>
                 <div className="row">
                     <div className="col-xl-12">
+                    <i className="material-icons star">star</i>
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
@@ -89,18 +94,19 @@ const Portfolio = () => {
                             </div>
                             <div className="col-xl-2"><cite>"quick and easy!"<br></br>~Justin<br></br><br></br><br></br>
                                 <div className="text-right">
-                                    "It's been 2 days!"<br></br>Quinn~
+                                    "I don't mind creating squares anymore!"<br></br>Justin~
                              </div></cite>
                             </div>
                             <div className="col-xl-5">
                                 <div className="card mx-auto float-xl-left shadow-lg" style={{ width: "18rem" }}>
-                                    <PortfolioCard image={soonPic} title="Coming Soon" text="Still planning my next move. Come back soon!" site="https://universal-storage.herokuapp.com/"></PortfolioCard>
+                                    <PortfolioCard image={squaresPic} title="Super Bowl Squares" text="A quick way to setup squares with friends!" site="https://www.thesquaresgame.com"></PortfolioCard>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </>
     )
 }

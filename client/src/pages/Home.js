@@ -102,9 +102,9 @@ const Home = () => {
                     <div className="col-sm-12 interest"><h3>What I Do</h3></div>
                 </div>
                 <div className="row text-white">
-                    <div className="col-sm-4"><p className="text-primary">Inspiration to Web Dev</p><p>My inspiration for web development came from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After 8+ hrs going through the documentation and turtorial videos, I was hooked. I was turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web dev was my next profession.</p></div>
-                    <div className="col-sm-4"><p className="text-primary">Node.js & Java </p><p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and Java for sever-side development. I find it powerful and important to provide and secure information for a web application. I have used Passport.js and AuthO for authentication in projects. </p></div>
-                    <div className="col-sm-4"><p className="text-primary">Current Project</p><p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website. A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my projects soon.</p></div>
+                    <div className="col-sm-4"><p className="text-primary">Inspiration to Web Dev</p><p>My inspiration for web development came from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After +8 hrs going through the documentation and turtorial videos, I was hooked. I was turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web dev was my next profession.</p></div>
+                    <div className="col-sm-4"><p className="text-primary">Server & Database </p><p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and Java for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p></div>
+                    <div className="col-sm-4"><p className="text-primary">Current Project</p><p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p></div>
                 </div>
                 {/* Fun Facts */}
                 <div className="row">
@@ -137,7 +137,7 @@ const Home = () => {
                     <div className="col-sm-3 ss">
                         <div className="card bg-dark" style={{ height: "100%" }}>
                             <div className="card-body text-primary">
-                                Active users on website
+                                Active Users On Website
                                 <Zoom duration={3000}>
 
                                     <h2 className="text-white">{acitveUsers}</h2>
@@ -148,7 +148,7 @@ const Home = () => {
                     <div className="col-sm-3 ss">
                         <div className="card bg-dark" style={{ height: "100%" }}>
                             <div className="card-body text-primary">
-                                Birthday countdown
+                                Birthday Countdown
                                 <Zoom duration={4000}>
 
                                     <h2 className="text-white">{birthday}</h2>

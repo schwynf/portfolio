@@ -12,7 +12,7 @@ const Navbar = () => {
                     <div className="navbar-nav">
                         <a className="nav-item nav-link active" href="/">About<span className="sr-only">(current)</span></a>
                         <a className="nav-item nav-link active" href="/portfolio">Portfolio</a>
-                        <a className="nav-item nav-link active" href="/resume">Tutorial</a>
+                        <a className="nav-item nav-link active" href="#">Tutorial</a>
                     </div>
                 </div>
             </nav>
