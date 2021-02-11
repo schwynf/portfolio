@@ -28,7 +28,16 @@ app.use(cookieParser());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
-}
+};
+
+app.use(function(req, res, next){ 
+  if(req.protocol === "http"){
+    res.redirect("https://" + req.hostname);
+  }else{
+    next();
+  }
+})
+
 
 app.get("/pdf", async function (req, res, next) {
   res.sendFile(path.join(__dirname, "./client/src/images/Resume-Schwyn-Francis.pdf"))
