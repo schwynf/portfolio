@@ -97,7 +97,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div style={{backgroundColor:"red"}}></div>
                 {/* What I Do */}
                 <div style={{backgroundColor:"white", height:"1px"}}></div>
                 {/* <div className="row">
@@ -112,6 +111,7 @@ const Home = () => {
                 {/* <div className="row">
                     <div className="col-sm-12 interest"><h3 className="pl-2">Fun Facts</h3></div>
                 </div> */}
+                <div className="mb-3" style={{backgroundColor:"white", height:"1px"}}></div>
                 <div className="row text-white text-center">
                     <div className="col-sm-3 ss">
                         <div className="card bg-dark" style={{ height: "100%" }}>
