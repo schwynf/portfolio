@@ -84,7 +84,6 @@ const Portfolio = () => {
                 </div>
                 <div className="row">
                     <div className="col-xl-12">
-                    <i className="material-icons star">star</i>
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>

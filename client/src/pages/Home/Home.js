@@ -65,7 +65,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="container intro">
+            <div className="container">
                 <Navbar></Navbar>
                 {/* intro */}
                 <div className="row" id="intro-content">

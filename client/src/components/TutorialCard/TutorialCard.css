@@ -1,0 +1,20 @@
+.card-wrapper {
+    width: 75%;
+}
+
+.card-img {
+    height: 150px;
+}
+
+.card-body {
+    height: auto;
+}
+
+@media only screen and (max-width:500px) {
+    .card-wrapper {
+        width: 100%;
+    }
+    .card-img {
+        height: 75%;
+    }
+}

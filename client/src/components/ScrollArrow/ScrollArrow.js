@@ -1,4 +1,3 @@
-import { set } from "mongoose";
 import React, { useEffect, useState } from "react";
 import {FaArrowCircleUp} from "react-icons/fa"
 import "./ScrollArrow.css"
