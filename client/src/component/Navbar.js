@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark nav-bar">
-                <a href="/" style={{fontFamily:"cursive", color:"rgb(8, 19, 78)", fontSize:"2rem"}}>SF</a>
+                <a href="/" style={{fontFamily:"Lucida Console, Courier New, monospace", color:"rgb(8, 19, 78)", fontSize:"2rem"}}>SF</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

@@ -7,6 +7,7 @@ import profilePic from "../images/profilePic.jpg"
 import ContactModal from "../component/ContactModal"
 import EmailModal from "../component/EmailModal"
 import Zoom from 'react-reveal/Zoom';
+import ScrollAroow from "../component/ScrollArrow"
 import "./Home.css"
 
 let socket;
@@ -162,7 +163,7 @@ const Home = () => {
                 {/* Email Modal */}
                 <EmailModal></EmailModal>
                 <ContactModal></ContactModal>
-
+                <ScrollAroow></ScrollAroow>
             </div>
 
         </>

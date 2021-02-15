@@ -10,6 +10,7 @@ import soonPic from "../images/soon.jpeg"
 import squaresPic from "../images/squares.JPG"
 import PortfolioCard from "../component/PorfolioCard"
 import LazyLoad from 'react-lazyload';
+import ScrollArrow from "../component/ScrollArrow"
 import "./Portfolio.css"
 
 
@@ -38,7 +39,7 @@ const Portfolio = () => {
         <>
             <div className="container text-warning">
                 <Navbar></Navbar>
-                <div className="row mt-5">
+                <div className="row mt-4">
                     <div className="col-xl-12">
                         <div className="row mb-5 mt-4">
                             <div className="col-xl-5 mb-1">
@@ -105,6 +106,7 @@ const Portfolio = () => {
                         </div>
                     </div>
                 </div>
+                <ScrollArrow style={{display:"none"}}></ScrollArrow>
             </div>
             
         </>
