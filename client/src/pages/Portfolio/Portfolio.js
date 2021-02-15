@@ -106,7 +106,7 @@ const Portfolio = () => {
                         </div>
                     </div>
                 </div>
-                <ScrollArrow style={{display:"none"}}></ScrollArrow>
+                <ScrollArrow></ScrollArrow>
             </div>
             
         </>
