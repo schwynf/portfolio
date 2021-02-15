@@ -9,3 +9,7 @@
 .nav-bar{
     background-color: black;
 }
+
+a:hover{
+    text-decoration: none;
+}

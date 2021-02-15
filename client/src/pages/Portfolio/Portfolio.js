@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import socketIOClient from "socket.io-client";
-import Navbar from "../component/Navbar"
-import triviaPic from "../images/Trivia-Pro.jpg"
-import lockPic from "../images/LOCKD.jpg"
-import managerPic from "../images/logo_spinner.png"
-import budgetPic from "../images/budget.png"
-import videoPic from "../images/video.gif"
-import soonPic from "../images/soon.jpeg"
-import squaresPic from "../images/squares.JPG"
-import PortfolioCard from "../component/PorfolioCard"
+import Navbar from "../../components/Navbar/Navbar"
+import triviaPic from "../../images/Trivia-Pro.jpg"
+import lockPic from "../../images/LOCKD.jpg"
+import managerPic from "../../images/logo_spinner.png"
+import budgetPic from "../../images/budget.png"
+import videoPic from "../../images/video.gif"
+import soonPic from "../../images/soon.jpeg"
+import squaresPic from "../../images/squares.JPG"
+import PortfolioCard from "../../components/PortfolioCard/PortfolioCard"
 import LazyLoad from 'react-lazyload';
-import ScrollArrow from "../component/ScrollArrow"
+import ScrollArrow from "../../components/ScrollArrow/ScrollArrow"
 import "./Portfolio.css"
 
 

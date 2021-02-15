@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PDF from "../images/Resume-Schwyn-Francis.pdf"
+import PDF from "../../images/Resume-Schwyn-Francis.pdf"
 import "./ContactModal.css"
 
 const ContactModal = () => {

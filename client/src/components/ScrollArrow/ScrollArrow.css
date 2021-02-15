@@ -2,15 +2,21 @@
     opacity: 0;
 }
 
+#scroll {
+    display: none; 
+}
+
 
 
 
 @media only screen and (max-width: 500px){
-    .scrollTop { 
+    #scroll {
         display: inline-block;
+    }
+    .scrollTop { 
         position: fixed;
         width: 23%;
-        bottom: 40px;
+        bottom: 60px;
         right: 0px;
         height: 20px;
         justify-content: center;

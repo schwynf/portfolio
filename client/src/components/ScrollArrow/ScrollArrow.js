@@ -21,7 +21,10 @@ const ScrollArrow = () => {
     window.addEventListener("scroll", checkScollTop)
     return (
         <>
+        <div id="scroll">
+
           <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height:40,display:showScroll ? 'flex' : "none"}}></FaArrowCircleUp>
+        </div>
         </>
     )
 }
