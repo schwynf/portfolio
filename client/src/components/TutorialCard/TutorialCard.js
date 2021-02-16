@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./TutorialCard.css"
+import { Link } from 'react-router-dom';
 
 const TutorialCard = (props) => {
 
@@ -14,7 +15,7 @@ const TutorialCard = (props) => {
                         <div className="card-body">
                             <h5 className="card-title">{props.title}</h5>
                             <p className="card-text">{props.body}</p>
-                            <a href="#" className="btn btn-outline-primary">View Work</a>
+                            <Link className="btn btn-outline-primary" to={"/tutorial/" + props.buttonLink }>View Work</Link>
                         </div>
                     </div>
                 </div>

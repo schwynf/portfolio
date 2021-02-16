@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios"
 
 const EmailModal = () => {
-
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
+
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
         console.log(email + name + message)
         if (email && name && message) {
-            axios.post("/email", { email: email, name: name, message: message }).then(({data}) => {
+            axios.post("/email", { email: email, name: name, message: message }).then(({ data }) => {
                 console.log(data);
                 setEmail("");
                 setName("");
@@ -19,9 +19,26 @@ const EmailModal = () => {
             }).catch((error) => { console.log(error) })
         }
     };
+    const handleFormKeyDown = (event) => {
+        event.preventDefault();
+        console.log("chi")
+        if (event.which === 13 && email && name && message) {
+            console.log(email + name + message)
+            if (email && name && message) {
+                axios.post("/email", { email: email, name: name, message: message }).then(({ data }) => {
+                    console.log(data);
+                    setEmail("");
+                    setName("");
+                    setMessage("");
+                }).catch((error) => { console.log(error) })
+            }
+
+        }
+    };
 
     return (
         <>
+
             <div className="modal fade" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
@@ -48,7 +65,7 @@ const EmailModal = () => {
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal" >Close</button>
                             <button disabled={!(email && name && message)} onClick={handleFormSubmit} type="button" className="btn btn-primary" data-dismiss="modal">Send message</button>
                         </div>
                     </div>

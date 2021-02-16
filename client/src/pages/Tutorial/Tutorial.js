@@ -10,14 +10,15 @@ const Tutorial = () => {
         <>
             <div className="container">
                 <Navbar></Navbar>
+                <h1 className="title">Tutorial</h1>
                 <div className="row mt-5">
                     <div className="col-12 tutorial-card-wrapper">
-                        <TutorialCard title="Angular, Node, MongoDB & Heroku" body="20 minute startup guide!" image={soonPic}></TutorialCard>
+                        <TutorialCard title="Angular, Node, MongoDB & Heroku" body="20 minute startup guide!" buttonLink="angular" image={soonPic}></TutorialCard>
                     </div>
                 </div>
                 <div className="row mt-5 mb-5">
                     <div className="col-12 tutorial-card-wrapper">
-                    <TutorialCard title="React, Node, MongoDB & Heroku" body="20 minute startup guide!" image={soonPic}></TutorialCard>
+                    <TutorialCard title="React, Node, MongoDB & Heroku" body="20 minute startup guide!" buttonLink="react" image={soonPic}></TutorialCard>
                     </div>
                 </div>
             </div>

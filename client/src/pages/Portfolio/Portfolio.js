@@ -39,6 +39,7 @@ const Portfolio = () => {
         <>
             <div className="container text-warning">
                 <Navbar></Navbar>
+                <h1 className="title">Portfolio</h1>
                 <div className="row mt-4">
                     <div className="col-xl-12">
                         <div className="row mb-5 mt-4">

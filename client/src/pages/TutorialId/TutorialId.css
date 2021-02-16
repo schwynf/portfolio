@@ -1,0 +1,17 @@
+.title {
+    text-align: center; 
+    color: #6c757d;
+}
+
+.img-scroll {
+    overflow-x: scroll;
+}
+
+.img-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.img-scroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
