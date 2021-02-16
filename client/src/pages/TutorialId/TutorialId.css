@@ -1,3 +1,7 @@
+.angular-pic {
+    width: 40%;
+}
+
 .title {
     text-align: center; 
     color: #6c757d;
@@ -14,4 +18,14 @@
 .img-scroll {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-  }
+}
+
+.comp-color {
+    color:blue;
+}
+
+@media only screen and (max-width:500px){
+    .angular-pic {
+        width: 100%
+    }
+}
