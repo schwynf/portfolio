@@ -5,6 +5,7 @@ const app = express();
 const path = require('path')
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser")
+const cors = require('cors');
 
 const emailController = require("./controllers/email");
 
@@ -23,6 +24,9 @@ require("./utils/socketConnection")(io);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+
+//CORS Middleware
+app.use(cors())
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

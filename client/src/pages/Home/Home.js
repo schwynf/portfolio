@@ -61,6 +61,15 @@ const Home = () => {
         window.location.href = "/pdf"
     }
 
+    const api = async () => {
+        console.log("api")
+        try {
+            let data = await axios.get("https://www.schwynfrancis.com/email");
+            console.log(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
 
     return (
@@ -74,7 +83,7 @@ const Home = () => {
                     </div>
                     <div className="col-sm-6 intro-text pb-2">
                         <h5 className="text-secondary">Full Stack Web Developer</h5>
-                        <h1>Schwyn Francis</h1>
+                        <h1 onClick={api}>Schwyn Francis</h1>
                         <p id="pp">Experienced professional with a demonstrated history of client facing work and completing team projects. I'm a Junior Web Developer with a Bachelors of Science (B.S) in Biological Sciences. 2+ years of JavaScript experience. I recently earned a Full Stack Web Development certificate from the University of Arizona. Main focus is MERN stack.</p>
                         <div className="icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
