@@ -1,3 +1,31 @@
+#navPic {
+    height: 400px;
+}
+#messageFormPic {
+    height: 300px;
+}
+#serviceFunctionPic {
+    height: 300px;
+}
+#formMessagePic {
+    height: 450px;
+}
+/* #scroll-service {
+    overflow-y: scroll;
+    height: 200px;
+} */
+#servicePic {
+    height: 550px;
+}
+
+#appModulePic {
+    height: 400px;
+}
+
+#routesPic {
+    height: 400px;
+}
+
 .angular-pic {
     width: 40%;
 }
@@ -9,6 +37,8 @@
 
 .img-scroll {
     overflow-x: scroll;
+    overflow-y: scroll;
+    height: 200px;
 }
 
 .img-scroll::-webkit-scrollbar {

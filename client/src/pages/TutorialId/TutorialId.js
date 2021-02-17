@@ -4,6 +4,13 @@ import "./TutorialId.css";
 import ngNewQuestionsPic from "../../images/ngNewQuestions.JPG"
 import Pic from "../../images/angularFirstView.JPG"
 import directoryPic from "../../images/angularDirectory.JPG"
+import navPic from "../../images/navPic.JPG"
+import routesPic from "../../images/routesPic.JPG"
+import appModulePic from "../../images/appModulePic.JPG"
+import servicePic from "../../images/servicePic.JPG"
+import serviceFunctionPic from "../../images/serviceFunctionsPic.JPG"
+import formMessagePic from "../../images/formMessagePic.JPG"
+import messageForm from "../../images/messageForm.JPG"
 
 const TutorialId = (props) => {
 
@@ -19,7 +26,7 @@ const TutorialId = (props) => {
                         <div className="col-sm-2">
                         </div>
                         <div className="col-12 col-sm-8">
-                            <h5>Prequistes:</h5>
+                            <h5>Prerequistes:</h5>
                             <ul>
                                 <li>
                                     Node.js
@@ -126,6 +133,7 @@ const TutorialId = (props) => {
                         <div className="col-sm-2">
                         </div>
                     </div>
+                    {/* STEP 4 */}
                     <div className="row">
                         <div className="col-sm-2">
                         </div>
@@ -138,6 +146,101 @@ const TutorialId = (props) => {
                             <li>Add link before end body tag:<code className="comp-color"> &#60;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
                             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"&#62;
                             </code></li>
+                            <p>Copy bootstrap navbar html from website (https://getbootstrap.com/docs/5.0/components/navbar/) to navbar.component.html. After editing links to fit our app, the html should look like this:</p>
+                            <div className="img-scroll">
+
+                                <img className="mt-2 mb-2 w-100" src={navPic} id="navPic"></img>
+                            </div>
+                        </div>
+                        <div className="col-sm-2">
+                        </div>
+                    </div>
+                    {/* STEP 5*/}
+                    <div className="row">
+                        <div className="col-sm-2">
+                        </div>
+                        <div className="col-12 col-sm-8">
+                            <h4>STEP 5: ROUTING PAGES</h4>
+                            <p>Go to app folder in terminal.</p>
+                            <p>In terminal: <code>ng generate module app-routing --flat --module=app</code></p>
+                            <p>go to app-routing.module.ts file and update:</p>
+                            <div className="img-scroll">
+                                <img className="mt-2 mb-2 w-100" src={routesPic} id="routesPic"></img>
+                            </div>
+                            <p>Go to app.component.html and add under &#60;app-navbar&#62;: <code className="comp-color">&#60;router-outlet&#62;&#60;/router-outlet&#62;</code></p>
+                            <p>In terminal: <code>ng serve -o</code></p>
+                            <p>The navbar links should work.</p>
+                        </div>
+
+                        <div className="col-sm-2">
+                        </div>
+                    </div>
+                    {/* STEP 6*/}
+                    <div className="row">
+                        <div className="col-sm-2">
+                        </div>
+                        <div className="col-12 col-sm-8">
+                            <h4>STEP 6: CREATE MESSAGE-SERVICE</h4>
+                            <p>Go to app folder and create a folder called services.</p>
+                            <p>Go to services folder in terminal.</p>
+                            <p>In terminal: <code>ng generate service message</code></p>
+                            <p>Add messageService to provider and HttpClientModule to imports:</p>
+                            <div className="img-scroll">
+                                <img className="mt-2 mb-2 w-100" src={appModulePic} id="appModulePic"></img>
+                            </div>
+                            <p>Update message-service:</p>
+                            <div className="img-scroll" id="scroll-service">
+                                <img className="mt-2 mb-2 w-100" src={servicePic} id="servicePic"></img>
+                            </div>
+                            <p>Service Functions:</p>
+                            <div className="img-scroll" id="scroll-service">
+                                <img className="mt-2 mb-2 w-100" src={serviceFunctionPic} id="serviceFunctionPic"></img>
+                            </div>
+                            <p>Update form-messages.component.ts:</p>
+                            <div className="img-scroll" id="scroll-service">
+                                <img className="mt-2 mb-2 w-100" src={formMessagePic} id="formMessagePic"></img>
+                            </div>
+                            <p>Update form-message.component.html:</p>
+                            <div className="img-scroll" id="scroll-service">
+                                <img className="mt-2 mb-2 w-100" src={messageForm} id="messageFormPic"></img>
+                            </div>
+                        </div>
+                        <div className="col-sm-2">
+                        </div>
+                    </div>
+                    {/* STEP 7*/}
+                    <div className="row">
+                        <div className="col-sm-2">
+                        </div>
+                        <div className="col-12 col-sm-8">
+                            <h4>STEP 7: SETUP SERVER</h4>
+                        </div>
+                        <div className="col-sm-2">
+                        </div>
+                    </div>
+                    {/* STEP 8*/}
+                    <div className="row">
+                        <div className="col-sm-2">
+                        </div>
+                        <div className="col-12 col-sm-8">
+                        </div>
+                        <div className="col-sm-2">
+                        </div>
+                    </div>
+                    {/* STEP 9*/}
+                    <div className="row">
+                        <div className="col-sm-2">
+                        </div>
+                        <div className="col-12 col-sm-8">
+                        </div>
+                        <div className="col-sm-2">
+                        </div>
+                    </div>
+                    {/* STEP 10*/}
+                    <div className="row">
+                        <div className="col-sm-2">
+                        </div>
+                        <div className="col-12 col-sm-8">
                         </div>
                         <div className="col-sm-2">
                         </div>
