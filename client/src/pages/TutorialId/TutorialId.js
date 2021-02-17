@@ -11,6 +11,7 @@ import servicePic from "../../images/servicePic.JPG"
 import serviceFunctionPic from "../../images/serviceFunctionsPic.JPG"
 import formMessagePic from "../../images/formMessagePic.JPG"
 import messageForm from "../../images/messageForm.JPG"
+import ScrollArrow from "../../components/ScrollArrow/ScrollArrow"
 
 const TutorialId = (props) => {
 
@@ -58,9 +59,9 @@ const TutorialId = (props) => {
                                     <code>ng new angular-node-app </code>Generates the angular app
                                 </li>
                             </ul>
-                            <div className="img-scroll">
+                            <div className="img-scroll" id="ngNewPic">
 
-                                <img className="mt-2 mb-2 w-100" src={ngNewQuestionsPic}></img>
+                                <img className="w-100" src={ngNewQuestionsPic}></img>
                             </div>
                             <ul>
                                 <li>
@@ -92,7 +93,7 @@ const TutorialId = (props) => {
                             <h4>STEP 2: GENERATE COMPONENTS</h4>
                             <p> Go to src/app and create 2 folders within app directory "components" and "pages"</p>
                             <div className="text-center">
-                                <img className="mt-2 mb-2" style={{ height: "400px" }} src={directoryPic}></img>
+                                <img className="mt-2 mb-2" style={{ height: "250px" }} src={directoryPic}></img>
                             </div>
                             <p>Go to "pages" folder in terminal.</p>
                             <p>In terminal:</p>
@@ -245,6 +246,7 @@ const TutorialId = (props) => {
                         <div className="col-sm-2">
                         </div>
                     </div>
+                    <ScrollArrow></ScrollArrow>
                 </div>
             </>
         )

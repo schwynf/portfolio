@@ -17,6 +17,9 @@
 #servicePic {
     height: 550px;
 }
+#ngNewPic {
+    height:150px;
+}
 
 #appModulePic {
     height: 400px;
@@ -57,5 +60,8 @@
 @media only screen and (max-width:500px){
     .angular-pic {
         width: 100%
+    }
+    #ngNewPic {
+        height:80px;
     }
 }
