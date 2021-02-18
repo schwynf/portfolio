@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import socketIOClient from "socket.io-client";
 import Navbar from "../../components/Navbar/Navbar";
 import "./TutorialId.css";
 import ngNewQuestionsPic from "../../images/ngNewQuestions.JPG"
@@ -15,6 +16,13 @@ import ScrollArrow from "../../components/ScrollArrow/ScrollArrow"
 
 const TutorialId = (props) => {
 
+    useEffect(() => {
+        let socket = socketIOClient();
+
+        return () => {
+            socket.disconnect()
+        };
+    }, []);
 
 
     if (props.match.params.id === "angular") {
@@ -147,7 +155,7 @@ const TutorialId = (props) => {
                             <li>Add link before end body tag:<code className="comp-color"> &#60;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
                             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"&#62;
                             </code></li>
-                            <p>Copy bootstrap navbar html from website (https://getbootstrap.com/docs/5.0/components/navbar/) to navbar.component.html. After editing links to fit our app, the html should look like this:</p>
+                            <p style={{wordWrap: "break-word"}}>Copy bootstrap navbar html from website (https://getbootstrap.com/docs/5.0/components/navbar/) to navbar.component.html. After editing links to fit our app, the html should look like this:</p>
                             <div className="img-scroll">
 
                                 <img className="mt-2 mb-2 w-100" src={navPic} id="navPic"></img>
@@ -215,6 +223,15 @@ const TutorialId = (props) => {
                         </div>
                         <div className="col-12 col-sm-8">
                             <h4>STEP 7: SETUP SERVER</h4>
+                            <p>Go to terminal in root directory:</p>
+                            <li>
+                                <code>npm i express</code>
+                            </li>
+                            <li>
+                                <code>npm install concurrently --save</code>
+                            </li>
+                            <p>create server.js file in root directory.</p>
+                            
                         </div>
                         <div className="col-sm-2">
                         </div>
@@ -246,7 +263,6 @@ const TutorialId = (props) => {
                         <div className="col-sm-2">
                         </div>
                     </div>
-                    <ScrollArrow></ScrollArrow>
                 </div>
             </>
         )

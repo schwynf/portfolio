@@ -15,15 +15,11 @@ import "./Portfolio.css"
 
 
 
-let socket;
-
 const Portfolio = () => {
 
     useEffect(() => {
-        socket = socketIOClient();
+        let socket = socketIOClient();
 
-        socket.on("activeUsersOnWebsite", (userCount)=>{
-        })
         return () => {
             socket.disconnect()
         };
@@ -106,7 +102,6 @@ const Portfolio = () => {
                         </div>
                     </div>
                 </div>
-                <ScrollArrow></ScrollArrow>
             </div>
             
         </>

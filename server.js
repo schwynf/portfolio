@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-//CORS Middleware
+//CORS Middleware --allows api access to other websites
 app.use(cors())
 
 // Serve up static assets (usually on heroku)

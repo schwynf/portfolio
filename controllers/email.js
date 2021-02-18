@@ -17,7 +17,7 @@ router.post("/email", async function (req, res, next) {
 
 router.get("/email", async function (req, res) {
         try {
-            console.log("----------" + req.protocol + " " + req.hostname + "-------------")
+            console.log("----------" + req.protocol + " " + req.hostname + "-------------");
                 let emailData = await db.Email.find({}).sort({date: -1})
                 res.json(emailData);
             }   catch (error) {

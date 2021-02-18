@@ -4,6 +4,7 @@ import Portfolio from"./pages/Portfolio/Portfolio"
 import Tutorial from"./pages/Tutorial/Tutorial"
 import Home from "./pages/Home/Home"
 import TutorialId from "./pages/TutorialId/TutorialId"
+import ScrollArrow from "./components/ScrollArrow/ScrollArrow"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/tutorial/:id" component={TutorialId} />
           <Route component={Home} />
         </Switch>
+        <ScrollArrow></ScrollArrow>
       </div>
     </Router>
   );
