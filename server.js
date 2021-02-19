@@ -15,7 +15,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 //database connection
-mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_D || 'mongodb://localhost:27017/portfolio', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //socket connection
 require("./utils/socketConnection")(io);
@@ -40,6 +40,7 @@ app.get("/pdf", async function (req, res, next) {
 app.use([emailController]);
 app.use((req, res) => {
   if (process.env.NODE_ENV === 'production') {
+    console.log("index file being called")
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
   } else {
     res.sendFile(path.join(__dirname, './client/public/index.html'))

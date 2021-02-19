@@ -12,6 +12,8 @@ import servicePic from "../../images/servicePic.JPG"
 import serviceFunctionPic from "../../images/serviceFunctionsPic.JPG"
 import formMessagePic from "../../images/formMessagePic.JPG"
 import messageForm from "../../images/messageForm.JPG"
+import serverMiddleware from "../../images/serverMiddleware.JPG"
+import serverRoutes from "../../images/serverRoutes.JPG"
 import ScrollArrow from "../../components/ScrollArrow/ScrollArrow"
 
 const TutorialId = (props) => {
@@ -230,7 +232,14 @@ const TutorialId = (props) => {
                             <li>
                                 <code>npm install concurrently --save</code>
                             </li>
-                            <p>create server.js file in root directory.</p>
+                            <p>create server.js file in root directory and update:</p>
+                            <div className="img-scroll" id="scroll-service">
+                                <img className="mt-2 mb-2 w-100" src={serverMiddleware} id="serverMiddlewarePic"></img>
+                            </div>
+                            <p>update server with routes:</p>
+                            <div className="img-scroll" id="scroll-service">
+                                <img className="mt-2 mb-2 w-100" src={serverRoutes} id="serverMiddlewarePic"></img>
+                            </div>
                             
                         </div>
                         <div className="col-sm-2">

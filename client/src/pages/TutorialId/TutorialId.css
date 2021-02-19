@@ -10,12 +10,11 @@
 #formMessagePic {
     height: 450px;
 }
-/* #scroll-service {
-    overflow-y: scroll;
-    height: 200px;
-} */
+#serverMiddlewarePic {
+    height: 400px;
+}
 #servicePic {
-    height: 550px;
+    height: 500px;
 }
 #ngNewPic {
     height:150px;
