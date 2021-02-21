@@ -1,16 +1,20 @@
+//dependencies
 import React, { useEffect, useState } from "react";
 import socketIOClient from "socket.io-client";
-import Navbar from "../../components/Navbar/Navbar"
-import triviaPic from "../../images/Trivia-Pro.jpg"
-import lockPic from "../../images/LOCKD.jpg"
-import managerPic from "../../images/logo_spinner.png"
-import budgetPic from "../../images/budget.png"
-import videoPic from "../../images/video.gif"
-import soonPic from "../../images/soon.jpeg"
-import squaresPic from "../../images/squares.JPG"
-import PortfolioCard from "../../components/PortfolioCard/PortfolioCard"
 import LazyLoad from 'react-lazyload';
-import ScrollArrow from "../../components/ScrollArrow/ScrollArrow"
+//components
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from '../../components/Footer/Footer';
+//images
+import triviaPic from "../../images/Trivia-Pro.jpg";
+import lockPic from "../../images/LOCKD.jpg";
+import managerPic from "../../images/logo_spinner.png";
+import budgetPic from "../../images/budget.png";
+import videoPic from "../../images/video.gif";
+import soonPic from "../../images/soon.jpeg";
+import squaresPic from "../../images/squares.JPG";
+import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
+//css
 import "./Portfolio.css"
 
 
@@ -18,15 +22,12 @@ import "./Portfolio.css"
 const Portfolio = () => {
 
     useEffect(() => {
-        let socket = socketIOClient();
-
-        return () => {
-            socket.disconnect()
-        };
+        const socket = socketIOClient();
+        return () => socket.disconnect();
     }, []);
+
     const Loading = () => (
         <div>
-    
             <h1>loading</h1>
         </div>
     )
@@ -42,7 +43,6 @@ const Portfolio = () => {
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
                                         <PortfolioCard image={triviaPic} title="Trivia-Pro" text="Easy application to create, print, and execute quiz!" site="https://schwynf.github.io/Trivia-Pro/"></PortfolioCard>
-                                   
                                 </div>
                             </div>
                             <div className="col-xl-2"><cite>"WOW!"<br></br>~Scott<br></br><br></br><br></br>
@@ -81,7 +81,7 @@ const Portfolio = () => {
                 </div>
                 <div className="row">
                     <div className="col-xl-12">
-                        <div className="row mb-5 mt-4">
+                        <div className="row mb-2 mt-4">
                             <div className="col-xl-5 mb-1">
                                 <div className="card mx-auto float-xl-right shadow-lg" style={{ width: "18rem" }}>
                                     <LazyLoad height={200} offset={100} placeholder={<Loading/>}> 
@@ -102,6 +102,7 @@ const Portfolio = () => {
                         </div>
                     </div>
                 </div>
+                <Footer></Footer>
             </div>
             
         </>

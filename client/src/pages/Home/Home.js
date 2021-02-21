@@ -1,14 +1,17 @@
+//dependencies
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import socketIOClient from "socket.io-client";
 import { SocialIcon } from 'react-social-icons';
-import Navbar from "../../components/Navbar/Navbar"
-import profilePic from "../../images/profilePic.jpg"
-import ContactModal from "../../components/ContactModal/ContactModal"
-import EmailModal from "../../components/EmailModal/EmailModal"
 import Zoom from 'react-reveal/Zoom';
-import ScrollArrow from "../../components/ScrollArrow/ScrollArrow"
-import "./Home.css"
+//components
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from '../../components/Footer/Footer';
+//images
+import profilePic from "../../images/profilePic.jpg";
+import EmailModal from "../../components/EmailModal/EmailModal";
+//css
+import "./Home.css";
+
 
 
 
@@ -38,24 +41,22 @@ const Home = () => {
         cDay = cDay.getTime();
         cDay = cDay / 1000 / 60 / 60 / 24;
 
-        let socket = socketIOClient();
+        const socket = socketIOClient();
         socket.on('activeUsersOnWebsite', async (activeUsersData) => {
             setCounter({
                 birthday: Math.floor(bDay - today),
                 wedding: Math.floor(wDay - today),
                 coding: Math.floor(today - cDay),
                 acitveUsers: activeUsersData
-            })
+            });
         });
 
-        return () => {
-            socket.disconnect();
-        };
+        return () => socket.disconnect();
     }, []);
 
 
     const pdf = async () => {
-        window.location.href = "/pdf"
+        window.location.href = "/pdf";
     }
 
     return (
@@ -83,7 +84,7 @@ const Home = () => {
                 <div style={{ backgroundColor: "white", height: "1px" }}></div>
                 <div className="row text-white pr-2 pl-2 mt-3">
                     <div className="col-sm-4"><p className="text-primary">Inspiration to Web Dev</p><p>My inspiration for web development came from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After +8 hrs going through the documentation and turtorial videos, I was hooked. I was turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web dev was my next profession.</p></div>
-                    <div className="col-sm-4"><p className="text-primary">Server & Database </p><p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js (Express) and Java (Spring) for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p></div>
+                    <div className="col-sm-4"><p className="text-primary">Server & Database </p><p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and C# for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p></div>
                     <div className="col-sm-4"><p className="text-primary">Current Project</p><p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p></div>
                 </div>
                 <div className="mb-3" style={{ backgroundColor: "white", height: "1px" }}></div>
@@ -130,10 +131,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                <Footer></Footer>
                 {/* Email Modal */}
                 <EmailModal></EmailModal>
             </div>
-
         </>
     )
 }

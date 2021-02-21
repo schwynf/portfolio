@@ -48,10 +48,6 @@ app.use((req, res) => {
 });
 
 // Server
-const startServer = async () => {
-
-  server.listen(PORT, () => {
-    console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:3000/ in your browser.`);
-  });
-};
-startServer();
+server.listen(PORT, () => {
+  console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:3000/ in your browser.`);
+});

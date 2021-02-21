@@ -1,29 +1,35 @@
+//dependencies
 import React, { useEffect, useState } from "react";
 import socketIOClient from "socket.io-client";
+import Confetti from 'react-dom-confetti';
+//components
+import LikeButton from "../../components/LikeButton/LikeButton";
 import Navbar from "../../components/Navbar/Navbar";
+import Footer from '../../components/Footer/Footer';
+//images
+import ngNewQuestionsPic from "../../images/ngNewQuestions.JPG";
+import Pic from "../../images/angularFirstView.JPG";
+import directoryPic from "../../images/angularDirectory.JPG";
+import navPic from "../../images/navPic.JPG";
+import routesPic from "../../images/routesPic.JPG";
+import appModulePic from "../../images/appModulePic.JPG";
+import servicePic from "../../images/servicePic.JPG";
+import serviceFunctionPic from "../../images/serviceFunctionsPic.JPG";
+import formMessagePic from "../../images/formMessagePic.JPG";
+import messageForm from "../../images/messageForm.JPG";
+import serverMiddleware from "../../images/serverMiddleware.JPG";
+import serverRoutes from "../../images/serverRoutes.JPG";
+import modelPic from "../../images/modelPic.JPG";
+import messageExport from "../../images/messageExport.JPG";
+//css
 import "./TutorialId.css";
-import ngNewQuestionsPic from "../../images/ngNewQuestions.JPG"
-import Pic from "../../images/angularFirstView.JPG"
-import directoryPic from "../../images/angularDirectory.JPG"
-import navPic from "../../images/navPic.JPG"
-import routesPic from "../../images/routesPic.JPG"
-import appModulePic from "../../images/appModulePic.JPG"
-import servicePic from "../../images/servicePic.JPG"
-import serviceFunctionPic from "../../images/serviceFunctionsPic.JPG"
-import formMessagePic from "../../images/formMessagePic.JPG"
-import messageForm from "../../images/messageForm.JPG"
-import serverMiddleware from "../../images/serverMiddleware.JPG"
-import serverRoutes from "../../images/serverRoutes.JPG"
-import ScrollArrow from "../../components/ScrollArrow/ScrollArrow"
+
 
 const TutorialId = (props) => {
 
     useEffect(() => {
-        let socket = socketIOClient();
-
-        return () => {
-            socket.disconnect()
-        };
+        const socket = socketIOClient();
+        return () => socket.disconnect();
     }, []);
 
 
@@ -44,18 +50,9 @@ const TutorialId = (props) => {
                                  </li>
                                 <li>
                                     MongoDB
-                                 </li>
+                                </li>
                                 <li>
-                                    MongoDB Atlas account
-                                 </li>
-                                <li>
-                                    Heroku account
-                                 </li>
-                                <li>
-                                    Github account
-                                 </li>
-                                <li>
-                                    Visual Studio Code "IDE"
+                                    Visual Studio Code
                                  </li>
                             </ul>
                             <h4>STEP 1: INSTALLING ANGULAR CLI AND GENERATING ANGULAR APP</h4>
@@ -157,7 +154,7 @@ const TutorialId = (props) => {
                             <li>Add link before end body tag:<code className="comp-color"> &#60;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
                             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"&#62;
                             </code></li>
-                            <p style={{wordWrap: "break-word"}}>Copy bootstrap navbar html from website (https://getbootstrap.com/docs/5.0/components/navbar/) to navbar.component.html. After editing links to fit our app, the html should look like this:</p>
+                            <p style={{ wordWrap: "break-word" }}>Copy bootstrap navbar html from website (https://getbootstrap.com/docs/5.0/components/navbar/) to navbar.component.html. After editing links to fit our app, the html should look like this:</p>
                             <div className="img-scroll">
 
                                 <img className="mt-2 mb-2 w-100" src={navPic} id="navPic"></img>
@@ -240,7 +237,7 @@ const TutorialId = (props) => {
                             <div className="img-scroll" id="scroll-service">
                                 <img className="mt-2 mb-2 w-100" src={serverRoutes} id="serverMiddlewarePic"></img>
                             </div>
-                            
+
                         </div>
                         <div className="col-sm-2">
                         </div>
@@ -250,6 +247,16 @@ const TutorialId = (props) => {
                         <div className="col-sm-2">
                         </div>
                         <div className="col-12 col-sm-8">
+                            <h4>STEP 8: SETUP MODEL FOR MONGOOSE</h4>
+                            <p>In root directory, create a models folder and add "message.js".</p>
+                            <p>Update file:</p>
+                            <div className="img-scroll" id="scroll-service">
+                                <img className="mt-2 mb-2 w-100" src={modelPic} id="modelPic"></img>
+                            </div>
+                            <p>add index.js file within models folder and update:</p>
+                            <div id="model-div">
+                                <img className="mt-2 mb-2 w-100" src={messageExport} id="messageExport"></img>
+                            </div>
                         </div>
                         <div className="col-sm-2">
                         </div>
@@ -272,6 +279,9 @@ const TutorialId = (props) => {
                         <div className="col-sm-2">
                         </div>
                     </div>
+                    <Footer></Footer>
+                    <LikeButton></LikeButton>
+                    
                 </div>
             </>
         )

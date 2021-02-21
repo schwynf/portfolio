@@ -9,31 +9,28 @@ const EmailModal = () => {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        console.log(email + name + message)
         if (email && name && message) {
             axios.post("/email", { email: email, name: name, message: message }).then(({ data }) => {
                 console.log(data);
                 setEmail("");
                 setName("");
                 setMessage("");
-            }).catch((error) => { console.log(error) })
-        }
+            }).catch((error) => { console.log(error) });
+        };
     };
+
     const handleFormKeyDown = (event) => {
         event.preventDefault();
-        console.log("chi")
         if (event.which === 13 && email && name && message) {
-            console.log(email + name + message)
             if (email && name && message) {
                 axios.post("/email", { email: email, name: name, message: message }).then(({ data }) => {
-                    console.log(data);
                     setEmail("");
                     setName("");
                     setMessage("");
-                }).catch((error) => { console.log(error) })
-            }
+                }).catch((error) => { console.log(error) });
+            };
 
-        }
+        };
     };
 
     return (
