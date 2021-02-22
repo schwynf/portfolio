@@ -7,22 +7,20 @@ const ScrollArrow = () => {
     const [showScroll, setShowScroll] = useState("none");
 
     useEffect(() => {
-        //  return ()=>{setShowScroll(false);}
+    
     }, [])
 
-    const checkScollTop = () => {
-        if (window.pageYOffset > 50) {
+    const checkScrollTop = () => {
+        if (window.pageYOffset > 50 && showScroll === "none") {
             setShowScroll("flex");
-        } else if (window.pageYOffset <= 50) {
+        } else if (window.pageYOffset <= 50 && showScroll === "flex") {
             setShowScroll("none")
         }
+       
     }
 
-    const scrollTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.addEventListener("scroll", checkScrollTop);
 
-    window.addEventListener("scroll", checkScollTop);
     return (
         <>
             <div id="scroll">

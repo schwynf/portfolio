@@ -50,10 +50,14 @@ const Home = () => {
                 acitveUsers: activeUsersData
             });
         });
+        window.removeEventListener("scroll", checkScoll);
 
         return () => socket.disconnect();
     }, []);
 
+    const checkScoll = function (){
+
+    };
 
     const pdf = async () => {
         window.location.href = "/pdf";

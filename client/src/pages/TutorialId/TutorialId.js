@@ -281,7 +281,6 @@ const TutorialId = (props) => {
                     </div>
                     <Footer></Footer>
                     <LikeButton></LikeButton>
-                    
                 </div>
             </>
         )

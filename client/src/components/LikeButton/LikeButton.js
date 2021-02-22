@@ -1,30 +1,31 @@
+//dependencies
 import React, { useEffect, useState } from "react";
 import { AiFillLike } from "react-icons/ai";
 import Confetti from 'react-dom-confetti';
+//css
 import "./LikeButton.css";
 
-const LikeButton = () => {
+const LikeButton = (props) => {
     const [showScroll, setShowScroll] = useState("none");
-    const [likeBoolean, setLikeBoolean] = useState(false);
     const [bgColor, setBgColor] = useState("blue")
 
     useEffect(() => {
-        return () => { window.removeEventListener("scroll", checkScoll) }
+        window.addEventListener("scroll", checkScrollLike);
+        return () => { window.removeEventListener("scroll", checkScrollLike);}
     }, [])
 
-    const checkScoll= () => {
+    const checkScrollLike= () => {
         if (window.pageYOffset > 50 && showScroll === "none") {
             setShowScroll("flex");
         } else if (window.pageYOffset <= 50 && showScroll === "flex") {
             setShowScroll("none")
-        }
+        } 
     }
-
-    window.addEventListener("scroll", checkScoll);
 
     const colorChange = () => {
         setBgColor("white")
     }
+
     return (
         <>
             <div id="scroll-like" onClick={colorChange}>
