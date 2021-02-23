@@ -22,7 +22,7 @@ const Home = () => {
         coding: 0,
         acitveUsers: 0
     })
-    
+
     useEffect(() => {
         //today
         let today = new Date();
@@ -55,7 +55,7 @@ const Home = () => {
         return () => socket.disconnect();
     }, []);
 
-    const checkScoll = function (){
+    const checkScoll = function () {
 
     };
 
@@ -75,7 +75,7 @@ const Home = () => {
                     <div className="col-sm-6 intro-text pb-2">
                         <h5 className="text-secondary">Full Stack Web Developer</h5>
                         <h1>Schwyn Francis</h1>
-                        <p id="pp">Experienced professional with a demonstrated history of client facing work and completing team projects. I'm a Junior Web Developer with a Bachelors of Science (B.S) in Biological Sciences. 2+ years of JavaScript experience. I recently earned a Full Stack Web Development certificate from the University of Arizona. Main focus is MERN stack.</p>
+                        <p id="pp">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am currently focused on utilizing my web development skills to help a business grow. Main focus is MERN stack (MongoDB, Express.js, React.js, Node.js). Always willing to learn and improve.</p>
                         <div className="icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
                             <div style={{ display: "inline-block" }} data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo"><SocialIcon bgColor="black" fgColor="white" network="email" /></div>

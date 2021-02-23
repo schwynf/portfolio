@@ -15,7 +15,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 //database connection
-mongoose.connect(process.env.MONGO_DB || 'mongodb://localhost:27017/portfolio', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_D || 'mongodb://localhost:27017/portfolio', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //socket connection
 require("./utils/socketConnection")(io);
