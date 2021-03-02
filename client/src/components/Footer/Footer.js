@@ -8,7 +8,7 @@ const Footer = () => {
         <>
             <footer>
                 <div className="text-center mt-2" style={{fontSize:"20px", color: "#212529"}}>
-                   @ 2020 Copyright: SchwynFrancis.com
+                &copy; 2020 Copyright: SchwynFrancis.com
                 </div>
             </footer>
         </>

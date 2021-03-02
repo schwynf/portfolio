@@ -1,14 +1,13 @@
+//dependencies
 import React, { useEffect, useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+//css
 import "./ScrollArrow.css";
 
 const ScrollArrow = () => {
-    const [showScroll, setShowScroll] = useState("none");
-
-    useEffect(() => {
     
-    }, [])
+    const [showScroll, setShowScroll] = useState("none");
 
     const checkScrollTop = () => {
         if (window.pageYOffset > 50 && showScroll === "none") {

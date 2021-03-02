@@ -6,9 +6,9 @@ import Zoom from 'react-reveal/Zoom';
 //components
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from '../../components/Footer/Footer';
+import EmailModal from "../../components/EmailModal/EmailModal";
 //images
 import profilePic from "../../images/profilePic.jpg";
-import EmailModal from "../../components/EmailModal/EmailModal";
 //css
 import "./Home.css";
 
@@ -50,7 +50,7 @@ const Home = () => {
                 acitveUsers: activeUsersData
             });
         });
-        window.removeEventListener("scroll", checkScoll);
+        // window.removeEventListener("scroll", checkScoll);
 
         return () => socket.disconnect();
     }, []);
@@ -67,6 +67,8 @@ const Home = () => {
         <>
             <div className="container">
                 <Navbar></Navbar>
+                <div className="justify-content-center text-center">
+                </div>
                 {/* intro */}
                 <div className="row" id="intro-content">
                     <div className="col-sm-6 intro-img text-center">

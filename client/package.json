@@ -9,6 +9,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-dom-confetti": "^0.2.0",
+    "react-gist": "^1.2.2",
     "react-icons": "^4.2.0",
     "react-lazyload": "^3.1.0",
     "react-pdf": "^5.1.0",

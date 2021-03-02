@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"
+import axios from "axios";
 
 const EmailModal = () => {
+
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
 
-
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
         if (email && name && message) {
             axios.post("/email", { email: email, name: name, message: message }).then(({ data }) => {
-                console.log(data);
-                setEmail("");
                 setName("");
+                setEmail("");
                 setMessage("");
             }).catch((error) => { console.log(error) });
         };
@@ -24,12 +23,11 @@ const EmailModal = () => {
         if (event.which === 13 && email && name && message) {
             if (email && name && message) {
                 axios.post("/email", { email: email, name: name, message: message }).then(({ data }) => {
-                    setEmail("");
                     setName("");
+                    setEmail("");
                     setMessage("");
                 }).catch((error) => { console.log(error) });
             };
-
         };
     };
 
@@ -53,7 +51,7 @@ const EmailModal = () => {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="recipient-email" className="col-form-label">Email:</label>
-                                    <input onChange={event => setEmail(event.target.value)} value={email} type="text" className="form-control" id="recipient-email"></input>
+                                    <input onChange={event => setEmail(event.target.value)}  value={email} type="text" className="form-control" id="recipient-email"></input>
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="message-text" className="col-form-label">Message:</label>

@@ -1,13 +1,14 @@
+//dependencies
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Portfolio from"./pages/Portfolio/Portfolio"
-import Tutorial from"./pages/Tutorial/Tutorial"
-import Home from "./pages/Home/Home"
-import TutorialId from "./pages/TutorialId/TutorialId"
-import ScrollArrow from "./components/ScrollArrow/ScrollArrow"
-
+//components
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Home from "./pages/Home/Home";
+import TutorialId from "./pages/TutorialId/TutorialId";
+import ScrollArrow from "./components/ScrollArrow/ScrollArrow";
 
 function App() {
+
   return (
     <Router>
       <div>
