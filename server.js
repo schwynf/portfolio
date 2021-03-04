@@ -32,13 +32,6 @@ app.use(cors())
 // Serve up static assets (usually on heroku) and adding middleware to redirect to https from http
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-  // app.use(function(req,res,next){
-  //   if(req.protocol === 'http'){
-  //     res.redirect('https://www.schwynfrancis.com')
-  //   }else{
-  //     next();
-  //   }
-  // })
 };
 
 // Add routes
@@ -47,15 +40,6 @@ app.get("/pdf", async function (req, res, next) {
 });
 app.use([emailController]);
 
-app.use(function(req,res,next){
-  // if(req.protocol === 'http'){
-  //   res.redirect('https://www.schwynfrancis.com')
-  // }else{
-  //   next();
-  // }
-  console.log(req.protocol);
-  next();
-})
 app.use((req, res) => {
   if (process.env.NODE_ENV === 'production') {
     console.log("index file being called")
