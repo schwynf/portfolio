@@ -1,7 +1,8 @@
 //dependencies
 import React, { useEffect, useState } from "react";
-import "./TutorialCard.css"
 import { Link } from 'react-router-dom';
+//css
+import "./TutorialCard.css";
 
 const TutorialCard = (props) => {
 

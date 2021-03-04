@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //components
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Home from "./pages/Home/Home";
-import TutorialId from "./pages/TutorialId/TutorialId";
+import Tutorial from "./pages/Tutorial/Tutorial";
 import ScrollArrow from "./components/ScrollArrow/ScrollArrow";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/portfolio" component={Portfolio} />
-          <Route exact path="/tutorial/:id" component={TutorialId} />
+          <Route exact path="/tutorial/:id" component={Tutorial} />
           <Route component={Home} />
         </Switch>
         <ScrollArrow></ScrollArrow>

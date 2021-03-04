@@ -15,7 +15,8 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 //database connection
-mongoose.connect(process.env.MONGO_DB || 'mongodb://localhost:27017/portfolio', { useNewUrlParser: true, useUnifiedTopology: true });
+const dbConnection = (process.env.NODE_ENV === 'production') ? process.env.MONGO_DB : 'mongodb://localhost:27017/portfolio';
+mongoose.connect(dbConnection, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //socket connection
 require("./utils/socketConnection")(io);
@@ -28,9 +29,16 @@ app.use(cookieParser());
 //CORS Middleware --allows api access to other websites
 app.use(cors())
 
-// Serve up static assets (usually on heroku)
+// Serve up static assets (usually on heroku) and adding middleware to redirect to https from http
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+  app.use(function(req,res,next){
+    if(req.protocol === 'http'){
+      res.redirect('https://www.schwynfrancis.com')
+    }else{
+      next();
+    }
+  })
 };
 
 // Add routes

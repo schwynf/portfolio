@@ -1,13 +1,100 @@
-.tutorial-card-wrapper {
-    padding-left: 210px;
+#navPic {
+    height: 400px;
+}
+#messageFormPic {
+    height: 300px;
+}
+
+/*  */
+#messageExport {
+    height: 70px;
+}
+#model-div {
+    height: 70px;
+}
+
+.gist {
+    width:50px;
+    overflow:auto;
+ }
+
+
+/*  */
+
+
+#modelPic {
+    height: 300px;
+}
+#serviceFunctionPic {
+    height: 300px;
+}
+#formMessagePic {
+    height: 450px;
+}
+#serverMiddlewarePic {
+    height: 400px;
+}
+#servicePic {
+    height: 500px;
+}
+#ngNewPic {
+    height:150px;
+}
+
+#angular-pic{
+    height: 120px;
+}
+
+#appModulePic {
+    height: 400px;
+}
+
+#routesPic {
+    height: 400px;
+}
+
+.angular-pic {
+    width: 40%;
 }
 
 .title {
+    text-align: center; 
     color: #6c757d;
 }
 
-@media only screen and (max-width:500px) {
-    .tutorial-card-wrapper {
-        padding-left: 10px;
+.img-scroll {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 200px;
+
+    /* Idk if need this css so mess around with it */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.gist-pic::-webkit-scrollbar {
+    display: none;
+}
+
+.img-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* .img-scroll {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+} */
+
+.comp-color {
+    color:blue;
+}
+
+@media only screen and (max-width:500px){
+    .angular-pic {
+        width: 100%;
+        height: 110px;
+    }
+    #ngNewPic {
+        height:80px;
     }
 }

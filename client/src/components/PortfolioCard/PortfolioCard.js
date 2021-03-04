@@ -1,5 +1,7 @@
+//dependencies
 import React, { useEffect, useState } from "react";
-import "./PortfolioCard.css"
+//css
+import "./PortfolioCard.css";
 
 const PortfolioCard = (props) => {
     return (

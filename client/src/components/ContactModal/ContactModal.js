@@ -1,5 +1,8 @@
+//dependencies
 import React, { useEffect, useState } from "react";
+//imgages
 import PDF from "../../images/Resume-Schwyn-Francis.pdf"
+//css
 import "./ContactModal.css"
 
 const ContactModal = () => {

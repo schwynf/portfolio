@@ -32,7 +32,9 @@ a:hover{
     animation-duration: 5s;
     transform-origin: center center;
   }
-
+#angular,#react:hover{
+  background-color: black;
+}
 @media only screen and (max-width:500px){
     #logo{
         margin-left: 0px;
