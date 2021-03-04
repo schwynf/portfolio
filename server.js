@@ -46,6 +46,16 @@ app.get("/pdf", async function (req, res, next) {
   res.sendFile(path.join(__dirname, "./client/src/images/Resume-Schwyn-Francis.pdf"))
 });
 app.use([emailController]);
+
+app.use(function(req,res,next){
+  // if(req.protocol === 'http'){
+  //   res.redirect('https://www.schwynfrancis.com')
+  // }else{
+  //   next();
+  // }
+  console.log(req.protocol);
+  next();
+})
 app.use((req, res) => {
   if (process.env.NODE_ENV === 'production') {
     console.log("index file being called")
