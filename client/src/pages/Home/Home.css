@@ -36,6 +36,10 @@
     padding-left: 6rem;
 }
 
+.distortTop{
+    transform: rotate(180deg)
+}
+
 @media only screen and (max-width:500px){
     #pp{
         padding-right: 0rem;
