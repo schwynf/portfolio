@@ -17,7 +17,7 @@ a:hover{
     margin-left: 50px;
 }
 
-.st2{
+.logo2{
     pointer-events: none;
     position: absolute;
     animation-name: logo;
@@ -25,13 +25,15 @@ a:hover{
     transform: translate(0px, 0px)
   }
 
-  .st3{
+  .logo3{
     pointer-events: none;
     position: absolute;
     animation-name: logoC;
     animation-duration: 5s;
     transform-origin: center center;
   }
+
+
 #angular,#react:hover{
   background-color: black;
 }

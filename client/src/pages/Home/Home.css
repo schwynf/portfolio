@@ -40,6 +40,25 @@
     transform: rotate(180deg)
 }
 
+#revolver{
+    pointer-events: none;
+    animation-name: revolver-spin;
+    animation-duration: 10s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+  }
+
+  #preset-revolver {
+    animation-fill-mode: forwards;
+
+  }
+
+  .revolver-div{
+      margin-left: 395px;
+  }
+
+
+
 @media only screen and (max-width:500px){
     #pp{
         padding-right: 0rem;
@@ -67,4 +86,16 @@
     .ss{
         margin-bottom: 1rem;
     }
+
+    .revolver-div{
+        margin-left: 15px;
+    }
 }
+
+
+@keyframes revolver-spin {
+    100%{
+      transform: rotate(5000deg)
+    }
+  
+  }

@@ -1,6 +1,6 @@
 //dependencies
 import React, { useEffect, useState } from "react";
-import { AiFillLike } from "react-icons/ai";
+import { AiFillLike, AiOutlineConsoleSql } from "react-icons/ai";
 import Confetti from 'react-dom-confetti';
 //css
 import "./LikeButton.css";
@@ -11,10 +11,14 @@ const LikeButton = (props) => {
 
     useEffect(() => {
         window.addEventListener("scroll", checkScrollLike);
-        return () => { window.removeEventListener("scroll", checkScrollLike);}
-    }, [])
+        return () => { 
+            console.log("likeButton useEffect")
+            window.removeEventListener("scroll", checkScrollLike);
+        }
+    }, [showScroll])
 
     const checkScrollLike= () => {
+        console.log(window.pageYOffset + " " + showScroll)
         if (window.pageYOffset > 50 && showScroll === "none") {
             setShowScroll("flex");
         } else if (window.pageYOffset <= 50 && showScroll === "flex") {

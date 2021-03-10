@@ -89,6 +89,7 @@
     color:blue;
 }
 
+
 @media only screen and (max-width:500px){
     .angular-pic {
         width: 100%;

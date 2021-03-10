@@ -9,16 +9,24 @@ const ScrollArrow = () => {
     
     const [showScroll, setShowScroll] = useState("none");
 
+    useEffect(() => {
+        window.addEventListener("scroll", checkScrollTop);
+        return () => { 
+            console.log("scrollUpButton useEffect");
+            window.removeEventListener("scroll", checkScrollTop);
+        }
+    }, [showScroll]);
+
     const checkScrollTop = () => {
+        console.log(window.pageYOffset + " " + showScroll);
         if (window.pageYOffset > 50 && showScroll === "none") {
             setShowScroll("flex");
         } else if (window.pageYOffset <= 50 && showScroll === "flex") {
-            setShowScroll("none")
+            setShowScroll("none");
         }
        
     }
 
-    window.addEventListener("scroll", checkScrollTop);
 
     return (
         <>
