@@ -30,6 +30,7 @@ const Home = () => {
     const [none, setNone] = useState("")
 
     useEffect(() => {
+        // console.log(window.location.protocol)
         //today
         let today = new Date();
         today = today.getTime();
