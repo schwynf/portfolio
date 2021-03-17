@@ -9,6 +9,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from '../../components/Footer/Footer';
 import EmailModal from "../../components/EmailModal/EmailModal";
 import ProjectRevolver from "../../components/ProjectRevolver/ProjectRevolver";
+import ProjectBullet from "../../components/ProjectBullet/ProjectBullet";
 //images
 import profilePic from "../../images/profilePic.jpg";
 import backgroundPic from "../../images/distortBottom.svg";
@@ -27,7 +28,15 @@ const Home = () => {
         acitveUsers: 0
     });
     const [spin, setSpin] = useState("preset-revolver");
-    const [none, setNone] = useState("")
+    const [bulletGlide, setBulletGlide] = useState("");
+    const [bulletName, setBulletName] = useState("");
+    const [none, setNone] = useState("none");
+    const [triviaRemove, setTriviaRemove] = useState("");
+    const [expenseRemove, setExpenseRemove] = useState("");
+    const [projectRemove, setProjectRemove] = useState("");
+    const [lockRemove, setLockRemove] = useState("");
+    const [squaresRemove, setSquaresRemove] = useState("");
+    const [dashboardRemove, setDashboardRemove] = useState("");
 
     useEffect(() => {
         // console.log(window.location.protocol)
@@ -67,11 +76,55 @@ const Home = () => {
         window.location.href = "/pdf";
     }
 
-    const spinRevolver = ()=> {
-        setSpin("revolver")
-        setTimeout(()=>{
-            setNone("none")
-        },10000)
+    const spinRevolver = () => {
+        let spinChoices = ["revolver","revolver1", "revolver2", "revolver3", "revolver4", "revolver5"];
+        let choice = Math.floor(spinChoices.length * Math.random());
+        setSpin(spinChoices[choice]);
+        setTimeout(() => {
+            let bulletsHeight = {
+                trivia: document.getElementsByClassName("trivia-circle")[0].getBoundingClientRect().top,
+                expense: document.getElementsByClassName("expense-circle")[0].getBoundingClientRect().top,
+                project: document.getElementsByClassName("project-circle")[0].getBoundingClientRect().top,
+                lock: document.getElementsByClassName("lock-circle")[0].getBoundingClientRect().top,
+                squares: document.getElementsByClassName("squares-circle")[0].getBoundingClientRect().top,
+                dashboard: document.getElementsByClassName("dashboard-circle")[0].getBoundingClientRect().top
+            }
+            let bulletsHeightSorted = Object.keys(bulletsHeight).sort(function (a, b) {
+                return bulletsHeight[a] - bulletsHeight[b];
+            })
+            //removing bullet
+            if (bulletsHeightSorted[0] === "trivia") {
+                setTriviaRemove("removeBullet");
+            } else if (bulletsHeightSorted[0] === "expense") {
+                setExpenseRemove("removeBullet")
+            } else if (bulletsHeightSorted[0] === "project") {
+                setProjectRemove("removeBullet")
+            } else if (bulletsHeightSorted[0] === "lock") {
+                setLockRemove("removeBullet")
+            } else if (bulletsHeightSorted[0] === "squares") {
+                setSquaresRemove("removeBullet")
+            } else {
+                setDashboardRemove("removeBullet")
+            }
+            setBulletName(bulletsHeightSorted[0]);
+            setBulletGlide("bullet-div");
+            setNone("");
+            setTimeout(function(){
+                if (bulletsHeightSorted[0] === "trivia") {
+                    window.location.href = "https://schwynf.github.io/Trivia-Pro/";
+                } else if (bulletsHeightSorted[0] === "expense") {
+                    window.location.href = "https://budget-data.herokuapp.com/";
+                } else if (bulletsHeightSorted[0] === "project") {
+                    window.location.href = "https://project-management-app-1.herokuapp.com/";
+                } else if (bulletsHeightSorted[0] === "lock") {
+                    window.location.href = "https://universal-storage.herokuapp.com/";
+                } else if (bulletsHeightSorted[0] === "squares") {
+                    window.location.href = "https://www.thesquaresgame.com/";
+                } else {
+                    window.location.href = "https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR";
+                }
+            },1500)
+        }, 5000)
     }
 
     return (
@@ -98,27 +151,26 @@ const Home = () => {
                     </div>
                 </div>
                 {/* What I Do */}
-                {/* <div style={{ backgroundColor: "white", height: "1px" }}></div> */}
-                <div className="row text-dark bg-white pr-2 pl-2 mt-3 pt-5" style={{width:"99.99%",marginLeft:"0.2px"}}>
+                <div className="row text-dark bg-white pr-2 pl-2 mt-3 pt-5" style={{ width: "99.99%", marginLeft: "0.2px" }}>
                     <div className="col-sm-4"><p className="text-primary">Inspiration to Web Dev</p><p>My inspiration for web development came from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After +8 hrs going through the documentation and turtorial videos, I was hooked. I was turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web dev was my next profession.</p></div>
                     <div className="col-sm-4"><p className="text-primary">Server & Database </p><p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and C# for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p></div>
                     <div className="col-sm-4"><p className="text-primary">Current Project</p><p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
                     </div>
-                    
+
                 </div>
-                <div className="distortTop" style={{marginTop:"-1px"}}>
+                <div className="distortTop" style={{ marginTop: "-1px" }}>
 
                     <ReactSVG src={backgroundPic} />
                 </div>
 
-                
-                
-                {/* <div className="mb-3" style={{ backgroundColor: "white", height: "1px" }}></div> */}
                 <div className="row">
                     <div className="col-12">
-                        <div id={spin} className="revolver-div" style={{ width: "300px", height: "300px",  marginTop: "50px", marginBottom: "50px" }}>
-                            <ProjectRevolver spinRevolver={spinRevolver} none={none}></ProjectRevolver>
-                            {/* <ReactSVG src={revolverPic} id="revolver" /> */}
+                        <div className={bulletGlide} id={none}>
+                            <ProjectBullet bulletName={bulletName}></ProjectBullet>
+                        </div>
+                        <div id={spin} className="revolver-div" style={{ width: "300px", height: "300px", marginTop: "50px", marginBottom: "50px" }}>
+                            <ProjectRevolver spinRevolver={spinRevolver} triviaRemove={triviaRemove} expenseRemove={expenseRemove}
+                                projectRemove={projectRemove} lockRemove={lockRemove} squaresRemove={squaresRemove} dashboardRemove={dashboardRemove}></ProjectRevolver>
                         </div>
                     </div>
                 </div>

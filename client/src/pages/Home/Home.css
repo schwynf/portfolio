@@ -6,99 +6,173 @@
 .intro-picture {
     margin-top: 2rem;
     background-color: grey;
-    /* background-color:grey; */
     border: .5rem solid grey;
     width: 21rem;
     height: 21rem;
 }
 
-.intro-text{
+.intro-text {
     color: white;
     padding-top: 3rem;
     text-align: left;
 }
 
-.what-i-do-content{
+.what-i-do-content {
     color: white;
     height: 20rem;
 }
 
-.interest{
-    color:white;
+.interest {
+    color: white;
 }
 
-#pp{
+#pp {
     padding-right: 8rem;
 }
 
-.icons{
+.icons {
     text-align: left;
     padding-left: 6rem;
 }
 
-.distortTop{
+.distortTop {
     transform: rotate(180deg)
 }
-
-#revolver{
+/* revolver choices */
+#revolver {
     pointer-events: none;
     animation-name: revolver-spin;
-    animation-duration: 10s;
+    animation-duration: 5s;
     transform-origin: center center;
     animation-fill-mode: forwards;
-  }
-
-  #preset-revolver {
+}
+#revolver1 {
+    pointer-events: none;
+    animation-name: revolver-spin1;
+    animation-duration: 5s;
+    transform-origin: center center;
     animation-fill-mode: forwards;
+}
+#revolver2 {
+    pointer-events: none;
+    animation-name: revolver-spin2;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+#revolver3 {
+    pointer-events: none;
+    animation-name: revolver-spin3;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+#revolver4 {
+    pointer-events: none;
+    animation-name: revolver-spin4;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+#revolver5 {
+    pointer-events: none;
+    animation-name: revolver-spin5;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
 
-  }
-
-  .revolver-div{
-      margin-left: 395px;
-  }
 
 
+#preset-revolver {
+    animation-fill-mode: forwards;
+}
 
-@media only screen and (max-width:500px){
-    #pp{
+.revolver-div {
+    margin-left: 395px;
+}
+
+.bullet-div {
+    position: absolute;
+    pointer-events: none;
+    animation-name: bullet-glide;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+#none {
+    display: none;
+}
+
+@media only screen and (max-width:500px) {
+    #pp {
         padding-right: 0rem;
     }
-
-    .intro-text{
+    .intro-text {
         text-align: center;
     }
-
-    .intro-picture{
+    .intro-picture {
         margin-top: 1rem;
         width: 15rem;
         height: 15rem;
     }
-
-    #intro-content{
+    #intro-content {
         padding-top: 2rem;
     }
-
-    .icons{
+    .icons {
         text-align: center;
         padding-left: 0;
     }
-
-    .ss{
+    .ss {
         margin-bottom: 1rem;
     }
-
-    .revolver-div{
+    .revolver-div {
         margin-left: 15px;
     }
-    .distortTop{
+    .distortTop {
         margin-left: .02px;
+    }
+    @keyframes bullet-glide {
+        100% {
+            margin-left: 300px;
+        }
     }
 }
 
-
 @keyframes revolver-spin {
-    100%{
-      transform: rotate(5000deg)
+    100% {
+        transform: rotate(6000deg)
     }
-  
-  }
+}
+@keyframes revolver-spin1 {
+    100% {
+        transform: rotate(7000deg)
+    }
+}
+@keyframes revolver-spin2 {
+    100% {
+        transform: rotate(8000deg)
+    }
+}
+@keyframes revolver-spin3 {
+    100% {
+        transform: rotate(9000deg)
+    }
+}
+@keyframes revolver-spin4 {
+    100% {
+        transform: rotate(10000deg)
+    }
+}
+@keyframes revolver-spin5 {
+    100% {
+        transform: rotate(11000deg)
+    }
+}
+
+@keyframes bullet-glide {
+    100% {
+        margin-left: 1000px;
+    }
+}
+
