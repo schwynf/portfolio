@@ -37,6 +37,8 @@ const Home = () => {
     const [lockRemove, setLockRemove] = useState("");
     const [squaresRemove, setSquaresRemove] = useState("");
     const [dashboardRemove, setDashboardRemove] = useState("");
+    let selectProject;
+    let goToWebsite;
 
     useEffect(() => {
         // console.log(window.location.protocol)
@@ -69,6 +71,17 @@ const Home = () => {
 
         return () => {
             socket.disconnect();
+            clearTimeout(selectProject);
+            clearTimeout(goToWebsite);
+            setSpin("preset-revolver");
+            setNone("none");
+            setBulletGlide("");
+            setTriviaRemove("");
+            setExpenseRemove("");
+            setProjectRemove("");
+            setLockRemove("");
+            setSquaresRemove("");
+            setDashboardRemove("");
         }
     }, []);
 
@@ -80,7 +93,7 @@ const Home = () => {
         let spinChoices = ["revolver","revolver1", "revolver2", "revolver3", "revolver4", "revolver5"];
         let choice = Math.floor(spinChoices.length * Math.random());
         setSpin(spinChoices[choice]);
-        setTimeout(() => {
+        selectProject = setTimeout(() => {
             let bulletsHeight = {
                 trivia: document.getElementsByClassName("trivia-circle")[0].getBoundingClientRect().top,
                 expense: document.getElementsByClassName("expense-circle")[0].getBoundingClientRect().top,
@@ -109,7 +122,7 @@ const Home = () => {
             setBulletName(bulletsHeightSorted[0]);
             setBulletGlide("bullet-div");
             setNone("");
-            setTimeout(function(){
+          goToWebsite =  setTimeout(function(){
                 if (bulletsHeightSorted[0] === "trivia") {
                     window.location.href = "https://schwynf.github.io/Trivia-Pro/";
                 } else if (bulletsHeightSorted[0] === "expense") {

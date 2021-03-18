@@ -15,3 +15,17 @@
     stroke: #000000;
     stroke-miterlimit: 10;
 }
+
+.bullet-div {
+    position: absolute;
+    pointer-events: none;
+    animation-name: bullet-glide;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bullet-glide {
+    100% {
+        margin-left: 1000px;
+    }
+}

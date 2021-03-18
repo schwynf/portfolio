@@ -37,3 +37,77 @@
 #removeBullet{
     display: none;
 }
+
+#revolver {
+    pointer-events: none;
+    animation-name: revolver-spin;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+#revolver1 {
+    pointer-events: none;
+    animation-name: revolver-spin1;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+#revolver2 {
+    pointer-events: none;
+    animation-name: revolver-spin2;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+#revolver3 {
+    pointer-events: none;
+    animation-name: revolver-spin3;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+#revolver4 {
+    pointer-events: none;
+    animation-name: revolver-spin4;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+#revolver5 {
+    pointer-events: none;
+    animation-name: revolver-spin5;
+    animation-duration: 5s;
+    transform-origin: center center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes revolver-spin {
+    100% {
+        transform: rotate(6000deg)
+    }
+}
+@keyframes revolver-spin1 {
+    100% {
+        transform: rotate(7000deg)
+    }
+}
+@keyframes revolver-spin2 {
+    100% {
+        transform: rotate(8000deg)
+    }
+}
+@keyframes revolver-spin3 {
+    100% {
+        transform: rotate(9000deg)
+    }
+}
+@keyframes revolver-spin4 {
+    100% {
+        transform: rotate(10000deg)
+    }
+}
+@keyframes revolver-spin5 {
+    100% {
+        transform: rotate(11000deg)
+    }
+}
