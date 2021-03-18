@@ -90,7 +90,7 @@ const Home = () => {
     }
 
     const spinRevolver = () => {
-        let spinChoices = ["revolver","revolver1", "revolver2", "revolver3", "revolver4", "revolver5"];
+        let spinChoices = ["revolver", "revolver1", "revolver2", "revolver3", "revolver4", "revolver5"];
         let choice = Math.floor(spinChoices.length * Math.random());
         setSpin(spinChoices[choice]);
         selectProject = setTimeout(() => {
@@ -122,7 +122,18 @@ const Home = () => {
             setBulletName(bulletsHeightSorted[0]);
             setBulletGlide("bullet-div");
             setNone("");
-          goToWebsite =  setTimeout(function(){
+            goToWebsite = setTimeout(function () {
+                clearTimeout(selectProject);
+                clearTimeout(goToWebsite);
+                setSpin("preset-revolver");
+                setNone("none");
+                setBulletGlide("");
+                setTriviaRemove("");
+                setExpenseRemove("");
+                setProjectRemove("");
+                setLockRemove("");
+                setSquaresRemove("");
+                setDashboardRemove("");
                 if (bulletsHeightSorted[0] === "trivia") {
                     window.location.href = "https://schwynf.github.io/Trivia-Pro/";
                 } else if (bulletsHeightSorted[0] === "expense") {
@@ -136,7 +147,7 @@ const Home = () => {
                 } else {
                     window.location.href = "https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR";
                 }
-            },1500)
+            }, 1500)
         }, 5000)
     }
 
