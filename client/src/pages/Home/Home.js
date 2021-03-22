@@ -10,10 +10,10 @@ import Footer from '../../components/Footer/Footer';
 import EmailModal from "../../components/EmailModal/EmailModal";
 import ProjectRevolver from "../../components/ProjectRevolver/ProjectRevolver";
 import ProjectBullet from "../../components/ProjectBullet/ProjectBullet";
+import Flask from "../../components/Flask/Flask";
 //images
 import profilePic from "../../images/profilePic.jpg";
 import backgroundPic from "../../images/distortBottom.svg";
-import revolverPic from "../../images/revolver.svg";
 //css
 import "./Home.css";
 
@@ -106,20 +106,25 @@ const Home = () => {
                 return bulletsHeight[a] - bulletsHeight[b];
             })
             //removing bullet
-            if (bulletsHeightSorted[0] === "trivia") {
+            if (bulletsHeightSorted[0] === "triva") {
                 setTriviaRemove("removeBullet");
+                setBulletName("TRIVIA");
             } else if (bulletsHeightSorted[0] === "expense") {
-                setExpenseRemove("removeBullet")
+                setExpenseRemove("removeBullet");
+                setBulletName("EXPENSE");
             } else if (bulletsHeightSorted[0] === "project") {
                 setProjectRemove("removeBullet")
+                setBulletName("PROJECT");
             } else if (bulletsHeightSorted[0] === "lock") {
                 setLockRemove("removeBullet")
+                setBulletName("LOCK'D");
             } else if (bulletsHeightSorted[0] === "squares") {
                 setSquaresRemove("removeBullet")
+                setBulletName("SQUARES");
             } else {
                 setDashboardRemove("removeBullet")
+                setBulletName("DASHBOARD");
             }
-            setBulletName(bulletsHeightSorted[0]);
             setBulletGlide("bullet-div");
             setNone("");
             goToWebsite = setTimeout(function () {
@@ -155,8 +160,6 @@ const Home = () => {
         <>
             <div className="container">
                 <Navbar></Navbar>
-                <div className="justify-content-center text-center">
-                </div>
                 {/* intro */}
                 <div className="row" id="intro-content">
                     <div className="col-sm-6 col-md-12 col-xl-6 intro-img text-center">
@@ -174,21 +177,69 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+
                 {/* What I Do */}
-                <div className="row text-dark bg-white pr-2 pl-2 mt-3 pt-5" style={{ width: "99.99%", marginLeft: "0.2px" }}>
-                    <div className="col-sm-4"><p className="text-primary">Inspiration to Web Dev</p><p>My inspiration for web development came from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After +8 hrs going through the documentation and turtorial videos, I was hooked. I was turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web dev was my next profession.</p></div>
-                    <div className="col-sm-4"><p className="text-primary">Server & Database </p><p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and C# for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p></div>
-                    <div className="col-sm-4"><p className="text-primary">Current Project</p><p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
+                <div className="row text-dark bg-white pr-2 pl-2 mt-3" style={{ width: "99.99%", marginLeft: "0.2px" }}>
+                    <div className="col-sm-4">
+                        <div className="row">
+                            <div className="col-2">
+                                <div style={{ width: "50px", height: "100px"}}>
+                                    <Flask></Flask>
+                                </div>
+                            </div>
+                            <div className="col-8">
+                                <p className="text-primary" style={{ marginTop: "60px" }}>
+                                    Inspiration
+                                </p>
+                            </div>
+                        </div>
+                        <p>My inspiration for web development came from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After +8 hrs going through the documentation and turtorial videos, I was hooked. I was turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web dev was my next profession.</p>
                     </div>
+                    <div className="col-sm-4">
+                        <div className="row">
+                            <div className="col-2">
+                                <div style={{ width: "50px", height: "100px"}}>
+                                    <Flask></Flask>
+                                </div>
+                            </div>
+                            <div className="col-8">
+                                <p className="text-primary" style={{ marginTop: "60px" }}>
+                                Server & Database
+                                </p>
+                            </div>
+                        </div>
+                        <p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and C# for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p>
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="row">
+                            <div className="col-2">
+                                <div style={{ width: "50px", height: "100px"}}>
+                                    <Flask></Flask>
+                                </div>
+                            </div>
+                            <div className="col-8">
+                                <p className="text-primary" style={{ marginTop: "60px" }}>
+                                Current Project
+                                </p>
+                            </div>
+                        </div>
+                        <p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
+                    </div>
+                    {/* <div className="col-sm-4"><p className="text-primary">Server & Database </p><p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and C# for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p></div>
+                    <div className="col-sm-4"><p className="text-primary">Current Project</p><p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
+                    </div> */}
 
                 </div>
-                <div className="distortTop" style={{ marginTop: "-1px" }}>
 
+                {/* Distorted Top */}
+                <div className="distortTop" style={{ marginTop: "-1px" }}>
                     <ReactSVG src={backgroundPic} />
                 </div>
 
+                {/* Project Revolver */}
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-12 text-center">
+                        <h1>TOP 6</h1>
                         <div className={bulletGlide} id={none}>
                             <ProjectBullet bulletName={bulletName}></ProjectBullet>
                         </div>
