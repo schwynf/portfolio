@@ -71,17 +71,6 @@ const Home = () => {
 
         return () => {
             socket.disconnect();
-            clearTimeout(selectProject);
-            clearTimeout(goToWebsite);
-            setSpin("preset-revolver");
-            setNone("none");
-            setBulletGlide("");
-            setTriviaRemove("");
-            setExpenseRemove("");
-            setProjectRemove("");
-            setLockRemove("");
-            setSquaresRemove("");
-            setDashboardRemove("");
         }
     }, []);
 
@@ -106,7 +95,7 @@ const Home = () => {
                 return bulletsHeight[a] - bulletsHeight[b];
             })
             //removing bullet
-            if (bulletsHeightSorted[0] === "triva") {
+            if (bulletsHeightSorted[0] === "trivia") {
                 setTriviaRemove("removeBullet");
                 setBulletName("TRIVIA");
             } else if (bulletsHeightSorted[0] === "expense") {
@@ -168,7 +157,7 @@ const Home = () => {
                     <div className="col-sm-6 col-md-12 col-xl-6 intro-text pb-2">
                         <h5 className="text-secondary">Full Stack Web Developer</h5>
                         <h1>Schwyn Francis</h1>
-                        <p id="pp">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am currently focused on utilizing my web development skills to help a business grow. Main focus is MERN stack (MongoDB, Express.js, React.js, Node.js). Always willing to learn and improve.</p>
+                        <p id="pp">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am currently focused on utilizing my web development skills to help a business grow. Main focus is MERN stack (MongoDB, Express.js, React.js, Node.js).</p>
                         <div className="icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
                             <div style={{ display: "inline-block" }} data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo"><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
@@ -193,7 +182,7 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
-                        <p>My inspiration for web development came from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After +8 hrs going through the documentation and turtorial videos, I was hooked. I was turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web dev was my next profession.</p>
+                        <p>My inspiration for web development evolved from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After a little self encouragement and going through the documentation and turtorial videos, I was hooked, turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web development was my next profession.</p>
                     </div>
                     <div className="col-sm-4">
                         <div className="row">
@@ -208,7 +197,7 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
-                        <p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and C# for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p>
+                        <p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p>
                     </div>
                     <div className="col-sm-4">
                         <div className="row">
@@ -223,12 +212,8 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
-                        <p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
+                        <p>I am creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to develop the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
                     </div>
-                    {/* <div className="col-sm-4"><p className="text-primary">Server & Database </p><p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js and C# for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p></div>
-                    <div className="col-sm-4"><p className="text-primary">Current Project</p><p>I am currently creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to create the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
-                    </div> */}
-
                 </div>
 
                 {/* Distorted Top */}
@@ -239,7 +224,7 @@ const Home = () => {
                 {/* Project Revolver */}
                 <div className="row">
                     <div className="col-12 text-center">
-                        <h1>TOP 6</h1>
+                        <h1 className="text-white mr-2">TOP 6</h1>
                         <div className={bulletGlide} id={none}>
                             <ProjectBullet bulletName={bulletName}></ProjectBullet>
                         </div>

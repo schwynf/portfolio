@@ -83,12 +83,12 @@
 
 @keyframes revolver-spin {
     100% {
-        transform: rotate(6000deg)
+        transform: rotate(5500deg)
     }
 }
 @keyframes revolver-spin1 {
     100% {
-        transform: rotate(7000deg)
+        transform: rotate(5700deg)
     }
 }
 @keyframes revolver-spin2 {

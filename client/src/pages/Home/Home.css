@@ -54,7 +54,38 @@
     display: none;
 }
 
-
+@media only screen and (max-width:800px) {
+    #pp {
+        padding-right: 0rem;
+    }
+    .intro-text {
+        text-align: center;
+    }
+    .intro-picture {
+        margin-top: 1rem;
+        width: 15rem;
+        height: 15rem;
+    }
+    #intro-content {
+        padding-top: 2rem;
+    }
+    .icons {
+        text-align: center;
+        padding-left: 0;
+    }
+    .ss {
+        margin-bottom: 1rem;
+    }
+    .revolver-div {
+        margin-left: 190px;
+    }
+   
+    @keyframes bullet-glide {
+        100% {
+            margin-left: 300px;
+        }
+    }
+}
 
 @media only screen and (max-width:500px) {
     #pp {
@@ -90,4 +121,6 @@
         }
     }
 }
+
+
 

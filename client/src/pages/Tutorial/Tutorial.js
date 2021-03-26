@@ -28,6 +28,7 @@ const Tutorial = (props) => {
             <>
                 <div className="container text-white">
                     <Navbar></Navbar>
+                <h1 className="title bg-warning">TUTORIAL STILL IN DEVELOPMENT</h1>
                 <h1 className="title">Angular</h1>
                 <div className="row">
                     <div className="col-sm-2">
