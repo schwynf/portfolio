@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="100%" viewBox="0 0 841 72" style="enable-background:new 0 0 841 72;" xml:space="preserve">
 <style type="text/css">
-	.bottomDistort{fill:white;}
+	.bottomDistort{fill:#ffe4c0;opacity:.9;}
 </style>
 <polygon class="bottomDistort" points="841,72 0,72 0,27.15 33,43.4 74,16.75 120.63,39.5 175,16.75 227,44.7 272.86,7 333,29.75 388.5,16.75 
 	438,28.45 519,7 600,39.5 648,14.8 742,39.5 796,17.4 841,27.15 "/>
