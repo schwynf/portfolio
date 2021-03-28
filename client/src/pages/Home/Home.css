@@ -3,7 +3,9 @@
     padding-bottom: 2rem;
 }
 
-
+.distort-bottom{
+    display: none;
+}
 
 .intro-picture {
     margin-top: 2rem;
@@ -97,6 +99,10 @@
 }
 
 @media only screen and (max-width:500px) {
+    .distort-bottom{
+        display: block;
+        margin-bottom: 20px;
+    }
     .revolver-parent{
         display: none;
     }

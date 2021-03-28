@@ -18,6 +18,7 @@ import profilePic from "../../images/profilePic.jpg";
 import backgroundPic from "../../images/distortBottom.svg";
 import ProjectVaultPic from "../../images/ProjectVault.JPG";
 import Space from "../../images/space.svg";
+import SbSquares from "../../images/SbSquares.JPG";
 //css
 import "./Home.css";
 
@@ -249,8 +250,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Distorted Top */}
-                <div className="" style={{ marginTop: "-1px" }}>
+                {/* Distorted Bottom */}
+                <div className="distort-bottom" style={{ marginTop: "-1px" }}>
                     <ReactSVG src={backgroundPic} />
                 </div>
 
@@ -267,7 +268,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div> */}
-                <h1>Portfolio</h1>
+                <h1 className="text-center text-white" style={{fontFamily:"fantasy"}}>Portfolio</h1>
                 <div className="row">
                     <div className="col-12 col-md-6">
                         <Reveal up>
@@ -276,7 +277,7 @@ const Home = () => {
                                     <h5 className="card-title">Project Vault</h5>
                                 </div>
                                 <div className="card-body">
-                                    <img src={ProjectVaultPic} className="img-fluid shadow-lg" alt="Profile Img"></img>
+                                    <img src={ProjectVaultPic} className="img-fluid shadow-lg" alt="Profile Img" style={{height:"200px", width:"300px"}} ></img>
                                     <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
                                     <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
@@ -290,10 +291,10 @@ const Home = () => {
                         <Reveal up>
                             <div className="card text-center">
                                 <div className="card-header">
-                                    <h5 className="card-title">Project Vault</h5>
+                                    <h5 className="card-title">Squares</h5>
                                 </div>
                                 <div className="card-body">
-                                    <img src={ProjectVaultPic} className="img-fluid shadow-lg" alt="Profile Img"></img>
+                                    <img src={SbSquares} className="img-fluid shadow-lg"  style={{height:"200px", width:"300px"}} alt="Profile Img"></img>
                                     <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
                                     <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
