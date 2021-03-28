@@ -3,6 +3,8 @@
     padding-bottom: 2rem;
 }
 
+
+
 .intro-picture {
     margin-top: 2rem;
     background-color: grey;
@@ -52,6 +54,13 @@
 
 #none {
     display: none;
+}
+
+.first-circle {
+    animation: growCircle .15s infinite;
+}
+.second-circle {
+    animation: growCircle2 .15s infinite;
 }
 
 @media only screen and (max-width:800px) {
@@ -122,6 +131,17 @@
         100% {
             margin-left: 300px;
         }
+    }
+}
+
+@keyframes growCircle {
+    100% {
+        r: 50px;
+    }
+}
+@keyframes growCircle2 {
+    100% {
+        r: 50px;
     }
 }
 

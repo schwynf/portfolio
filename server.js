@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Add routes
 app.get("/pdf", async function (req, res, next) {
-  res.sendFile(path.join(__dirname, "./client/src/images/Resume-Schwyn-Francis.pdf"));
+  res.sendFile(path.join(__dirname, "./client/src/images/schwynFrancis-resume.pdf"));
 });
 app.use([emailController]);
 app.use((req, res) => {

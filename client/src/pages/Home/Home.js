@@ -16,6 +16,8 @@ import Flask from "../../components/Flask/Flask";
 //images
 import profilePic from "../../images/profilePic.jpg";
 import backgroundPic from "../../images/distortBottom.svg";
+import ProjectVaultPic from "../../images/ProjectVault.JPG";
+import Space from "../../images/space.svg";
 //css
 import "./Home.css";
 
@@ -154,17 +156,20 @@ const Home = () => {
                 {/* intro */}
                 <div className="row" id="intro-content">
                     <div className="col-sm-6 col-md-12 col-xl-6 intro-img text-center">
-                    <Flash>
-          
-                    </Flash>
+                        <Flash>
+
+                        </Flash>
                         <img src={profilePic} className="img-fluid shadow-lg rounded-circle intro-picture" alt="Profile Img"></img>
+                        <div className="space" style={{ marginTop: "-7px"}}>
+                        <ReactSVG src={Space} />
+                        </div>
                     </div>
                     <div className="col-sm-6 col-md-12 col-xl-6 intro-text pb-2">
                         <h5 className="text-secondary">Full Stack Web Developer</h5>
-                        <Flash count={2}>
-          
-                        <h1>Schwyn Francis</h1>
-                    </Flash>
+                        <Flash>
+
+                            <h1>Schwyn Francis</h1>
+                        </Flash>
                         <p id="pp">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am currently focused on utilizing my web development skills to help a business grow. Main focus is MERN stack (MongoDB, Express.js, React.js, Node.js).</p>
                         <div className="icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
@@ -177,69 +182,69 @@ const Home = () => {
                 <div className="distortTop" style={{ marginTop: "-1px" }}>
                     <ReactSVG src={backgroundPic} />
                 </div>
-                
+
 
                 {/* What I Do */}
-                <div className="row text-white pr-2 pl-2 mt-3" style={{backgroundColor: "black",width: "99.99%", marginLeft: "0.2px" }}>
+                <div className="row text-white pr-2 pl-2 mt-3" style={{ backgroundColor: "black", width: "99.99%", marginLeft: "0.2px" }}>
                     <div className="col-sm-4">
                         <div className="row">
                             <div className="col-2">
-                                <div style={{ width: "50px", height: "100px"}}>
+                                <div style={{ width: "50px", height: "100px" }}>
                                     <Flask></Flask>
                                 </div>
                             </div>
                             <div className="col-8">
-                            <Reveal left>
-                                <p className="text-primary" style={{ marginTop: "60px" }}>
-                                    Inspiration
+                                <Reveal left>
+                                    <p className="text-primary" style={{ marginTop: "60px" }}>
+                                        Inspiration
                                 </p>
-                            </Reveal>
-                            
+                                </Reveal>
+
                             </div>
                         </div>
                         <Reveal left delay={500}>
-                        <p>My inspiration for web development evolved from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After a little self encouragement and going through the documentation and turtorial videos, I was hooked, turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web development was my next profession.</p>
+                            <p>My inspiration for web development evolved from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After a little self encouragement and going through the documentation and turtorial videos, I was hooked, turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web development was my next profession.</p>
                         </Reveal>
                     </div>
                     <div className="col-sm-4">
                         <div className="row">
                             <div className="col-2">
-                                <div style={{ width: "50px", height: "100px"}}>
+                                <div style={{ width: "50px", height: "100px" }}>
                                     <Flask></Flask>
                                 </div>
                             </div>
                             <div className="col-8">
-                            <Reveal left>
-                                
-                                <p className="text-primary" style={{ marginTop: "60px" }}>
-                                Server & Database
+                                <Reveal left>
+
+                                    <p className="text-primary" style={{ marginTop: "60px" }}>
+                                        Server & Database
                                 </p>
-                            </Reveal>
+                                </Reveal>
                             </div>
                         </div>
                         <Reveal left duration={1500}>
-                                
-                        <p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p>
+
+                            <p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p>
                         </Reveal>
                     </div>
                     <div className="col-sm-4">
                         <div className="row">
                             <div className="col-2">
-                                <div style={{ width: "50px", height: "100px"}}>
+                                <div style={{ width: "50px", height: "100px" }}>
                                     <Flask></Flask>
                                 </div>
                             </div>
                             <div className="col-8">
-                            <Reveal left>
-                                
-                                <p className="text-primary" style={{ marginTop: "60px" }}>
-                                Current Project
+                                <Reveal left>
+
+                                    <p className="text-primary" style={{ marginTop: "60px" }}>
+                                        Current Project
                                 </p>
-                            </Reveal>
+                                </Reveal>
                             </div>
                         </div>
-                        <Reveal left>       
-                        <p>I am creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to develop the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
+                        <Reveal left>
+                            <p>I am creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to develop the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
                         </Reveal>
                     </div>
                 </div>
@@ -250,7 +255,7 @@ const Home = () => {
                 </div>
 
                 {/* Project Revolver */}
-                <div className="row revolver-parent">
+                {/* <div className="row revolver-parent">
                     <div className="col-12 text-center">
                         <h1 className="text-white mr-4">TOP 6</h1>
                         <div className={bulletGlide} id={none}>
@@ -261,7 +266,45 @@ const Home = () => {
                                 projectRemove={projectRemove} lockRemove={lockRemove} squaresRemove={squaresRemove} dashboardRemove={dashboardRemove}></ProjectRevolver>
                         </div>
                     </div>
+                </div> */}
+    <h1>Portfolio</h1>
+                <div className="row">
+                    <div className="col-12 col-md-6">
+                        <Reveal up>
+                            <div className="card text-center">
+                                <div className="card-header">
+                                    <h5 className="card-title">Project Vault</h5>
+                                </div>
+                                <div className="card-body">
+                                    <img src={ProjectVaultPic} className="img-fluid shadow-lg" alt="Profile Img"></img>
+                                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div className="card-footer text-muted">
+                                    2 days ago
+                            </div>
+                            </div>
+                        </Reveal>
+                    </div>
+                    <div className="col-12 col-md-6">
+                    <Reveal up>
+                            <div className="card text-center">
+                                <div className="card-header">
+                                    <h5 className="card-title">Project Vault</h5>
+                                </div>
+                                <div className="card-body">
+                                    <img src={ProjectVaultPic} className="img-fluid shadow-lg" alt="Profile Img"></img>
+                                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div className="card-footer text-muted">
+                                    2 days ago
+                            </div>
+                            </div>
+                        </Reveal>
+                    </div>
                 </div>
+
 
                 {/* Fun Facts */}
                 <div className="row text-white text-center mt-3">
