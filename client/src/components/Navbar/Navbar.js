@@ -24,7 +24,18 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <Link className="nav-item nav-link active" to="/">About</Link>
-                        <Link className="nav-item nav-link active" to="/portfolio">Portfolio</Link>
+                        <li className="nav-item dropdown active text-white">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Portfolio
+                            </a>
+                            <div className="dropdown-menu" style={{backgroundColor:"black"}} aria-labelledby="navbarDropdown">
+                                <a className="dropdown-item deactive text-white" id="react" href="https://project-management-app-1.herokuapp.com/">Project Vault</a>
+                                <a className="dropdown-item deactive text-white" id="react" href="https://www.thesquaresgame.com">Squares</a>
+                                <a className="dropdown-item deactive text-white" id="react" href="https://universal-storage.herokuapp.com/">Lock'D</a>
+                                <a className="dropdown-item deactive text-white" id="react" href="https://budget-data.herokuapp.com/">Budget Caculator</a>
+                                <a className="dropdown-item deactive text-white" id="react" href="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR">CLI Employee Dashboard</a>
+                            </div>
+                        </li>
                         <li className="nav-item dropdown active text-white">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Tutorials

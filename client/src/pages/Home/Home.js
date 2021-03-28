@@ -19,6 +19,8 @@ import backgroundPic from "../../images/distortBottom.svg";
 import ProjectVaultPic from "../../images/ProjectVault.JPG";
 import Space from "../../images/space.svg";
 import SbSquares from "../../images/SbSquares.JPG";
+import lockD from "../../images/LOCKD.jpg";
+import TriviaPro from "../../images/TriviaPro.JPG";
 //css
 import "./Home.css";
 
@@ -32,6 +34,7 @@ const Home = () => {
         coding: 0,
         acitveUsers: 0
     });
+    
     const [spin, setSpin] = useState("preset-revolver");
     const [bulletGlide, setBulletGlide] = useState("");
     const [bulletName, setBulletName] = useState("");
@@ -83,72 +86,6 @@ const Home = () => {
         window.location.href = "/pdf";
     }
 
-    const spinRevolver = () => {
-        let spinChoices = ["revolver", "revolver1", "revolver2", "revolver3", "revolver4", "revolver5"];
-        let choice = Math.floor(spinChoices.length * Math.random());
-        setSpin(spinChoices[choice]);
-        selectProject = setTimeout(() => {
-            let bulletsHeight = {
-                trivia: document.getElementsByClassName("trivia-circle")[0].getBoundingClientRect().top,
-                expense: document.getElementsByClassName("expense-circle")[0].getBoundingClientRect().top,
-                project: document.getElementsByClassName("project-circle")[0].getBoundingClientRect().top,
-                lock: document.getElementsByClassName("lock-circle")[0].getBoundingClientRect().top,
-                squares: document.getElementsByClassName("squares-circle")[0].getBoundingClientRect().top,
-                dashboard: document.getElementsByClassName("dashboard-circle")[0].getBoundingClientRect().top
-            }
-            let bulletsHeightSorted = Object.keys(bulletsHeight).sort(function (a, b) {
-                return bulletsHeight[a] - bulletsHeight[b];
-            })
-            //removing bullet
-            if (bulletsHeightSorted[0] === "trivia") {
-                setTriviaRemove("removeBullet");
-                setBulletName("TRIVIA");
-            } else if (bulletsHeightSorted[0] === "expense") {
-                setExpenseRemove("removeBullet");
-                setBulletName("EXPENSE");
-            } else if (bulletsHeightSorted[0] === "project") {
-                setProjectRemove("removeBullet")
-                setBulletName("PROJECT");
-            } else if (bulletsHeightSorted[0] === "lock") {
-                setLockRemove("removeBullet")
-                setBulletName("LOCK'D");
-            } else if (bulletsHeightSorted[0] === "squares") {
-                setSquaresRemove("removeBullet")
-                setBulletName("SQUARES");
-            } else {
-                setDashboardRemove("removeBullet")
-                setBulletName("DASHBOARD");
-            }
-            setBulletGlide("bullet-div");
-            setNone("");
-            goToWebsite = setTimeout(function () {
-                clearTimeout(selectProject);
-                clearTimeout(goToWebsite);
-                setSpin("preset-revolver");
-                setNone("none");
-                setBulletGlide("");
-                setTriviaRemove("");
-                setExpenseRemove("");
-                setProjectRemove("");
-                setLockRemove("");
-                setSquaresRemove("");
-                setDashboardRemove("");
-                if (bulletsHeightSorted[0] === "trivia") {
-                    window.location.href = "https://schwynf.github.io/Trivia-Pro/";
-                } else if (bulletsHeightSorted[0] === "expense") {
-                    window.location.href = "https://budget-data.herokuapp.com/";
-                } else if (bulletsHeightSorted[0] === "project") {
-                    window.location.href = "https://project-management-app-1.herokuapp.com/";
-                } else if (bulletsHeightSorted[0] === "lock") {
-                    window.location.href = "https://universal-storage.herokuapp.com/";
-                } else if (bulletsHeightSorted[0] === "squares") {
-                    window.location.href = "https://www.thesquaresgame.com/";
-                } else {
-                    window.location.href = "https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR";
-                }
-            }, 1500)
-        }, 5000)
-    }
 
     return (
         <>
@@ -158,8 +95,8 @@ const Home = () => {
                 <div className="row" id="intro-content">
                     <div className="col-sm-6 col-md-12 col-xl-6 intro-img text-center">
                         <Reveal up>
-                            <img src={profilePic} className="img-fluid shadow-lg rounded-circle intro-picture" alt="Profile Img"></img>
-                            <div className="space" style={{ marginTop: "-7px" }}>
+                            <img src={profilePic} className="img-fluid shadow-lg rounded-circle intro-picture" style={{height:"150px", width:"200px"}}alt="Profile Img"></img>
+                            <div className="space" style={{ marginTop: "-1px" }}>
                                 <ReactSVG src={Space} />
                             </div>
                         </Reveal>
@@ -180,9 +117,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="distortTop" style={{ marginTop: "-1px" }}>
+                <div style={{height:"2px", backgroundColor:"white"}} ></div>
+                {/* <div className="distortTop" style={{ marginTop: "-1px" }}>
                     <ReactSVG src={backgroundPic} />
-                </div>
+                </div> */}
 
 
                 {/* What I Do */}
@@ -249,58 +187,60 @@ const Home = () => {
                         </Reveal>
                     </div>
                 </div>
-
-                {/* Distorted Bottom */}
-                <div className="distort-bottom" style={{ marginTop: "-1px" }}>
-                    <ReactSVG src={backgroundPic} />
-                </div>
-
-                {/* Project Revolver */}
-                {/* <div className="row revolver-parent">
-                    <div className="col-12 text-center">
-                        <h1 className="text-white mr-4">TOP 6</h1>
-                        <div className={bulletGlide} id={none}>
-                            <ProjectBullet bulletName={bulletName}></ProjectBullet>
-                        </div>
-                        <div id={spin} className="revolver-div" style={{ width: "300px", height: "300px", marginTop: "50px", marginBottom: "50px" }}>
-                            <ProjectRevolver spinRevolver={spinRevolver} triviaRemove={triviaRemove} expenseRemove={expenseRemove}
-                                projectRemove={projectRemove} lockRemove={lockRemove} squaresRemove={squaresRemove} dashboardRemove={dashboardRemove}></ProjectRevolver>
-                        </div>
-                    </div>
-                </div> */}
+                <div style={{height:"2px", backgroundColor:"white"}} ></div>
                 <h1 className="text-center text-white" style={{fontFamily:"fantasy"}}>Portfolio</h1>
-                <div className="row">
+                <div className="row text-white">
                     <div className="col-12 col-md-6">
                         <Reveal up>
                             <div className="card text-center">
-                                <div className="card-header">
-                                    <h5 className="card-title">Project Vault</h5>
-                                </div>
-                                <div className="card-body">
+                                <div className="card-body bg-dark">
+                                <h5 className="card-title">Project Vault</h5>
+                                    <p>Project management software. With Project Vault, users can manage tasks and projects in the office or on the go.</p>
                                     <img src={ProjectVaultPic} className="img-fluid shadow-lg" alt="Profile Img" style={{height:"200px", width:"300px"}} ></img>
-                                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <p className="card-text">TECH: React, Auth0, Passport.js, MongoDB...</p>
+                                    <a href="https://project-management-app-1.herokuapp.com/" class="btn btn-primary">Click Me!</a>
                                 </div>
-                                <div className="card-footer text-muted">
-                                    2 days ago
-                            </div>
                             </div>
                         </Reveal>
                     </div>
                     <div className="col-12 col-md-6">
                         <Reveal up>
                             <div className="card text-center">
-                                <div className="card-header">
+                                <div className="card-body bg-dark">
                                     <h5 className="card-title">Squares</h5>
-                                </div>
-                                <div className="card-body">
+                                    <p>Stop using paper to setup squares with friends! This application comes with google login and live chat to allow quick interaction. </p>
                                     <img src={SbSquares} className="img-fluid shadow-lg"  style={{height:"200px", width:"300px"}} alt="Profile Img"></img>
-                                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <p className="card-text">TECH: React, Redux, OAuth, Passport.js, Socket.io, MongoDB...</p>
+                                    <a href="https://www.thesquaresgame.com" class="btn btn-primary">Click Me!</a>
                                 </div>
-                                <div className="card-footer text-muted">
-                                    2 days ago
                             </div>
+                        </Reveal>
+                    </div>
+                </div>
+                <div className="row text-white">
+                    <div className="col-12 col-md-6">
+                        <Reveal up>
+                            <div className="card text-center">
+                                <div className="card-body bg-dark">
+                                <h5 className="card-title">Lock'D</h5>
+                                    <p>Password management software. With Lock'D, users can manage login information safely and verify if password or email has been compromised.</p>
+                                    <img src={lockD} className="img-fluid shadow-lg" alt="Profile Img" style={{height:"200px", width:"300px"}} ></img>
+                                    <p className="card-text">TECH: Handlebars, CryptoJS, BcryptJS, Passport.js, MySQL, Bootstrap CSS...</p>
+                                    <a href="https://universal-storage.herokuapp.com/" class="btn btn-primary">Click Me!</a>
+                                </div>
+                            </div>
+                        </Reveal>
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <Reveal up>
+                            <div className="card text-center h-100">
+                                <div className="card-body bg-dark">
+                                    <h5 className="card-title">Trivia-Pro</h5>
+                                    <p>Easy application to create, print, and execute quizzes! "Open Trivia Database" API used for quick question generator. Great for learning and fun! </p>
+                                    <img src={TriviaPro} className="img-fluid shadow-lg"  style={{height:"200px", width:"300px"}} alt="Profile Img"></img>
+                                    <p className="card-text">TECH: JQuery, Choreographer.js, Local Storage, Materialize CSS...</p>
+                                    <a href="https://schwynf.github.io/Trivia-Pro/" class="btn btn-primary">Click Me!</a>
+                                </div>
                             </div>
                         </Reveal>
                     </div>

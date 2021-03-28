@@ -10,7 +10,7 @@
 .intro-picture {
     margin-top: 2rem;
     background-color: grey;
-    border: .5rem solid #ffe4c0;
+    border: .5rem solid #F5F3FA;
     width: 21rem;
     height: 21rem;
 }
@@ -63,6 +63,10 @@
 }
 .second-circle {
     animation: growCircle2 .15s infinite;
+}
+
+.stars-drop {
+    animation: drop 5s infinite;
 }
 
 @media only screen and (max-width:800px) {
@@ -150,6 +154,17 @@
         r: 50px;
     }
 }
+
+@keyframes drop {
+    .5%{
+      transform: translate(0px, 0px);
+    }
+    100%{
+      transform: translate(0px, 50px);
+      opacity: .1;
+    }
+  
+  }
 
 
 
