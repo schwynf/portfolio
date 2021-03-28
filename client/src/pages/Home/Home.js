@@ -156,13 +156,13 @@ const Home = () => {
                 {/* intro */}
                 <div className="row" id="intro-content">
                     <div className="col-sm-6 col-md-12 col-xl-6 intro-img text-center">
-                        <Flash>
-
-                        </Flash>
-                        <img src={profilePic} className="img-fluid shadow-lg rounded-circle intro-picture" alt="Profile Img"></img>
-                        <div className="space" style={{ marginTop: "-7px"}}>
-                        <ReactSVG src={Space} />
-                        </div>
+                        <Reveal up>
+                            <img src={profilePic} className="img-fluid shadow-lg rounded-circle intro-picture" alt="Profile Img"></img>
+                            <div className="space" style={{ marginTop: "-7px" }}>
+                                <ReactSVG src={Space} />
+                            </div>
+                        </Reveal>
+                        
                     </div>
                     <div className="col-sm-6 col-md-12 col-xl-6 intro-text pb-2">
                         <h5 className="text-secondary">Full Stack Web Developer</h5>
@@ -267,7 +267,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div> */}
-    <h1>Portfolio</h1>
+                <h1>Portfolio</h1>
                 <div className="row">
                     <div className="col-12 col-md-6">
                         <Reveal up>
@@ -287,7 +287,7 @@ const Home = () => {
                         </Reveal>
                     </div>
                     <div className="col-12 col-md-6">
-                    <Reveal up>
+                        <Reveal up>
                             <div className="card text-center">
                                 <div className="card-header">
                                     <h5 className="card-title">Project Vault</h5>
