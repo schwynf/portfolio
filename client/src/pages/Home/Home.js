@@ -95,8 +95,8 @@ const Home = () => {
                 <div className="row" id="intro-content">
                     <div className="col-sm-6 col-md-12 col-xl-6 intro-img text-center">
                         <Reveal up>
-                            <img src={profilePic} className="img-fluid shadow-lg rounded-circle intro-picture" style={{height:"150px", width:"200px"}}alt="Profile Img"></img>
-                            <div className="space" style={{ marginTop: "-1px" }}>
+                            <img src={profilePic} className="img-fluid shadow-lg rounded-circle intro-picture" style={{height:"160px", width:"200px"}}alt="Profile Img"></img>
+                            <div className="space" style={{ marginTop: "-38px" }}>
                                 <ReactSVG src={Space} />
                             </div>
                         </Reveal>
