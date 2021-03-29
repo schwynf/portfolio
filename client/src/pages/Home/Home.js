@@ -11,9 +11,6 @@ import LazyLoad from 'react-lazyload';
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from '../../components/Footer/Footer';
 import EmailModal from "../../components/EmailModal/EmailModal";
-import ProjectRevolver from "../../components/ProjectRevolver/ProjectRevolver";
-import ProjectBullet from "../../components/ProjectBullet/ProjectBullet";
-import Flask from "../../components/Flask/Flask";
 //images
 import profilePic from "../../images/profilePic.jpg";
 import backgroundPic from "../../images/distortBottom.svg";
@@ -37,19 +34,6 @@ const Home = () => {
         coding: 0,
         acitveUsers: 0
     });
-
-    const [spin, setSpin] = useState("preset-revolver");
-    const [bulletGlide, setBulletGlide] = useState("");
-    const [bulletName, setBulletName] = useState("");
-    const [none, setNone] = useState("none");
-    const [triviaRemove, setTriviaRemove] = useState("");
-    const [expenseRemove, setExpenseRemove] = useState("");
-    const [projectRemove, setProjectRemove] = useState("");
-    const [lockRemove, setLockRemove] = useState("");
-    const [squaresRemove, setSquaresRemove] = useState("");
-    const [dashboardRemove, setDashboardRemove] = useState("");
-    let selectProject;
-    let goToWebsite;
 
     useEffect(() => {
         // console.log(window.location.protocol)
@@ -123,82 +107,14 @@ const Home = () => {
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
                         </div>
                     </div>
-                    {/* <div className="col-sm-6 col-md-12 col-xl-2 bg-white">
-                        <p>d</p>
-                    </div> */}
                 </div>
                 <div style={{ height: "2px", backgroundColor: "white" }} ></div>
                 {/* <div className="distortTop" style={{ marginTop: "-1px" }}>
                     <ReactSVG src={backgroundPic} />
                 </div> */}
 
-
-                {/* What I Do */}
-                {/* <div className="row text-white pr-2 pl-2 mt-3" style={{ backgroundColor: "black", width: "99.99%", marginLeft: "0.2px" }}>
-                    <div className="col-sm-4">
-                        <div className="row">
-                            <div className="col-2">
-                                <div style={{ width: "50px", height: "100px" }}>
-                                    <Flask></Flask>
-                                </div>
-                            </div>
-                            <div className="col-8">
-                                <Reveal left>
-                                    <p className="text-primary" style={{ marginTop: "60px" }}>
-                                        Inspiration
-                                </p>
-                                </Reveal>
-
-                            </div>
-                        </div>
-                        <Reveal left delay={500}>
-                            <p>My inspiration for web development evolved from working with an Arduino kit I bought for fun. At first the idea of me learning how to code using this toy like apparatus seemed inevitable. After a little self encouragement and going through the documentation and turtorial videos, I was hooked, turning lights on and off thinking i'm Humphry Davy. My love for developing software started to take off and I knew web development was my next profession.</p>
-                        </Reveal>
-                    </div>
-                    <div className="col-sm-4">
-                        <div className="row">
-                            <div className="col-2">
-                                <div style={{ width: "50px", height: "100px" }}>
-                                    <Flask></Flask>
-                                </div>
-                            </div>
-                            <div className="col-8">
-                                <Reveal left>
-
-                                    <p className="text-primary" style={{ marginTop: "60px" }}>
-                                        Server & Database
-                                </p>
-                                </Reveal>
-                            </div>
-                        </div>
-                        <Reveal left duration={1500}>
-
-                            <p>Backend programming is my favorite part in Full Stack Web Development. I currently work with Node.js for sever-side development. I find it powerful and important to provide and secure information for a web application. I use Passport.js for authentication, and MongoDB and MySQL for database storage. </p>
-                        </Reveal>
-                    </div>
-                    <div className="col-sm-4">
-                        <div className="row">
-                            <div className="col-2">
-                                <div style={{ width: "50px", height: "100px" }}>
-                                    <Flask></Flask>
-                                </div>
-                            </div>
-                            <div className="col-8">
-                                <Reveal left>
-
-                                    <p className="text-primary" style={{ marginTop: "60px" }}>
-                                        Current Project
-                                </p>
-                                </Reveal>
-                            </div>
-                        </div>
-                        <Reveal left>
-                            <p>I am creating a wedding website for my fiancee and I. If you look below in fun facts, the days are winding down fast so I need to hurry!  I am using the MERN stack to develop the website.  A npm-package I found to be useful is <a href="https://www.npmjs.com/package/react-confetti"><code className="bg-secondary text-white">react-confetti</code></a>. It allows you to create confetti with a few lines of a code. Stay in touch the website should be in my portfolio soon.</p>
-                        </Reveal>
-                    </div>
-                </div> */}
                 <div style={{ height: "2px", backgroundColor: "white" }} ></div>
-                <h1 className="text-center text-white mt-4 mb-3" style={{ fontFamily: "fantasy" }}>Portfolio</h1>
+                <h1 className="text-center text-white mt-4 mb-3" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
                 <div className="row text-white">
                     <div className="col-12 col-md-4">
                         <Reveal up>
@@ -272,11 +188,9 @@ const Home = () => {
                                 <div className="card-body bg-dark">
                                     <h5 className="card-title">Budget Calculator</h5>
                                     <p>Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem.</p>
-                                    <LazyLoad height={200} offset={100} placeholder={<Loading/>}> 
                                     <img src={BudgetCalculator} className="img-fluid shadow-lg mt-4" style={{ height: "200px", width: "300px" }} alt="Profile Img"></img>
-                                    </LazyLoad>
                                     <p className="card-text">TECH: JQuery, Chart.js, MongoDB, Bootstrap CSS...</p>
-                                    <a href="https://schwynf.github.io/Trivia-Pro/" class="btn btn-primary">Click Me!</a>
+                                    <a href="https://budget-data.herokuapp.com/" class="btn btn-primary">Click Me!</a>
                                 </div>
                                 <div className="distortTop bg-dark" style={{ marginTop: "-1px" }}>
                                     <ReactSVG src={backgroundPic} />
@@ -290,9 +204,11 @@ const Home = () => {
                                 <div className="card-body bg-dark">
                                     <h5 className="card-title">Employee Dashboard</h5>
                                     <p>This is a command line interface application that generates an employee dashboard depending on user input.</p>
+                                    <LazyLoad height={200} offset={100} placeholder={<Loading/>}> 
                                     <img src={videoPic} className="img-fluid shadow-lg mt-4" style={{ height: "200px", width: "300px" }} alt="Profile Img"></img>
+                                    </LazyLoad>
                                     <p className="card-text">TECH: Node.js, Jest, RegExp, Bootstrap CSS...</p>
-                                    <a href="https://schwynf.github.io/Trivia-Pro/" class="btn btn-primary">Click Me!</a>
+                                    <a href="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR" class="btn btn-primary">Click Me!</a>
                                 </div>
                                 <div className="distortTop bg-dark" style={{ marginTop: "-1px" }}>
                                     <ReactSVG src={backgroundPic} />
@@ -301,7 +217,6 @@ const Home = () => {
                         </Reveal>
                     </div>
                 </div>
-
 
                 {/* Fun Facts */}
                 <div className="row text-white text-center mt-3">
