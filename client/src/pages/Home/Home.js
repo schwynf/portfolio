@@ -23,6 +23,8 @@ import BudgetCalculator from "../../images/BudgetCalculator.JPG";
 import videoPic from "../../images/video.gif";
 //css
 import "./Home.css";
+// var header = document.getElementById("portfolio-div");
+// var sticky = header.offsetTop;
 
 
 
@@ -34,7 +36,7 @@ const Home = () => {
         coding: 0,
         acitveUsers: 0
     });
-
+    
     useEffect(() => {
         // console.log(window.location.protocol)
         //today
@@ -63,7 +65,7 @@ const Home = () => {
                 acitveUsers: activeUsersData
             });
         });
-
+        
         return () => {
             socket.disconnect();
         }
@@ -108,18 +110,14 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: "2px", backgroundColor: "white" }} ></div>
-                {/* <div className="distortTop" style={{ marginTop: "-1px" }}>
-                    <ReactSVG src={backgroundPic} />
-                </div> */}
-
-                <div style={{ height: "2px", backgroundColor: "white" }} ></div>
-                <h1 className="text-center text-white mt-4 mb-3" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
+                {/* <div style={{ height: "2px", backgroundColor: "white" }} ></div> */}
+                <div style={{ height: "4px", backgroundColor: "white" }} ></div>
+                <h1 className="text-center text-white mt-4 mb-3" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
                 <div className="row text-white">
                     <div className="col-12 col-md-4">
                         <Reveal up>
                             <div className="card text-center h-100">
-                                <div className="card-body bg-dark">
+                                <div className="card-body bg-dark grow">
                                     <h5 className="card-title">Project Vault</h5>
                                     <p>Project management software. With Project Vault, users can manage tasks and projects in the office or on the go.</p>
                                     <img src={ProjectVaultPic} className="img-fluid shadow-lg mt-4" alt="Profile Img" style={{ height: "200px", width: "300px" }} ></img>
@@ -135,7 +133,7 @@ const Home = () => {
                     <div className="col-12 col-md-4">
                         <Reveal up>
                             <div className="card text-center">
-                                <div className="card-body bg-dark">
+                                <div className="card-body bg-dark grow">
                                     <h5 className="card-title">Squares</h5>
                                     <p>Stop using paper to setup squares with friends! This application comes with google login and live chat to allow quick interaction. </p>
                                     <img src={SbSquares} className="img-fluid shadow-lg" style={{ height: "200px", width: "300px" }} alt="Profile Img"></img>
@@ -151,7 +149,7 @@ const Home = () => {
                     <div className="col-12 col-md-4">
                         <Reveal up>
                             <div className="card text-center">
-                                <div className="card-body bg-dark">
+                                <div className="card-body bg-dark grow">
                                     <h5 className="card-title">Lock'D</h5>
                                     <p>Password management software. With Lock'D, users can manage login information safely and verify if password or email has been compromised.</p>
                                     <img src={lockD} className="img-fluid shadow-lg" alt="Profile Img" style={{ height: "200px", width: "300px" }} ></img>
@@ -169,7 +167,7 @@ const Home = () => {
                     <div className="col-12 col-md-4">
                         <Reveal up>
                             <div className="card text-center h-100">
-                                <div className="card-body bg-dark">
+                                <div className="card-body bg-dark grow">
                                     <h5 className="card-title">Trivia-Pro</h5>
                                     <p>Easy application to create, print, and execute quizzes! "Open Trivia Database" API used for quick question generator. Great for learning and fun! </p>
                                     <img src={TriviaPro} className="img-fluid shadow-lg" style={{ height: "200px", width: "300px" }} alt="Profile Img"></img>
@@ -185,7 +183,7 @@ const Home = () => {
                     <div className="col-12 col-md-4">
                         <Reveal up>
                             <div className="card text-center h-100">
-                                <div className="card-body bg-dark">
+                                <div className="card-body bg-dark grow">
                                     <h5 className="card-title">Budget Calculator</h5>
                                     <p>Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem.</p>
                                     <img src={BudgetCalculator} className="img-fluid shadow-lg mt-4" style={{ height: "200px", width: "300px" }} alt="Profile Img"></img>
@@ -201,7 +199,7 @@ const Home = () => {
                     <div className="col-12 col-md-4">
                         <Reveal up>
                             <div className="card text-center h-100">
-                                <div className="card-body bg-dark">
+                                <div className="card-body bg-dark grow">
                                     <h5 className="card-title">Employee Dashboard</h5>
                                     <p>This is a command line interface application that generates an employee dashboard depending on user input.</p>
                                     <LazyLoad height={200} offset={100} placeholder={<Loading/>}> 

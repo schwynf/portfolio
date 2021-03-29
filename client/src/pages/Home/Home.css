@@ -3,7 +3,7 @@
     padding-bottom: 2rem;
 }
 
-.distort-bottom{
+.distort-bottom {
     display: none;
 }
 
@@ -42,9 +42,21 @@
 /* .distortTop {
     transform: rotate(180deg)
 } */
+.port-div-show {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 
+.grow {
+    transition: all .2s ease-in-out;
+}
 
-
+.grow:hover {
+    transform: scale(1.1);
+    z-index: -1;
+}
 
 #preset-revolver {
     animation-fill-mode: forwards;
@@ -61,6 +73,7 @@
 .first-circle {
     animation: growCircle .15s infinite;
 }
+
 .second-circle {
     animation: growCircle2 .15s infinite;
 }
@@ -94,7 +107,6 @@
     .revolver-div {
         margin-left: 190px;
     }
-   
     @keyframes bullet-glide {
         100% {
             margin-left: 300px;
@@ -103,11 +115,11 @@
 }
 
 @media only screen and (max-width:500px) {
-    .distort-bottom{
+    .distort-bottom {
         display: block;
         margin-bottom: 20px;
     }
-    .revolver-parent{
+    .revolver-parent {
         display: none;
     }
     #pp {
@@ -149,6 +161,7 @@
         r: 50px;
     }
 }
+
 @keyframes growCircle2 {
     100% {
         r: 50px;
@@ -156,15 +169,11 @@
 }
 
 @keyframes drop {
-    .5%{
-      transform: translate(0px, 0px);
+    .5% {
+        transform: translate(0px, 0px);
     }
-    100%{
-      transform: translate(0px, 100px);
-      opacity: .1;
+    100% {
+        transform: translate(0px, 100px);
+        opacity: .1;
     }
-  
-  }
-
-
-
+}
