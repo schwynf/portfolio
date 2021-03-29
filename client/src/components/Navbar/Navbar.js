@@ -42,7 +42,7 @@ const Navbar = () => {
                             </a>
                             <div className="dropdown-menu" style={{backgroundColor:"black"}} aria-labelledby="navbarDropdown">
                                 <Link className="dropdown-item text-white" id="angular" to="/tutorial/angular">MEAN Stack</Link>
-                                <a className="dropdown-item deactive text-white" id="react" href="#">MERN Stack</a>
+                                {/* <a className="dropdown-item deactive text-white" id="react" href="#">MERN Stack</a> */}
                             </div>
                         </li>
                     </div>
