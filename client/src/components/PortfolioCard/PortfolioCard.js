@@ -33,7 +33,6 @@ const PortfolioCard = (props) => {
                     <ReactSVG src={backgroundPic} />
                 </div>
             </div>
-
         </>
     )
 }

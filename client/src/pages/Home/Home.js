@@ -17,7 +17,7 @@ import Counter from "../../components/Counter/Counter";
 import profilePic from "../../images/profilePic.jpg";
 import backgroundPic from "../../images/distortBottom.svg";
 import ProjectVaultPic from "../../images/ProjectVault.JPG";
-import Space from "../../images/space.svg";
+import Space from "../../images/space2.svg";
 import SbSquares from "../../images/SbSquares.JPG";
 import lockD from "../../images/LOCKD.jpg";
 import TriviaPro from "../../images/TriviaPro.JPG";

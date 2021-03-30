@@ -52,16 +52,16 @@
 <path class="st13" d="M329,143.6V166v34.6c0,0-19.5,12.8-27.4,12.8c-7.9,0-27.4-12.8-27.4-12.8v-28.5v-33.4"/>
 <line class="st15" x1="183.6" y1="143" x2="219.5" y2="143"/>
 <line class="st15" x1="328.7" y1="143.6" x2="364.6" y2="143.6"/>
-<circle class="st2 first-circle" cx="225.9" cy="284.7" r="15"/>
-<circle class="st8 second-circle" cx="297.1" cy="284.7" r="15"/>
-<circle class="st9 first-circle" cx="284.9" cy="284.7" r="15"/>
-<circle class="st7 second-circle" cx="272.7" cy="284.7" r="15"/>
-<circle class="st6 first-circle" cx="261.8" cy="284.7" r="15"/>
-<circle class="st4 second-circle" cx="250.2" cy="284.7" r="15"/>
-<circle class="st5 first-circle" cx="238" cy="284.7" r="15"/>
-<circle class="st11 second-circle" cx="321.4" cy="284.7" r="15"/>
-<circle class="st10 first-circle" cx="309.2" cy="284.7" r="15"/>
-<line class="st16" x1="255.4" y1="126.8" x2="297.4" y2="15"/>
+<circle class="st2 first-circle" cx="225.9" cy="284.7" r="30"/>
+<circle class="st8 second-circle" cx="297.1" cy="284.7" r="6.4"/>
+<circle class="st9 first-circle" cx="284.9" cy="284.7" r="6.4"/>
+<circle class="st7 second-circle" cx="272.7" cy="284.7" r="40"/>
+<circle class="st6 first-circle" cx="261.8" cy="284.7" r="6.4"/>
+<circle class="st4 second-circle" cx="250.2" cy="284.7" r="6.4"/>
+<circle class="st5 first-circle" cx="238" cy="284.7" r="30"/>
+<circle class="st11 second-circle" cx="321.4" cy="284.7" r="6.4"/>
+<circle class="st10 first-circle" cx="309.2" cy="284.7" r="6.4"/>
+<line class="st16" x1="255.4" y1="126.8" x2="297.4" y2="126.8"/>
 <polygon class="st17 stars-drop" points="195.5,245.8 191.2,241.7 185.3,242.8 188,237.4 185,232.2 191,233 195,228.6 196.1,234.5 201.5,237 
 	196.2,239.9 "/>
 <polygon class="st17 stars-drop" points="357.4,228.8 353.1,224.6 347.2,225.8 349.8,220.4 346.9,215.2 352.8,216 356.9,211.6 357.9,217.5 

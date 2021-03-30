@@ -14,7 +14,7 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-dark nav-bar" id="top">
                 <Link to="/">
-                    <div id="logo" style={{ width: "75px", height: "75px" }}>
+                    <div id="logo" style={{ width: "50px", height: "50px" }}>
                         <ReactSVG src={logo} />
                     </div>
                 </Link>

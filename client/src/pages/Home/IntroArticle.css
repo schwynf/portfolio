@@ -7,17 +7,21 @@
     margin-top: 2rem;
     background-color: grey;
     border: .5rem solid #F5F3FA;
-    width: 180px;
-    height: 180px;
+    width: 90px;
+    height: 90px;
+    animation: shrink-image 3s forwards;
+    
 }
 
 #space-svg-parent {
-    margin-top: -38px;
+    margin-top: -2px;
+    margin-left: 12px;
 }
 
 .intro-section-summary {
     color: white;
     text-align: left;
+    padding-top: 3rem;
 }
 
 #intro-section-summary-paragraph {
@@ -29,16 +33,14 @@
     padding-left: 6rem;
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:1200px) {}
 
-}
-@media only screen and (max-width:990px) {
+@media only screen and (max-width:990px) {}
 
-}
 @media only screen and (max-width:775px) {
-    #intro-article {
+    /* #intro-article {
         padding-top: 2rem;
-    }
+    } */
     #portfolio-image {
         margin-top: 1rem;
         width: 15rem;
@@ -46,6 +48,7 @@
     }
     .intro-section-summary {
         text-align: center;
+        padding-top: 0rem;
     }
     #intro-section-summary-paragraph {
         padding-right: 0rem;
@@ -54,31 +57,29 @@
         text-align: center;
         padding-left: 0;
     }
-
 }
+
 @media only screen and (max-width:575px) {
     #intro-article {
-        padding-top: 2rem;
+        padding-top: 0rem;
     }
     #portfolio-image {
         margin-top: 1rem;
-        width: 15rem;
-        height: 15rem;
+        /* margin-right: 1px; */
+        width: 7rem;
+        height: 7rem;
     }
     .intro-section-summary-icons {
         text-align: center;
         padding-left: 0;
     }
-
 }
 
-
-
-
-
-
-@keyframes name {
-    100% {
-        
+@keyframes shrink-image {
+    from {
+        height: 300px;
+    }
+    to {
+        height: 120px;
     }
 }

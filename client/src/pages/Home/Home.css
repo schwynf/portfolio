@@ -36,6 +36,7 @@
     opacity: 1;
 }
 
+
 #preset-revolver {
     animation-fill-mode: forwards;
 }
@@ -48,13 +49,13 @@
     display: none;
 }
 
-.first-circle {
+/* .first-circle {
     animation: growCircle .15s infinite;
 }
 
 .second-circle {
     animation: growCircle2 .15s infinite;
-}
+} */
 
 .stars-drop {
     animation: drop 5s infinite;
