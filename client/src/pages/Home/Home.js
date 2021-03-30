@@ -88,7 +88,7 @@ const Home = () => {
                 <Navbar></Navbar>
                 {/* intro */}
                 <article className="row" id="intro-article">
-                    <aside className="col-sm-6 col-md-12 col-xl-4 text-center">
+                    <aside className="col-sm-6 col-md-6 col-xl-4 text-center">
                         <Reveal up>
                             <img src={profilePic} id="portfolio-image" className="img-fluid shadow-lg rounded-circle" alt="Profile Img"></img>
                             <div id="space-svg-parent">
@@ -96,7 +96,7 @@ const Home = () => {
                             </div>
                         </Reveal>
                     </aside>
-                    <section className="col-sm-6 col-md-12 col-xl-8 intro-section-summary pb-2">
+                    <section className="col-sm-6 col-md-6 col-xl-8 intro-section-summary pb-2">
                         <h5 className="text-secondary">Full Stack Web Developer</h5>
                         <Flash>
                             <h1>Schwyn Francis</h1>
@@ -115,39 +115,39 @@ const Home = () => {
                 {/* Portfolio */}
                 <h1 className="text-center text-white mt-4 mb-3" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
                 <article className="row text-white">
-                    <section className="col-12 col-md-4">
+                    <section className="col-12 col-lg-4">
                         <Reveal up>
                             <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
-                    <section className="col-12 col-md-4">
+                    <section className="col-12 col-lg-4">
                         <Reveal up>
                             <PortfolioCard title="Squares" content="Stop using paper to setup squares! This application comes with google login and live chat to allow quick interaction." picture={SbSquares} tech="TECH: React, Redux, OAuth, Passport.js, Socket.io, MongoDB..." link="https://www.thesquaresgame.com" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
-                    <section className="col-12 col-md-4">
+                    <section className="col-12 col-lg-4">
                         <Reveal up>
-                            <PortfolioCard title="Lock'D" content="Password management software. With Lock'D, users can manage login information safely and verify if password or email has been compromised." picture={lockD} tech="TECH: Handlebars, CryptoJS, BcryptJS, Passport.js, MySQL, Bootstrap CSS..." link="https://universal-storage.herokuapp.com/" class="img-fluid shadow-lg">
+                            <PortfolioCard title="Lock'D" content="Password management software. With Lock'D, users can manage login information safely and verify if password or email has been compromised." picture={lockD} tech="TECH: Handlebars, CryptoJS, BcryptJS, Passport.js, MySQL..." link="https://universal-storage.herokuapp.com/" class="img-fluid shadow-lg">
                             </PortfolioCard>
                         </Reveal>
                     </section>
                 </article>
                 <article className="row text-white mt-2">
-                    <section className="col-12 col-md-4">
+                    <section className="col-12 col-lg-4">
                         <Reveal up>
                             <PortfolioCard title="Trivia-Pro" content="Easy application to create, print, and execute quizzes! Open Trivia Database API used for quick question generator. Great for learning and fun!" picture={TriviaPro} tech="TECH: JQuery, Choreographer.js, Local Storage, Materialize CSS..." link="https://schwynf.github.io/Trivia-Pro/" class="img-fluid shadow-lg">
                             </PortfolioCard>
                         </Reveal>
                     </section>
-                    <section className="col-12 col-md-4">
+                    <section className="col-12 col-lg-4">
                         <Reveal up>
                             <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, Bootstrap CSS..." link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
-                    <section className="col-12 col-md-4">
+                    <section className="col-12 col-lg-4">
                         <Reveal up>
                             <PortfolioCard title="Employee Dashboard" content="This is a command line interface application that generates an employee dashboard depending on user input." picture={videoPic} tech="TECH: Node.js, Jest, RegExp, Bootstrap CSS..." link="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
@@ -167,7 +167,7 @@ const Home = () => {
                         <Counter title="Active Users On Website" counter={counter.activeUsers}></Counter>
                     </aside>
                     <aside className="col-sm-3 ss">
-                    <Counter title="Birthday Countdown" counter={counter.birthday}></Counter>
+                        <Counter title="Birthday Countdown" counter={counter.birthday}></Counter>
                     </aside>
                 </article>
                 <Footer></Footer>
