@@ -1,24 +1,6 @@
-#intro-content {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
 
 .distort-bottom {
     display: none;
-}
-
-.intro-picture {
-    margin-top: 2rem;
-    background-color: grey;
-    border: .5rem solid #F5F3FA;
-    width: 21rem;
-    height: 21rem;
-}
-
-.intro-text {
-    color: white;
-    /* padding-top: 3rem; */
-    text-align: left;
 }
 
 .what-i-do-content {
@@ -30,18 +12,6 @@
     color: white;
 }
 
-#pp {
-    padding-right: 8rem;
-}
-
-.icons {
-    text-align: left;
-    padding-left: 6rem;
-}
-
-/* .distortTop {
-    transform: rotate(180deg)
-} */
 .port-div-show {
     position: fixed;
     top: 0;
@@ -55,7 +25,15 @@
 
 .grow:hover {
     transform: scale(1.1);
-    z-index: -1;
+}
+
+.grow:hover .blob {
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+    opacity: 1;
+}
+.grow:hover #click-me {
+    opacity: 1;
 }
 
 #preset-revolver {
@@ -83,24 +61,6 @@
 }
 
 @media only screen and (max-width:800px) {
-    #pp {
-        padding-right: 0rem;
-    }
-    .intro-text {
-        text-align: center;
-    }
-    .intro-picture {
-        margin-top: 1rem;
-        width: 15rem;
-        height: 15rem;
-    }
-    #intro-content {
-        padding-top: 2rem;
-    }
-    .icons {
-        text-align: center;
-        padding-left: 0;
-    }
     .ss {
         margin-bottom: 1rem;
     }
@@ -121,24 +81,6 @@
     }
     .revolver-parent {
         display: none;
-    }
-    #pp {
-        padding-right: 0rem;
-    }
-    .intro-text {
-        text-align: center;
-    }
-    .intro-picture {
-        margin-top: 1rem;
-        width: 15rem;
-        height: 15rem;
-    }
-    #intro-content {
-        padding-top: 2rem;
-    }
-    .icons {
-        text-align: center;
-        padding-left: 0;
     }
     .ss {
         margin-bottom: 1rem;
