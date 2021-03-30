@@ -58,8 +58,10 @@
 } */
 
 .stars-drop {
-    animation: drop 5s infinite;
+    animation: drop 1s infinite;
 }
+
+
 
 @media only screen and (max-width:800px) {
     .ss {

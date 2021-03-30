@@ -9,7 +9,6 @@
     border: .5rem solid #F5F3FA;
     width: 90px;
     height: 90px;
-    animation: shrink-image 3s forwards;
     
 }
 
@@ -31,6 +30,10 @@
 .intro-section-summary-icons {
     text-align: left;
     padding-left: 6rem;
+}
+
+.flame {
+    animation: shrink-image .2s infinite;
 }
 
 @media only screen and (max-width:1200px) {}
@@ -77,9 +80,9 @@
 
 @keyframes shrink-image {
     from {
-        height: 300px;
+        fill: red;
     }
     to {
-        height: 120px;
+        height: yellow;
     }
 }
