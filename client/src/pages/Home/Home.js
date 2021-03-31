@@ -231,7 +231,7 @@ const Home = () => {
                         </div>
                         {/* arrow to portfolio */}
                         <Jump forever duration={2000}>
-                            <Link to="portfolio-div" spy={true} smooth={true} offset={800} duration={800}>
+                            <Link to="portfolio-div" spy={true} smooth={true} offset={670} duration={800}>
                             <div className={downArrowMobile} style={{ color:"white", fontSize: "90px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
