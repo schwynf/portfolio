@@ -15,7 +15,6 @@ import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
 import Counter from "../../components/Counter/Counter";
 //images
 import profilePic from "../../images/profilePic.jpg";
-import backgroundPic from "../../images/distortBottom.svg";
 import ProjectVaultPic from "../../images/ProjectVault.JPG";
 import Space from "../../images/space2.svg";
 import SbSquares from "../../images/SbSquares.JPG";
@@ -28,14 +27,6 @@ import "./Home.css";
 import "./IntroArticle.css"
 
 
-
-
-// var header = document.getElementById("portfolio-div");
-// var sticky = header.offsetTop;
-
-
-
-
 const Home = () => {
     const [counter, setCounter] = useState({
         birthday: 0,
@@ -45,7 +36,6 @@ const Home = () => {
     });
 
     useEffect(() => {
-        // console.log(window.location.protocol)
         //today
         let today = new Date();
         today = today.getTime();
@@ -82,38 +72,56 @@ const Home = () => {
         window.location.href = "/pdf";
     }
 
-    return (
-        <>
-            <main className="container">
-                <Navbar></Navbar>
-                {/* intro */}
-                <article className="row" id="intro-article">
-                    <aside className="col-sm-6 col-md-6 col-xl-4 text-center">
-                        <Reveal up>
-                            <img src={profilePic} id="portfolio-image" className="img-fluid shadow-lg rounded-circle" alt="Profile Img"></img>
-                            <div id="space-svg-parent">
-                                <ReactSVG src={Space} />
-                            </div>
-                        </Reveal>
-                    </aside>
-                    <section className="col-sm-6 col-md-6 col-xl-8 intro-section-summary pb-2">
-                        <h5 className="text-secondary">Full Stack Web Developer</h5>
-                        <Flash>
-                            <h1>Schwyn Francis</h1>
-                        </Flash>
-                        <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am focused on utilizing my web development skills to help a business grow.</p>
-                        <div className="intro-section-summary-icons">
-                            <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
-                            <div style={{ display: "inline-block" }} data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo"><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
-                            <div onClick={pdf} style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="" /></div>
-                            <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
-                        </div>
-                    </section>
-                </article>
-                {/* White Divider */}
-                <div style={{ height: "4px", backgroundColor: "white" }} ></div>
-                {/* Portfolio */}
-                <h1 className="text-center text-white mt-4 mb-3" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
+    const checkWidth = () => {
+        if (window.innerWidth > 500) {
+
+            return (
+                <>
+                    <article className="row text-white">
+                        <section className="col-12 col-lg-4">
+                            <Reveal down>
+                                <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
+                                </PortfolioCard>
+                            </Reveal>
+                        </section>
+                        <section className="col-12 col-lg-4">
+                            <Reveal down>
+                                <PortfolioCard title="Squares" content="Stop using paper to setup squares! This application comes with google login and live chat to allow quick interaction." picture={SbSquares} tech="TECH: React, Redux, OAuth, Passport.js, Socket.io, MongoDB..." link="https://www.thesquaresgame.com" class="img-fluid shadow-lg mt-4">
+                                </PortfolioCard>
+                            </Reveal>
+                        </section>
+                        <section className="col-12 col-lg-4">
+                            <Reveal down>
+                                <PortfolioCard title="Lock'D" content="Password management software. With Lock'D, users can manage login information safely and verify if password or email has been compromised." picture={lockD} tech="TECH: Handlebars, CryptoJS, BcryptJS, Passport.js, MySQL..." link="https://universal-storage.herokuapp.com/" class="img-fluid shadow-lg">
+                                </PortfolioCard>
+                            </Reveal>
+                        </section>
+                    </article>
+                    <article className="row text-white mt-2">
+                        <section className="col-12 col-lg-4">
+                            <Reveal down>
+                                <PortfolioCard title="Trivia-Pro" content="Easy application to create, print, and execute quizzes! Open Trivia Database API used for quick question generator. Great for learning and fun!" picture={TriviaPro} tech="TECH: JQuery, Choreographer.js, Local Storage, Materialize CSS..." link="https://schwynf.github.io/Trivia-Pro/" class="img-fluid shadow-lg">
+                                </PortfolioCard>
+                            </Reveal>
+                        </section>
+                        <section className="col-12 col-lg-4">
+                            <Reveal down>
+                                <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, Bootstrap CSS..." link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
+                                </PortfolioCard>
+                            </Reveal>
+                        </section>
+                        <section className="col-12 col-lg-4">
+                            <Reveal down>
+                                <PortfolioCard title="Employee Dashboard" content="This is a command line interface application that generates an employee dashboard depending on user input." picture={videoPic} tech="TECH: Node.js, Jest, RegExp, Bootstrap CSS..." link="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR" class="img-fluid shadow-lg mt-4">
+                                </PortfolioCard>
+                            </Reveal>
+                        </section>
+                    </article>
+                </>
+            )
+        }
+        return (
+            <>
                 <article className="row text-white">
                     <section className="col-12 col-lg-4">
                         <Reveal up>
@@ -154,6 +162,45 @@ const Home = () => {
                         </Reveal>
                     </section>
                 </article>
+            </>
+        )
+
+    }
+
+    return (
+        <>
+            <main className="container">
+                <Navbar></Navbar>
+                {/* intro */}
+                <article className="row" id="intro-article">
+                    <aside className="col-sm-6 col-md-6 col-xl-4 text-center">
+                        <Reveal up>
+                            <img src={profilePic} id="portfolio-image" className="img-fluid shadow-lg rounded-circle" alt="Profile Img"></img>
+                            <div id="space-svg-parent">
+                                <ReactSVG src={Space} />
+                            </div>
+                        </Reveal>
+                    </aside>
+                    <section className="col-sm-6 col-md-6 col-xl-8 intro-section-summary pb-2">
+                        <h5 className="text-secondary">Full Stack Web Developer</h5>
+                        <Flash>
+                            <h1>Schwyn Francis</h1>
+                        </Flash>
+                        <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am focused on utilizing my web development skills to help a business grow.</p>
+                        <div className="intro-section-summary-icons">
+                            <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
+                            <div style={{ display: "inline-block" }} data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo"><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
+                            <div onClick={pdf} style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="" /></div>
+                            <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
+                        </div>
+                    </section>
+                </article>
+                {/* White Divider */}
+                <div style={{ height: "4px", backgroundColor: "white" }} ></div>
+                {/* Portfolio */}
+                <h1 className="text-center text-white mt-4 mb-3" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
+                {/* check for up or down */}
+                {checkWidth()}
 
                 {/* Fun Facts */}
                 <article className="row text-white text-center mt-3">

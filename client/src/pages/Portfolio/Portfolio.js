@@ -11,7 +11,6 @@ import lockPic from "../../images/LOCKD.jpg";
 import managerPic from "../../images/logo_spinner.png";
 import budgetPic from "../../images/budget.png";
 import videoPic from "../../images/video.gif";
-import soonPic from "../../images/soon.jpeg";
 import squaresPic from "../../images/squares.JPG";
 import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
 //css

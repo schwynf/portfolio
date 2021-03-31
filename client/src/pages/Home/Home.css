@@ -49,14 +49,6 @@
     display: none;
 }
 
-/* .first-circle {
-    animation: growCircle .15s infinite;
-}
-
-.second-circle {
-    animation: growCircle2 .15s infinite;
-} */
-
 .stars-drop {
     animation: drop 1s infinite;
 }
@@ -101,17 +93,6 @@
     }
 }
 
-@keyframes growCircle {
-    100% {
-        r: 50px;
-    }
-}
-
-@keyframes growCircle2 {
-    100% {
-        r: 50px;
-    }
-}
 
 @keyframes drop {
     .5% {
