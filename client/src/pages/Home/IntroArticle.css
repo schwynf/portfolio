@@ -14,7 +14,9 @@
 
 #space-svg-parent {
     margin-top: -2px;
-    margin-left: 12px;
+    margin-left: 30px;
+    width:150px;
+    height:200px;
 }
 
 .intro-section-summary {
@@ -76,10 +78,10 @@
         padding-top: 0rem;
     }
     #intro-section-summary-paragraph {
-        padding-top:130px;
+        padding-top:0px;
     }
     #intro-section-summary-name {
-        font-size:48px;
+        font-size:40px;
     }
     #intro-article {
         padding-top: 0rem;
@@ -95,15 +97,40 @@
         padding-left: 0;
     }
     #full-stack{
-        margin-top:-120px;
+        margin-top: 80px;
         font-size: 25px;
     }
     #down-arrown{
         display:none;
     }
+    #space-svg-parent {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width:550px) and (min-width:500px){
+    #space-svg-parent{
+        margin-left:108px;
+    }
+}
+
+@media screen and (max-width:420px) and (min-width:400px){
+    #space-svg-parent{
+        margin-left:45px;
+    }
+}
+
+@media only screen and (max-width:385px) {
+    #space-svg-parent{
+        margin-left:25px;
+    }
+    
 }
 
 @media only screen and (max-width:365px) {
+    #space-svg-parent{
+        margin-left:20px;
+    }
 
     #intro-section-summary-name {
         font-size:35px;
@@ -125,12 +152,18 @@
     }
     #full-stack{
         font-size: 20px;
-        margin-top: -150px;
+        margin-top: 40px;
     } 
     #space-svg-parent{
-        margin-left:0px
+        margin-left:0px;
     }
     
+}
+
+@media screen and (max-width:300px) and (min-width:200px){
+    #space-svg-parent{
+        margin-left:-18px;
+    }
 }
 
 
