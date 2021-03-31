@@ -49,7 +49,7 @@
 }
 
 .stars-drop {
-    animation: drop 3s infinite;
+    animation: drop 1s infinite;
 }
 
 .form-icons {
@@ -99,7 +99,7 @@
 
 @keyframes drop {
     .5% {
-        transform: translate(0px, 0px);
+        transform: translate(0px, -500px);
     }
     100% {
         transform: translate(0px, 700px);
