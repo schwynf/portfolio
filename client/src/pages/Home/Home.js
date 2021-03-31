@@ -214,8 +214,11 @@ const Home = () => {
                         <h5 id="full-stack" className="text-warning">Full Stack Web Developer</h5>
 
                         <h1 id="intro-section-summary-name">Schwyn Francis</h1>
+                        {/* link to about */}
                         <Jump forever duration={2000}>
-                            <div className={downArrowMobile} style={{ fontSize: "90px", marginLeft: "0px" }} onClick={scrollMoreMobile}></div>
+                            <Link to="intro-section-summary-paragraph" spy={true} smooth={true} offset={-160} duration={800}>
+                            <div className={downArrowMobile} style={{ fontSize: "90px", marginLeft: "0px" }}></div>
+                            </Link>
                         </Jump>
                         {checkWidthName()}
                         <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
@@ -226,8 +229,11 @@ const Home = () => {
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
 
                         </div>
+                        {/* arrow to portfolio */}
                         <Jump forever duration={2000}>
-                            <div className={downArrowMobile} style={{ fontSize: "90px", marginLeft: "0px" }} onClick={scrollMoreMobile}></div>
+                            <Link to="portfolio-div" spy={true} smooth={true} offset={800} duration={800}>
+                            <div className={downArrowMobile} style={{ color:"white", fontSize: "90px", marginLeft: "0px" }}></div>
+                            </Link>
                         </Jump>
                         <Jump forever duration={2000}>
                             <div className={downArrow} style={{ fontSize: "90px", marginLeft: "150px" }} onMouseEnter={scrollMore}></div>

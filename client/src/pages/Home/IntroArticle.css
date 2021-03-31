@@ -53,7 +53,7 @@
         padding-top: 2rem;
     } */
     #portfolio-image {
-        margin-top: 1rem;
+        margin-top: 0rem;
         width: 15rem;
         height: 15rem;
     }
@@ -82,7 +82,7 @@
         font-size:48px;
     }
     #intro-article {
-        padding-top: 3rem;
+        padding-top: 0rem;
     }
     #portfolio-image {
         margin-top: 1rem;
@@ -95,7 +95,7 @@
         padding-left: 0;
     }
     #full-stack{
-        margin-top:-110px;
+        margin-top:-120px;
         font-size: 25px;
     }
     #down-arrown{
@@ -118,14 +118,18 @@
 @media only screen and (max-width:340px) {
  
     #portfolio-image {
-        margin-left: 29px;
+        margin-left: 5px;
     }
-    /* #intro-section-summary-name {
+    #intro-section-summary-name {
         font-size:25px;
     }
     #full-stack{
-        font-size: 25px;
-    } */
+        font-size: 20px;
+        margin-top: -150px;
+    } 
+    #space-svg-parent{
+        margin-left:0px
+    }
     
 }
 

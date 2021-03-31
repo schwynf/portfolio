@@ -6,12 +6,12 @@ import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } f
 import "./ScrollArrow.css";
 
 const ScrollArrow = () => {
-    
+
     const [showScroll, setShowScroll] = useState("none");
 
     useEffect(() => {
         window.addEventListener("scroll", checkScrollTop);
-        return () => { 
+        return () => {
             window.removeEventListener("scroll", checkScrollTop);
         }
     }, [showScroll]);
@@ -22,7 +22,7 @@ const ScrollArrow = () => {
         } else if (window.pageYOffset <= 50 && showScroll === "flex") {
             setShowScroll("none");
         }
-       
+
     }
 
 
@@ -30,7 +30,7 @@ const ScrollArrow = () => {
         <>
             <div id="scroll">
                 <Link to="top" spy={true} smooth={true} offset={-56} duration={800}>
-                    <FaArrowCircleUp className="scrollTop"  style={{ height: 40, display: showScroll }}></FaArrowCircleUp>
+                    <FaArrowCircleUp className="scrollTop" style={{ height: 40, display: showScroll }}></FaArrowCircleUp>
                 </Link>
             </div>
         </>
@@ -38,3 +38,4 @@ const ScrollArrow = () => {
 }
 
 export default ScrollArrow;
+
