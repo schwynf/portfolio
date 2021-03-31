@@ -36,6 +36,10 @@
 .flame {
     animation: flame-color .1s infinite;
 }
+#down-arrown{
+
+    display:inline-block;
+}
 
 
 @media only screen and (max-width:1200px) {}
@@ -83,6 +87,12 @@
     .intro-section-summary-icons {
         text-align: center;
         padding-left: 0;
+    }
+    #full-stack{
+        margin-top:-110px;
+    }
+    #down-arrown{
+        display:none;
     }
 }
 

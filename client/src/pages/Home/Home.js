@@ -7,6 +7,8 @@ import { ReactSVG } from 'react-svg';
 import Reveal from 'react-reveal/Fade';
 import Flash from 'react-reveal/Flash';
 import LazyLoad from 'react-lazyload';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import Jump from 'react-reveal/Jump';
 //components
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from '../../components/Footer/Footer';
@@ -34,8 +36,12 @@ const Home = () => {
         coding: 0,
         acitveUsers: 0
     });
+    const [downArrow, setDownArrow] = useState("")
 
     useEffect(() => {
+        if(window.innerWidth > 500){
+            setDownArrow("fa fa-angle-double-down")
+        }
         //today
         let today = new Date();
         today = today.getTime();
@@ -71,6 +77,10 @@ const Home = () => {
     const pdf = async () => {
         window.location.href = "/pdf";
     }
+    
+    const scrollMore = () =>{
+        scroll.scrollMore(850)
+    }
 
     const checkWidth = () => {
         if (window.innerWidth > 500) {
@@ -79,19 +89,19 @@ const Home = () => {
                 <>
                     <article className="row text-white">
                         <section className="col-12 col-lg-4">
-                            <Reveal down duration={3000}>
+                            <Reveal down duration={2000}>
                                 <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                                 </PortfolioCard>
                             </Reveal>
                         </section>
                         <section className="col-12 col-lg-4">
-                            <Reveal down duration={3000}>
+                            <Reveal down duration={2000}>
                                 <PortfolioCard title="Squares" content="Stop using paper to setup squares! This application comes with google login and live chat to allow quick interaction." picture={SbSquares} tech="TECH: React, Redux, OAuth, Passport.js, Socket.io, MongoDB..." link="https://www.thesquaresgame.com" class="img-fluid shadow-lg mt-4">
                                 </PortfolioCard>
                             </Reveal>
                         </section>
                         <section className="col-12 col-lg-4">
-                            <Reveal down duration={3000}>
+                            <Reveal down duration={2000}>
                                 <PortfolioCard title="Lock'D" content="Password management software. With Lock'D, users can manage login information safely and verify if password or email has been compromised." picture={lockD} tech="TECH: Handlebars, CryptoJS, BcryptJS, Passport.js, MySQL..." link="https://universal-storage.herokuapp.com/" class="img-fluid shadow-lg">
                                 </PortfolioCard>
                             </Reveal>
@@ -99,19 +109,19 @@ const Home = () => {
                     </article>
                     <article className="row text-white mt-2">
                         <section className="col-12 col-lg-4">
-                            <Reveal down>
+                            <Reveal left>
                                 <PortfolioCard title="Trivia-Pro" content="Easy application to create, print, and execute quizzes! Open Trivia Database API used for quick question generator. Great for learning and fun!" picture={TriviaPro} tech="TECH: JQuery, Choreographer.js, Local Storage, Materialize CSS..." link="https://schwynf.github.io/Trivia-Pro/" class="img-fluid shadow-lg">
                                 </PortfolioCard>
                             </Reveal>
                         </section>
                         <section className="col-12 col-lg-4">
-                            <Reveal down>
-                                <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, Bootstrap CSS..." link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
+                            <Reveal up>
+                                <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, IndexedDB, Service Worker" link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                                 </PortfolioCard>
                             </Reveal>
                         </section>
                         <section className="col-12 col-lg-4">
-                            <Reveal down>
+                            <Reveal right>
                                 <PortfolioCard title="Employee Dashboard" content="This is a command line interface application that generates an employee dashboard depending on user input." picture={videoPic} tech="TECH: Node.js, Jest, RegExp, Bootstrap CSS..." link="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR" class="img-fluid shadow-lg mt-4">
                                 </PortfolioCard>
                             </Reveal>
@@ -151,7 +161,7 @@ const Home = () => {
                     </section>
                     <section className="col-12 col-lg-4">
                         <Reveal up opposite>
-                            <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, Bootstrap CSS..." link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
+                            <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, IndexedDB, Service Worker" link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
@@ -184,13 +194,17 @@ const Home = () => {
 
                         <h1>Schwyn Francis</h1>
 
-                        <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am focused on utilizing my web development skills to help a business grow.</p>
+                        <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
                         <div className="intro-section-summary-icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
                             <div style={{ display: "inline-block" }} data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo"><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
                             <div onClick={pdf} style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="" /></div>
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
+                            
                         </div>
+                        <Jump forever duration={2000}>
+                        <div className={downArrow} style={{ fontSize:"90px", marginLeft:"150px"}} onMouseEnter={scrollMore}></div>
+                        </Jump>
                     </section>
                 </article>
                 {/* White Divider */}
