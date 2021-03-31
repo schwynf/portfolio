@@ -37,7 +37,7 @@
 }
 
 #full-stack {
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 
@@ -115,6 +115,6 @@
         color: red;
     }
     to {
-        color: grey;
+        color: yellow;
     }
 }
