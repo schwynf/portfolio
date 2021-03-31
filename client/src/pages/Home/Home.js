@@ -79,19 +79,19 @@ const Home = () => {
                 <>
                     <article className="row text-white">
                         <section className="col-12 col-lg-4">
-                            <Reveal down>
+                            <Reveal down duration={3000}>
                                 <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                                 </PortfolioCard>
                             </Reveal>
                         </section>
                         <section className="col-12 col-lg-4">
-                            <Reveal down>
+                            <Reveal down duration={3000}>
                                 <PortfolioCard title="Squares" content="Stop using paper to setup squares! This application comes with google login and live chat to allow quick interaction." picture={SbSquares} tech="TECH: React, Redux, OAuth, Passport.js, Socket.io, MongoDB..." link="https://www.thesquaresgame.com" class="img-fluid shadow-lg mt-4">
                                 </PortfolioCard>
                             </Reveal>
                         </section>
                         <section className="col-12 col-lg-4">
-                            <Reveal down>
+                            <Reveal down duration={3000}>
                                 <PortfolioCard title="Lock'D" content="Password management software. With Lock'D, users can manage login information safely and verify if password or email has been compromised." picture={lockD} tech="TECH: Handlebars, CryptoJS, BcryptJS, Passport.js, MySQL..." link="https://universal-storage.herokuapp.com/" class="img-fluid shadow-lg">
                                 </PortfolioCard>
                             </Reveal>
@@ -124,19 +124,19 @@ const Home = () => {
             <>
                 <article className="row text-white">
                     <section className="col-12 col-lg-4">
-                        <Reveal up>
+                        <Reveal up opposite>
                             <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
                     <section className="col-12 col-lg-4">
-                        <Reveal up>
+                        <Reveal up opposite>
                             <PortfolioCard title="Squares" content="Stop using paper to setup squares! This application comes with google login and live chat to allow quick interaction." picture={SbSquares} tech="TECH: React, Redux, OAuth, Passport.js, Socket.io, MongoDB..." link="https://www.thesquaresgame.com" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
                     <section className="col-12 col-lg-4">
-                        <Reveal up>
+                        <Reveal up opposite>
                             <PortfolioCard title="Lock'D" content="Password management software. With Lock'D, users can manage login information safely and verify if password or email has been compromised." picture={lockD} tech="TECH: Handlebars, CryptoJS, BcryptJS, Passport.js, MySQL..." link="https://universal-storage.herokuapp.com/" class="img-fluid shadow-lg">
                             </PortfolioCard>
                         </Reveal>
@@ -144,19 +144,19 @@ const Home = () => {
                 </article>
                 <article className="row text-white mt-2">
                     <section className="col-12 col-lg-4">
-                        <Reveal up>
+                        <Reveal up opposite>
                             <PortfolioCard title="Trivia-Pro" content="Easy application to create, print, and execute quizzes! Open Trivia Database API used for quick question generator. Great for learning and fun!" picture={TriviaPro} tech="TECH: JQuery, Choreographer.js, Local Storage, Materialize CSS..." link="https://schwynf.github.io/Trivia-Pro/" class="img-fluid shadow-lg">
                             </PortfolioCard>
                         </Reveal>
                     </section>
                     <section className="col-12 col-lg-4">
-                        <Reveal up>
+                        <Reveal up opposite>
                             <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, Bootstrap CSS..." link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
                     <section className="col-12 col-lg-4">
-                        <Reveal up>
+                        <Reveal up opposite>
                             <PortfolioCard title="Employee Dashboard" content="This is a command line interface application that generates an employee dashboard depending on user input." picture={videoPic} tech="TECH: Node.js, Jest, RegExp, Bootstrap CSS..." link="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
@@ -174,18 +174,16 @@ const Home = () => {
                 {/* intro */}
                 <article className="row" id="intro-article">
                     <aside className="col-sm-6 col-md-6 col-xl-4 text-center">
-                        <Reveal up>
-                            <img src={profilePic} id="portfolio-image" className="img-fluid shadow-lg rounded-circle" alt="Profile Img"></img>
-                            <div id="space-svg-parent">
-                                <ReactSVG src={Space} />
-                            </div>
-                        </Reveal>
+                        <img src={profilePic} id="portfolio-image" className="img-fluid shadow-lg rounded-circle" alt="Profile Img"></img>
+                        <div id="space-svg-parent">
+                            <ReactSVG src={Space} />
+                        </div>
                     </aside>
                     <section className="col-sm-6 col-md-6 col-xl-8 intro-section-summary pb-2">
-                        <h5 id="full-stack">Full Stack Web Developer</h5>
-                        <Flash>
-                            <h1>Schwyn Francis</h1>
-                        </Flash>
+                        <h5 id="full-stack" className="text-warning">Full Stack Web Developer</h5>
+
+                        <h1>Schwyn Francis</h1>
+
                         <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am focused on utilizing my web development skills to help a business grow.</p>
                         <div className="intro-section-summary-icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
@@ -196,14 +194,73 @@ const Home = () => {
                     </section>
                 </article>
                 {/* White Divider */}
-                <div style={{ height: "4px", backgroundColor: "white" }} ></div>
+                <Reveal left>
+
+                    <div style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div>
+                </Reveal>
                 {/* Portfolio */}
-                <h1 className="text-center text-white mt-4 mb-3" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
+                <Reveal left>
+                    <h1 className="text-center text-white mt-5 mb-5 text-danger" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
+                </Reveal>
                 {/* check for up or down */}
                 {checkWidth()}
 
+                <Reveal left>
+
+                    <div style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div>
+                </Reveal>
+
+                <Reveal left>
+                    <h1 className="text-center text-white mt-5 mb-5 text-danger" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Contact</h1>
+                </Reveal>
+                <Reveal up>
+                    <article className="row justify-content-center mb-5">
+                        <section className="col-8 justify-content-center">
+                            <div className="row">
+                                <div className="col-6">
+                                    <input type="text" id="name" name="name" className="form-control w-90 text-white" style={{backgroundColor:"black"}}></input>
+                                    <label for="name" className="text-white">Name</label>
+
+                                </div>
+                                <div className="col-6">
+                                    <input type="text" id="email" name="email" className="form-control w-90 text-white" style={{backgroundColor:"black"}}></input>
+                                    <label for="email" className="text-white">Email</label>
+
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-12">
+                                    <input type="text" id="subject" name="subject" className="form-control text-white" style={{backgroundColor:"black"}}></input>
+                                    <label for="subject" className="text-white">Subject</label>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-12">
+                                    <input type="text" id="subject" name="message" class="form-control text-white" style={{backgroundColor:"black"}}></input>
+                                    <label for="subject" className="text-white">Message</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section className="col-12 col-lg-4">
+                            <li className="form-icons">
+                                <i class="fa fa-globe" style={{ color: "white" }}></i>
+                                <p className="text-white">Scottsdale, AZ 85257, USA</p>
+                            </li>
+                            <li className="form-icons">
+                                <i class="fa fa-mobile-phone" style={{ color: "white" }}></i>
+                                <p className="text-white">+01 630-903-9996</p>
+                            </li>
+                            <li className="form-icons">
+                                <i class="	fa fa-send-o" style={{ color: "white" }}></i>
+                                <p className="text-white">schwynf@gmail.com</p>
+                            </li>
+                        </section>
+                        <button type="button" className="btn btn-danger float-left">Send</button>
+                    </article>
+                </Reveal>
+
                 {/* Fun Facts */}
-                <article className="row text-white text-center mt-3">
+                <article className="row text-white text-center mt-5">
                     <aside className="col-sm-3 ss">
                         <Counter title=" Days Coding" counter={counter.coding}></Counter>
                     </aside>

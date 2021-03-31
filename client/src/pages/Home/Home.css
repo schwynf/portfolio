@@ -1,4 +1,3 @@
-
 .distort-bottom {
     display: none;
 }
@@ -17,7 +16,7 @@
     top: 0;
     width: 100%;
     z-index: -1;
-  }
+}
 
 .grow {
     transition: all .2s ease-in-out;
@@ -32,10 +31,10 @@
     animation: pulse-black 2s infinite;
     opacity: 1;
 }
+
 .grow:hover #click-me {
     opacity: 1;
 }
-
 
 #preset-revolver {
     animation-fill-mode: forwards;
@@ -53,7 +52,9 @@
     animation: drop 3s infinite;
 }
 
-
+.form-icons {
+    background-color: black;
+}
 
 @media only screen and (max-width:800px) {
     .ss {
@@ -86,13 +87,15 @@
     .distortTop {
         margin-left: .02px;
     }
+    .form-icons {
+        margin-left: 80px;
+    }
     @keyframes bullet-glide {
         100% {
             margin-left: 300px;
         }
     }
 }
-
 
 @keyframes drop {
     .5% {
