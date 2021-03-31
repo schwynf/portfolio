@@ -182,7 +182,7 @@ const Home = () => {
                         </Reveal>
                     </aside>
                     <section className="col-sm-6 col-md-6 col-xl-8 intro-section-summary pb-2">
-                        <h5 className="text-secondary">Full Stack Web Developer</h5>
+                        <h5 id="full-stack">Full Stack Web Developer</h5>
                         <Flash>
                             <h1>Schwyn Francis</h1>
                         </Flash>

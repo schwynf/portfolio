@@ -33,8 +33,13 @@
 }
 
 .flame {
-    animation: shrink-image .2s infinite;
+    animation: flame-color .1s infinite;
 }
+
+#full-stack {
+    transition: all .2s ease-in-out;
+}
+
 
 @media only screen and (max-width:1200px) {}
 
@@ -82,6 +87,9 @@
         text-align: center;
         padding-left: 0;
     }
+    #full-stack{
+        animation: font-color 5s forwards;
+    }
 }
 @media only screen and (max-width:340px) {
  
@@ -94,11 +102,19 @@
 
 
 
-@keyframes shrink-image {
+@keyframes flame-color {
     from {
         fill: red;
     }
     to {
         height: yellow;
+    }
+}
+@keyframes font-color {
+    from {
+        color: red;
+    }
+    to {
+        color: grey;
     }
 }
