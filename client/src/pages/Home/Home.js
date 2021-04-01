@@ -204,23 +204,27 @@ const Home = () => {
                 <Navbar></Navbar>
                 {/* intro */}
                 <article className="row" id="intro-article">
-                    <aside className="col-sm-6 col-md-6 col-xl-4 text-center">
+                    <aside className="col-12 text-center">
                         <img src={profilePic} id="portfolio-image" className="img-fluid shadow-lg rounded-circle" alt="Profile Img"></img>
                         <div id="space-svg-parent">
                             <ReactSVG src={Space} />
                         </div>
                     </aside>
-                    <section className="col-sm-6 col-md-6 col-xl-8 intro-section-summary pb-2">
+                    <section className="col-12 intro-section-summary pb-2">
                         <h5 id="full-stack" className="text-warning">Full Stack Web Developer</h5>
 
                         <h1 id="intro-section-summary-name">Schwyn Francis</h1>
                         {/* link to about */}
                         <Jump forever duration={2000}>
                             <Link to="intro-section-summary-paragraph" spy={true} smooth={true} offset={-160} duration={800}>
-                            <div className={downArrowMobile} style={{ fontSize: "90px", marginLeft: "0px" }}></div>
+                                <div className="fa fa-angle-double-down" style={{ fontSize: "90px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
-                        {checkWidthName()}
+                        {/* {checkWidthName()} */}
+                        <Reveal left>
+                            <div style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div>
+                            <h1 className="text-center text-white mt-5 mb-5 text-danger" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>About</h1>
+                        </Reveal>
                         <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
                         <div className="intro-section-summary-icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
@@ -232,12 +236,12 @@ const Home = () => {
                         {/* arrow to portfolio */}
                         <Jump forever duration={2000}>
                             <Link to="portfolio-div" spy={true} smooth={true} offset={670} duration={800}>
-                            <div className={downArrowMobile} style={{ color:"white", fontSize: "90px", marginLeft: "0px" }}></div>
+                                <div className="fa fa-angle-double-down" style={{ color: "white", fontSize: "90px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
-                        <Jump forever duration={2000}>
+                        {/* <Jump forever duration={2000}>
                             <div className={downArrow} style={{ fontSize: "90px", marginLeft: "150px" }} onMouseEnter={scrollMore}></div>
-                        </Jump>
+                        </Jump> */}
                     </section>
                 </article>
                 {/* White Divider */}
@@ -251,6 +255,13 @@ const Home = () => {
                 </Reveal>
                 {/* check for up or down */}
                 {checkWidth()}
+                <Jump forever duration={2000}>
+                    <Link to="contact-div" spy={true} smooth={true} offset={0} duration={800}><div className="text-center mt-2">
+
+                        <div className="fa fa-angle-double-down text-white" style={{ fontSize: "90px"}}></div>
+                    </div>
+                    </Link>
+                </Jump>
 
                 <Reveal left>
 
@@ -258,19 +269,19 @@ const Home = () => {
                 </Reveal>
 
                 <Reveal left>
-                    <h1 className="text-center text-white mt-5 mb-5 text-danger" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Contact</h1>
+                    <h1 className="text-center text-white mt-5 mb-5 text-danger" id="contact-div" style={{ fontFamily: "Train One , cursive" }}>Contact</h1>
                 </Reveal>
                 <Reveal up>
                     <article className="row justify-content-center mb-5">
                         <section className="col-8 justify-content-center">
                             <div className="row">
                                 <div className="col-6">
-                                    <input type="text" id="name" name="name" className="form-control w-90 text-white" style={{ backgroundColor: "black" }}></input>
+                                    <input type="text" id="name" name="name" className="form-control w-100 text-white" style={{ backgroundColor: "black" }}></input>
                                     <label for="name" className="text-white">Name</label>
 
                                 </div>
                                 <div className="col-6">
-                                    <input type="text" id="email" name="email" className="form-control w-90 text-white" style={{ backgroundColor: "black" }}></input>
+                                    <input type="text" id="email" name="email" className="form-control w-100 text-white" style={{ backgroundColor: "black" }}></input>
                                     <label for="email" className="text-white">Email</label>
 
                                 </div>
