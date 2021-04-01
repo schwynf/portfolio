@@ -318,17 +318,17 @@ const Home = () => {
                 </Reveal>
 
                 {/* Fun Facts */}
-                <article className="row text-white text-center mt-5">
-                    <aside className="col-sm-3 ss">
+                <article className="row text-white text-center mt-5 fun-facts">
+                    <aside className="col-6 col-sm-3 ss">
                         <Counter title=" Days Coding" counter={counter.coding}></Counter>
                     </aside>
-                    <aside className="col-sm-3 ss">
+                    <aside className=" col-6 col-sm-3 ss">
                         <Counter title="Wedding Countdown" counter={counter.wedding}></Counter>
                     </aside>
-                    <aside className="col-sm-3 ss">
+                    <aside className=" col-6 col-sm-3 ss">
                         <Counter title="Active Users On Website" counter={counter.activeUsers}></Counter>
                     </aside>
-                    <aside className="col-sm-3 ss">
+                    <aside className="col-6 col-sm-3 ss">
                         <Counter title="Birthday Countdown" counter={counter.birthday}></Counter>
                     </aside>
                 </article>

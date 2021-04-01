@@ -8,7 +8,7 @@ import "./Counter.css";
 const Counter = (props) => {
     return (
         <>
-            <div className="card bg-dark" style={{ height: "100%" }}>
+            <div className="card bg-dark" style={{ height: "100%",width: "100%",borderRadius:"50%" }}>
                 <div className="card-body text-primary">
                         {props.title}
                     <Zoom duration={1000}>
