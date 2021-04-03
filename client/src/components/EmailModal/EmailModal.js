@@ -37,7 +37,7 @@ const EmailModal = () => {
 
             <div className="modal fade" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
+                    <div className="modal-content text-white" style={{backgroundColor:"black"}}>
                         <div className="modal-header">
                             <h5 className="modal-title  w-100 text-center" id="exampleModalLabel2">Get In Touch.</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
