@@ -148,6 +148,9 @@
     #space-svg-parent{
         margin-left:25px;
     }
+    #portfolio-image {
+        margin-top: 50px;
+    }
     
 }
 
@@ -161,6 +164,9 @@
     }
     #full-stack{
         font-size: 25px;
+    }
+    #portfolio-image {
+        margin-top: 30px;
     }
     
 }

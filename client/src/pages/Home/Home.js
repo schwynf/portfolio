@@ -18,7 +18,7 @@ import EmailModal from "../../components/EmailModal/EmailModal";
 import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
 import Counter from "../../components/Counter/Counter";
 //images
-import profilePic from "../../images/profilePic.jpg";
+import profilePic from "../../images/profilePic2.jpg";
 import ProjectVaultPic from "../../images/ProjectVault.JPG";
 import Space from "../../images/space2.svg";
 import SbSquares from "../../images/SbSquares.JPG";
@@ -142,7 +142,7 @@ const Home = () => {
                     {/* Title and About Section */}
                     <section className="col-12 intro-section-summary pb-2">
                         <h1 id="intro-section-summary-name">Hi, I'm Schwyn Francis</h1>
-                        <h5 id="full-stack" className="text-secondary text-center justify-content-center" style={{textAlign: 'center'}}><TextTransition
+                        <h5 id="full-stack" className="text-secondary text-center justify-content-center mb-5" style={{textAlign: 'center'}}><TextTransition
                             text={TEXTS[index % TEXTS.length]}
                             springConfig={presets.molasses}
                             inline={true}
@@ -150,7 +150,7 @@ const Home = () => {
                         {/* Down Arrow to About */}
                         <Jump count={2} duration={2000}>
                             <Link to="intro-section-summary-paragraph" spy={true} smooth={true} offset={-160} duration={800}>
-                                <div className="fa fa-angle-double-down" style={{ fontSize: "90px", marginLeft: "0px" }}></div>
+                                <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
                         {/* About */}
@@ -159,7 +159,7 @@ const Home = () => {
                             <h1 className="text-center text-white mt-5 mb-5 text-danger" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>About</h1>
                         </Reveal>
                         <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
-                        <div className="intro-section-summary-icons">
+                        <div className="intro-section-summary-icons mb-4">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
                             <Link to="contact" spy={true} smooth={true} offset={730} duration={1000}>
                                 <div style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
@@ -171,7 +171,7 @@ const Home = () => {
                         {/* Down Arrow to Portfolio */}
                         <Jump count={3} duration={2000}>
                             <Link to="portfolio-div" spy={true} smooth={true} offset={670} duration={800}>
-                                <div className="fa fa-angle-double-down" style={{ color: "white", fontSize: "90px", marginLeft: "0px" }}></div>
+                            <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
                     </section>
@@ -207,7 +207,7 @@ const Home = () => {
                     </section>
                 </article>
                 {/* Second Row Portfolio */}
-                <article className="row text-white mt-2">
+                <article className="row text-white mt-2 mb-4">
                     <section className="col-12 col-lg-4">
                         <Reveal left={desktopCard} up={mobileCard}>
                             <PortfolioCard title="Trivia-Pro" content="Easy application to create, print, and execute quizzes! Open Trivia Database API used for quick question generator. Great for learning and fun!" picture={TriviaPro} tech="TECH: JQuery, Choreographer.js, Local Storage, Materialize CSS..." link="https://schwynf.github.io/Trivia-Pro/" class="img-fluid shadow-lg">
@@ -230,7 +230,7 @@ const Home = () => {
                 {/* Down Arrow to Contact */}
                 <Jump count={3} duration={2000}>
                     <Link to="contact-div" spy={true} smooth={true} offset={0} duration={800}><div className="text-center mt-2">
-                        <div className="fa fa-angle-double-down text-white" style={{ fontSize: "90px" }}></div>
+                    <div className="fa fa-angle-down text-white" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                     </div>
                     </Link>
                 </Jump>
