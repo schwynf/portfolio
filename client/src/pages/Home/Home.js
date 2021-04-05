@@ -10,6 +10,7 @@ import Flash from 'react-reveal/Flash';
 import LazyLoad from 'react-lazyload';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import Jump from 'react-reveal/Jump';
+import TextTransition, { presets } from "react-text-transition";
 //components
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from '../../components/Footer/Footer';
@@ -29,6 +30,12 @@ import videoPic from "../../images/video.gif";
 import "./Home.css";
 import "./IntroArticle.css"
 
+let a = 0;
+const TEXTS = [
+    "Full Stack Web Developer",
+    "Web Designer",
+    "UI Designer"
+];
 
 const Home = () => {
     const [counter, setCounter] = useState({
@@ -39,6 +46,7 @@ const Home = () => {
     });
     const [mobileCard, setMobileCard] = useState(true);
     const [desktopCard, setDesktopCard] = useState(false);
+    const [index, setIndex] = useState(0);
 
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
@@ -46,6 +54,10 @@ const Home = () => {
     const [subject, setSubject] = useState("");
 
     useEffect(() => {
+        const intervalId = setInterval(() =>
+            setIndex(index => index + 1),
+            3000 // every 3 seconds
+        );
         if (window.innerWidth > 500) {
             setMobileCard(false);
             setDesktopCard(true)
@@ -80,6 +92,7 @@ const Home = () => {
 
         return () => {
             socket.disconnect();
+            clearTimeout(intervalId);
         }
     }, []);
 
@@ -87,7 +100,7 @@ const Home = () => {
         window.location.href = "/pdf";
     }
 
-    
+
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         if (email && name && message) {
@@ -112,7 +125,7 @@ const Home = () => {
             };
         };
     };
-
+    
     return (
         <>
             <main className="container">
@@ -122,16 +135,20 @@ const Home = () => {
                     {/* Space SVG */}
                     <aside className="col-12 text-center">
                         <img src={profilePic} id="portfolio-image" className="img-fluid shadow-lg rounded-circle" alt="Profile Img"></img>
-                        <div id="space-svg-parent">
+                        {/* <div id="space-svg-parent">
                             <ReactSVG src={Space} />
-                        </div>
+                        </div> */}
                     </aside>
                     {/* Title and About Section */}
                     <section className="col-12 intro-section-summary pb-2">
-                        <h5 id="full-stack" className="text-warning">Full Stack Web Developer</h5>
-                        <h1 id="intro-section-summary-name">Schwyn Francis</h1>
+                        <h1 id="intro-section-summary-name">Hi, I'm Schwyn Francis</h1>
+                        <h5 id="full-stack" className="text-secondary text-center justify-content-center" style={{textAlign: 'center'}}><TextTransition
+                            text={TEXTS[index % TEXTS.length]}
+                            springConfig={presets.molasses}
+                            inline={true}
+                        /></h5>
                         {/* Down Arrow to About */}
-                        <Jump forever duration={2000}>
+                        <Jump count={2} duration={2000}>
                             <Link to="intro-section-summary-paragraph" spy={true} smooth={true} offset={-160} duration={800}>
                                 <div className="fa fa-angle-double-down" style={{ fontSize: "90px", marginLeft: "0px" }}></div>
                             </Link>
@@ -144,15 +161,15 @@ const Home = () => {
                         <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
                         <div className="intro-section-summary-icons">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
-                            <Link to="contact" spy={true} smooth={true} offset={730} duration={1000}>    
-                            <div style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
+                            <Link to="contact" spy={true} smooth={true} offset={730} duration={1000}>
+                                <div style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
                             </Link>
                             <div onClick={pdf} style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="" /></div>
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
 
                         </div>
                         {/* Down Arrow to Portfolio */}
-                        <Jump forever duration={2000}>
+                        <Jump count={3} duration={2000}>
                             <Link to="portfolio-div" spy={true} smooth={true} offset={670} duration={800}>
                                 <div className="fa fa-angle-double-down" style={{ color: "white", fontSize: "90px", marginLeft: "0px" }}></div>
                             </Link>
@@ -169,7 +186,7 @@ const Home = () => {
                 </Reveal>
                 {/* First Row Portfolio*/}
                 <article className="row text-white">
-                    
+
                     <section className="col-12 col-lg-4">
                         <Reveal down={desktopCard} up={mobileCard} duration={2000}>
                             <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
@@ -211,7 +228,7 @@ const Home = () => {
                     </section>
                 </article>
                 {/* Down Arrow to Contact */}
-                <Jump forever duration={2000}>
+                <Jump count={3} duration={2000}>
                     <Link to="contact-div" spy={true} smooth={true} offset={0} duration={800}><div className="text-center mt-2">
                         <div className="fa fa-angle-double-down text-white" style={{ fontSize: "90px" }}></div>
                     </div>
@@ -227,7 +244,7 @@ const Home = () => {
                 </Reveal>
                 <Reveal down>
                     <article className="row justify-content-center mb-5" id="contact">
-                        <section className="col-8 justify-content-center">
+                        <section className="col-8 justify-content-center contact-section">
                             <div className="row">
                                 <div className="col-6">
                                     <input type="text" onChange={event => setName(event.target.value)} value={name} id="name" name="name" className="form-control w-100 text-white" style={{ backgroundColor: "black" }}></input>
@@ -235,7 +252,7 @@ const Home = () => {
 
                                 </div>
                                 <div className="col-6">
-                                    <input type="text" onChange={(event)=>{setEmail(event.target.value)}} value={email} id="email" name="email" className="form-control w-100 text-white" style={{ backgroundColor: "black" }}></input>
+                                    <input type="text" onChange={(event) => { setEmail(event.target.value) }} value={email} id="email" name="email" className="form-control w-100 text-white" style={{ backgroundColor: "black" }}></input>
                                     <label for="email" className="text-white">Email</label>
 
                                 </div>
@@ -248,7 +265,7 @@ const Home = () => {
                             </div>
                             <div className="row">
                                 <div className="col-12">
-                                <textarea className="form-control text-white" onChange={event => setMessage(event.target.value)} value={message} id="exampleFormControlTextarea1" rows="3" style={{ backgroundColor: "black" }}></textarea>
+                                    <textarea className="form-control text-white" onChange={event => setMessage(event.target.value)} value={message} id="exampleFormControlTextarea1" rows="3" style={{ backgroundColor: "black" }}></textarea>
                                     <label for="subject" className="text-white">Message</label>
                                 </div>
                             </div>

@@ -54,9 +54,20 @@
 
 .form-icons {
     background-color: black;
+    padding-left: 20px;
+}
+.contact-section{
+    padding-left: 70px;
 }
 
 @media only screen and (max-width:800px) {
+    .contact-section{
+        padding-left:0px;
+    }
+    .form-icons {
+      
+        padding-left: 260px;
+    }
     .ss {
         margin-bottom: 1rem;
     }
@@ -93,6 +104,10 @@
     }
     .form-icons {
         margin-left: 80px;
+        padding-left:0px;
+    }
+    .contact-section{
+        padding-left:0px;
     }
     @keyframes bullet-glide {
         100% {
