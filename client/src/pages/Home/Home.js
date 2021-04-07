@@ -76,7 +76,7 @@ const Home = () => {
             setArrow(800)
         }
         if (window.innerWidth > 2000) {
-            setArrow(1950)
+            setArrow(1890)
         }
         
 
