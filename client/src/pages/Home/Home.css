@@ -108,6 +108,7 @@
     }
     .contact-section{
         padding-left:0px;
+        padding-right:0px;
     }
     @keyframes bullet-glide {
         100% {
