@@ -163,7 +163,7 @@ const Home = () => {
                             <Reveal up>
                                 {/* <div style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div> */}
                                 <div className="cool2"></div>
-                                <h1 className="text-center text-white mt-5 mb-5 text-dark" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>About</h1>
+                                <h1 className="text-center text-white mb-5 text-dark" id="portfolio-div" style={{ fontFamily: "Train One , cursive", paddingTop:"50px" }}>About</h1>
                             </Reveal>
                             <Reveal up>
                             <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript & Python experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>

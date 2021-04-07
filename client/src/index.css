@@ -22,6 +22,29 @@ html, body {
     margin-bottom: 3rem;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background:black;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
 @media only screen and (max-width:500px) {
     .container {
         border-radius: 0px;
