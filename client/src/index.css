@@ -4,10 +4,10 @@ body {
     /* background-color: rgb(8, 19, 78); */
     /* overflow-y: scroll; */
     -webkit-overflow-scrolling: touch;
-    background-image: url("./images/intro.jpg");
+    /* background-image: url("./images/intro.jpg");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
 }
 
 html, body {
@@ -19,7 +19,6 @@ html, body {
     background-color: black;
     border-radius: 25px;
     padding: 20px;
-    margin-top: 3rem;
     margin-bottom: 3rem;
 }
 

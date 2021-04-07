@@ -46,6 +46,7 @@ const Home = () => {
     });
     const [mobileCard, setMobileCard] = useState(true);
     const [desktopCard, setDesktopCard] = useState(false);
+    const [arrow, setArrow] = useState(670);
     const [index, setIndex] = useState(0);
 
     const [email, setEmail] = useState("");
@@ -60,7 +61,10 @@ const Home = () => {
         );
         if (window.innerWidth > 500) {
             setMobileCard(false);
-            setDesktopCard(true)
+            setDesktopCard(true);
+        }
+        if (window.innerWidth > 2000){
+            setArrow(1500)
         }
 
         //today
@@ -153,12 +157,14 @@ const Home = () => {
                                 <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
+                        <div className="cool"></div>
                         {/* About */}
                         <Reveal left>
                             <div style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div>
+                            <div className="cool2"></div>
                             <h1 className="text-center text-white mt-5 mb-5 text-danger" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>About</h1>
                         </Reveal>
-                        <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
+                        <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript & Python experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
                         <div className="intro-section-summary-icons mb-4">
                             <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
                             <Link to="contact" spy={true} smooth={true} offset={730} duration={1000}>
@@ -169,16 +175,17 @@ const Home = () => {
 
                         </div>
                         {/* Down Arrow to Portfolio */}
-                        <Jump count={3} duration={2000}>
-                            <Link to="portfolio-div" spy={true} smooth={true} offset={670} duration={800}>
+                        <Jump forever duration={2000}>
+                            <Link to="portfolio-div" spy={true} smooth={true} offset={arrow} duration={800}>
                             <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
+                        <div className="cool"></div>
                     </section>
                 </article>
                 {/* White Divider */}
                 <Reveal left>
-                    <div style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div>
+                    <div className="white-divider" style={{ height: "4px", backgroundColor: "white",  marginTop: "110px" }} ></div>
                 </Reveal>
                 {/* Portfolio */}
                 <Reveal left>
@@ -189,7 +196,7 @@ const Home = () => {
 
                     <section className="col-12 col-lg-4">
                         <Reveal down={desktopCard} up={mobileCard} duration={2000}>
-                            <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
+                            <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, Express.js ,MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
@@ -222,7 +229,7 @@ const Home = () => {
                     </section>
                     <section className="col-12 col-lg-4">
                         <Reveal right={desktopCard} up={mobileCard}>
-                            <PortfolioCard title="Employee Dashboard" content="This is a command line interface application that generates an employee dashboard depending on user input." picture={videoPic} tech="TECH: Node.js, Jest, RegExp, Bootstrap CSS..." link="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR" class="img-fluid shadow-lg mt-4">
+                            <PortfolioCard title="Employee Dashboard" content="This is a command line interface application that generates an employee dashboard depending on user input." picture={videoPic} tech="TECH: Node.js, Jest, RegExp, Inquirer, Bootstrap CSS..." link="https://github.com/schwynf/HW-TEAM-DASHBOARD-GENERATOR" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>

@@ -30,11 +30,13 @@
     padding-right: 20%;
     font-size:30px;
     padding-left: 20%;
-
+    font-weight: 200;
 }
+
 
 .intro-section-summary-icons {
     text-align: center;
+    margin-bottom: 100px;
 
 }
 
@@ -48,10 +50,39 @@
 #full-stack{
     font-size:25px;
     transition: opacity 0.5s;
+    font-weight: 200;
 }
 
 #intro-section-summary-name{
     font-size:55px;
+    font-weight: 200;
+}
+
+.port-div{
+    color:gold;
+}
+
+
+@media screen and (max-width:2900px) and (min-width:2300px){
+    #portfolio-image {
+        margin-top: 17rem;
+        width: 250px;
+        height: 250px; 
+    }
+    .cool{
+        margin-bottom: 400px;
+    }
+    .cool2{
+        margin-bottom: 200px;
+    }
+    #intro-section-summary-paragraph {
+    
+        padding-right: 0px;
+        font-size:60px;
+        padding-left: 0px;
+        
+    }
+   
 }
 
 @media screen and (max-width:1030px) and (min-width:1020px){

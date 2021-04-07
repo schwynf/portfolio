@@ -15,16 +15,16 @@
     }
     .scrollTop { 
         position: fixed;
-        width: 23%;
+        width: 10%;
         bottom: 60px;
-        right: 0px;
+        right: 10px;
         height: 20px;
         justify-content: center;
         z-index: 1000;
         cursor: pointer;
         animation: fadeIn 0.3s;
         transition: opacity 0.4s;
-        color: blue;
+        color: grey;
         opacity: 0.7;
     }
     
