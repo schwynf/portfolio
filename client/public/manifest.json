@@ -2,7 +2,7 @@
   "short_name": "Schwyn Francis",
   "name": "Schwyn Francis Portfolio",
   "start_url": "./index.html",
-  "display": "standalone",
+  "display": "minimal-ui",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
