@@ -28,7 +28,7 @@
 
 .grow:hover .blob {
     transform: scale(1);
-    animation: pulse-black 2s infinite;
+    animation: pulse-black 3s infinite;
     opacity: 1;
 }
 

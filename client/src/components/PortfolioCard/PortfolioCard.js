@@ -17,7 +17,7 @@ const PortfolioCard = (props) => {
     return (
         <>
             <div className="card text-center h-100">
-                <div className="card-body bg-dark grow">
+                <div className="card-body grow" style={{backgroundColor: "black" }}>
                     <h5 className="card-title" style={{fontWeight:"200"}}>{props.title}</h5>
                     <p style={{fontWeight:"100"}}>{props.content}</p>
                     <LazyLoad height={200} offset={100} placeholder={<Loading />}>
@@ -29,7 +29,7 @@ const PortfolioCard = (props) => {
                     </div>
                     {/* <a id="click-me" href={props.link}>Click Me!</a> */}
                 </div>
-                <div className="distortTop bg-dark" style={{ marginTop: "-1px" }}>
+                <div className="distortTop" style={{ marginTop: "-1px", backgroundColor:"black"}}>
                     <ReactSVG src={backgroundPic} />
                 </div>
             </div>

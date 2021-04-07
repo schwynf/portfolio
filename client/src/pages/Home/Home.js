@@ -46,7 +46,7 @@ const Home = () => {
     });
     const [mobileCard, setMobileCard] = useState(true);
     const [desktopCard, setDesktopCard] = useState(false);
-    const [arrow, setArrow] = useState(670);
+    const [arrow, setArrow] = useState(600);
     const [index, setIndex] = useState(0);
 
     const [email, setEmail] = useState("");
@@ -63,7 +63,7 @@ const Home = () => {
             setMobileCard(false);
             setDesktopCard(true);
         }
-        if (window.innerWidth > 2000){
+        if (window.innerWidth > 2000) {
             setArrow(1500)
         }
 
@@ -129,7 +129,7 @@ const Home = () => {
             };
         };
     };
-    
+
     return (
         <>
             <main className="container">
@@ -146,50 +146,54 @@ const Home = () => {
                     {/* Title and About Section */}
                     <section className="col-12 intro-section-summary pb-2">
                         <h1 id="intro-section-summary-name">Hi, I'm Schwyn Francis</h1>
-                        <h5 id="full-stack" className="text-secondary text-center justify-content-center mb-5" style={{textAlign: 'center'}}><TextTransition
+                        <h5 id="full-stack" className="text-secondary text-center justify-content-center mb-5" style={{ textAlign: 'center' }}><TextTransition
                             text={TEXTS[index % TEXTS.length]}
                             springConfig={presets.molasses}
                             inline={true}
                         /></h5>
                         {/* Down Arrow to About */}
-                        <Jump count={2} duration={2000}>
+                        <Jump forever duration={2000}>
                             <Link to="intro-section-summary-paragraph" spy={true} smooth={true} offset={-160} duration={800}>
                                 <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
                         <div className="cool"></div>
                         {/* About */}
-                        <Reveal left>
-                            <div style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div>
-                            <div className="cool2"></div>
-                            <h1 className="text-center text-white mt-5 mb-5 text-danger" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>About</h1>
-                        </Reveal>
-                        <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript & Python experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
-                        <div className="intro-section-summary-icons mb-4">
-                            <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
-                            <Link to="contact" spy={true} smooth={true} offset={730} duration={1000}>
-                                <div style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
-                            </Link>
-                            <div onClick={pdf} style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="" /></div>
-                            <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
+                        <div style={{ backgroundColor: "white", color: "black", marginTop:"100px" }}>
+                            <Reveal up>
+                                {/* <div style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div> */}
+                                <div className="cool2"></div>
+                                <h1 className="text-center text-white mt-5 mb-5 text-dark" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>About</h1>
+                            </Reveal>
+                            <Reveal up>
+                            <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript & Python experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
+                            </Reveal>
+                            <div className="intro-section-summary-icons mb-4">
+                                <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
+                                <Link to="contact" spy={true} smooth={true} offset={730} duration={1000}>
+                                    <div style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
+                                </Link>
+                                <div onClick={pdf} style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="" /></div>
+                                <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://www.linkedin.com/in/schwyn-francis-5a47a9199/" />
 
+                            </div>
+                            {/* Down Arrow to Portfolio */}
+                            <Jump forever duration={2000}>
+                                <Link to="portfolio-div" spy={true} smooth={true} offset={arrow} duration={800}>
+                                    <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
+                                </Link>
+                            </Jump>
                         </div>
-                        {/* Down Arrow to Portfolio */}
-                        <Jump forever duration={2000}>
-                            <Link to="portfolio-div" spy={true} smooth={true} offset={arrow} duration={800}>
-                            <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
-                            </Link>
-                        </Jump>
                         <div className="cool"></div>
                     </section>
                 </article>
                 {/* White Divider */}
-                <Reveal left>
-                    <div className="white-divider" style={{ height: "4px", backgroundColor: "white",  marginTop: "110px" }} ></div>
-                </Reveal>
+                {/* <Reveal left>
+                    <div className="white-divider" style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div>
+                </Reveal> */}
                 {/* Portfolio */}
                 <Reveal left>
-                    <h1 className="text-center text-white mt-5 mb-5 text-danger" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
+                    <h1 className="text-center text-white mt-5 mb-5 text-white" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
                 </Reveal>
                 {/* First Row Portfolio*/}
                 <article className="row text-white">
@@ -235,9 +239,9 @@ const Home = () => {
                     </section>
                 </article>
                 {/* Down Arrow to Contact */}
-                <Jump count={3} duration={2000}>
+                <Jump forever duration={2000}>
                     <Link to="contact-div" spy={true} smooth={true} offset={0} duration={800}><div className="text-center mt-2">
-                    <div className="fa fa-angle-down text-white" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
+                        <div className="fa fa-angle-down text-white" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                     </div>
                     </Link>
                 </Jump>
@@ -247,7 +251,7 @@ const Home = () => {
                 </Reveal>
                 {/* Contact */}
                 <Reveal left>
-                    <h1 className="text-center text-white mt-5 mb-5 text-danger" id="contact-div" style={{ fontFamily: "Train One , cursive" }}>Contact</h1>
+                    <h1 className="text-center text-white mt-5 mb-5 text-white" id="contact-div" style={{ fontFamily: "Train One , cursive" }}>Contact</h1>
                 </Reveal>
                 <Reveal down>
                     <article className="row justify-content-center mb-5" id="contact">
