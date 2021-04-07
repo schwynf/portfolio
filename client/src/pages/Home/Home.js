@@ -46,7 +46,7 @@ const Home = () => {
     });
     const [mobileCard, setMobileCard] = useState(true);
     const [desktopCard, setDesktopCard] = useState(false);
-    const [arrow, setArrow] = useState(670);
+    const [arrow, setArrow] = useState(650);
     const [index, setIndex] = useState(0);
 
     const [email, setEmail] = useState("");
