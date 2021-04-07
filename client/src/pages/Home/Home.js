@@ -36,6 +36,10 @@ const TEXTS = [
     "Web Designer",
     "UI Designer"
 ];
+const TEXTS2 = [
+    "JavaScript",
+    "Python",
+];
 
 const Home = () => {
     const [counter, setCounter] = useState({
@@ -48,6 +52,7 @@ const Home = () => {
     const [desktopCard, setDesktopCard] = useState(false);
     const [arrow, setArrow] = useState(650);
     const [index, setIndex] = useState(0);
+    const [index2, setIndex2] = useState(0);
 
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
@@ -59,13 +64,21 @@ const Home = () => {
             setIndex(index => index + 1),
             3000 // every 3 seconds
         );
+        const intervalId2 = setInterval(() =>
+            setIndex2(index2 => index2 + 1),
+            5000 // every 3 seconds
+        );
         if (window.innerWidth > 500) {
             setMobileCard(false);
             setDesktopCard(true);
         }
-        if (window.innerWidth > 2000) {
-            setArrow(1500)
+        if (window.innerWidth > 1200) {
+            setArrow(800)
         }
+        if (window.innerWidth > 2000) {
+            setArrow(1950)
+        }
+        
 
         //today
         let today = new Date();
@@ -97,6 +110,7 @@ const Home = () => {
         return () => {
             socket.disconnect();
             clearTimeout(intervalId);
+            clearTimeout(intervalId2);
         }
     }, []);
 
@@ -153,7 +167,7 @@ const Home = () => {
                         /></h5>
                         {/* Down Arrow to About */}
                         <Jump forever duration={2000}>
-                            <Link to="intro-section-summary-paragraph" spy={true} smooth={true} offset={-160} duration={800}>
+                            <Link to="intro-section-summary-paragraph" spy={true} smooth={true} offset={-120} duration={800}>
                                 <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                             </Link>
                         </Jump>
@@ -166,9 +180,13 @@ const Home = () => {
                                 <h1 className="text-center text-white mb-5 text-dark" id="portfolio-div" style={{ fontFamily: "Train One , cursive", paddingTop:"50px" }}>About</h1>
                             </Reveal>
                             <Reveal up>
-                            <p id="intro-section-summary-paragraph">Experienced professional with a demonstrated history of client facing work and completing team projects. 2+ years of JavaScript & Python experience. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!</p>
+                            <p id="intro-section-summary-paragraph">Skilled professional with a demonstrated history of client facing work and completing team projects.On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!<br></br> 2+ years of <TextTransition
+                            text={TEXTS2[index2 % TEXTS2.length]}
+                            springConfig={presets.molasses}
+                            inline={true}
+                        /> experience. <br></br></p>
                             </Reveal>
-                            <div className="intro-section-summary-icons mb-4">
+                            <div className="intro-section-summary-icons">
                                 <SocialIcon bgColor="black" fgColor="white" target="_blank" url="https://github.com/schwynf" />
                                 <Link to="contact" spy={true} smooth={true} offset={730} duration={1000}>
                                     <div style={{ display: "inline-block" }}><SocialIcon bgColor="black" fgColor="white" network="email" /></div>
@@ -183,14 +201,11 @@ const Home = () => {
                                     <div className="fa fa-angle-down" style={{ fontSize: "40px", marginLeft: "0px" }}></div>
                                 </Link>
                             </Jump>
+                            <div className="cool3"></div>
                         </div>
                         <div className="cool"></div>
                     </section>
                 </article>
-                {/* White Divider */}
-                {/* <Reveal left>
-                    <div className="white-divider" style={{ height: "4px", backgroundColor: "white", marginTop: "110px" }} ></div>
-                </Reveal> */}
                 {/* Portfolio */}
                 <Reveal left>
                     <h1 className="text-center text-white mt-5 mb-5 text-white" id="portfolio-div" style={{ fontFamily: "Train One , cursive" }}>Portfolio</h1>
@@ -200,7 +215,7 @@ const Home = () => {
 
                     <section className="col-12 col-lg-4">
                         <Reveal down={desktopCard} up={mobileCard} duration={2000}>
-                            <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, Express.js ,MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
+                            <PortfolioCard title="Project Vault" content="Project management software. With Project Vault, users can manage tasks and projects in the office or on the go." picture={ProjectVaultPic} tech="TECH: React, Auth0, Passport.js, Express.js, MongoDB..." link="https://project-management-app-1.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>

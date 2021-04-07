@@ -63,28 +63,42 @@
 }
 
 
-@media screen and (max-width:2900px) and (min-width:2300px){
+@media screen and (max-width:2900px) and (min-width:2000px){
     #portfolio-image {
-        margin-top: 17rem;
-        width: 250px;
-        height: 250px; 
+        margin-top: 24rem;
+        width: 190px;
+        height: 190px; 
     }
     .cool{
-        margin-bottom: 400px;
+        margin-bottom: 420px;
     }
     .cool2{
         margin-bottom: 200px;
     }
+    .cool3{
+        height: 240px;
+    }
     #intro-section-summary-paragraph {
     
-        padding-right: 0px;
-        font-size:60px;
-        padding-left: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size:55px;
         
+    }
+    .intro-section-summary-icons {
+        text-align: center;
+        margin-bottom: 200px;
+        margin-top: 100px;
+    
     }
    
 }
 
+@media screen and (max-width:1600px) and (min-width:1400px){
+    .cool3{
+        height: 100px;
+    }
+}
 @media screen and (max-width:1030px) and (min-width:1020px){
     #space-svg-parent{
         margin-left:315px;
