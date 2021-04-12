@@ -12,6 +12,9 @@ const Loading = () => (
         <h1>loading</h1>
     </div>
 )
+const goTo = (event) => {
+    window.location = event.target.id
+}
 
 const PortfolioCard = (props) => {
     return (
@@ -21,11 +24,11 @@ const PortfolioCard = (props) => {
                     <h5 className="card-title" style={{fontWeight:"200"}}>{props.title}</h5>
                     <p style={{fontWeight:"100"}}>{props.content}</p>
                     <LazyLoad height={200} offset={100} placeholder={<Loading />}>
-                        <img src={props.picture} className={props.class} alt="Profile Img" style={{ height: "200px", width: "300px" }} ></img>
+                        <img src={props.picture} id={props.link} onClick={goTo} className={props.class} alt="Profile Img" style={{ height: "200px", width: "300px" }} ></img>
                     </LazyLoad>
                     <p className="card-text" style={{fontWeight:"100"}}>{props.tech}</p>
                     <div style={{ paddingLeft: "120px" }}>
-                        <div class="blob" href={props.link}></div>
+                        <div class="blob" id={props.link} onClick={goTo}></div>
                     </div>
                     {/* <a id="click-me" href={props.link}>Click Me!</a> */}
                 </div>
