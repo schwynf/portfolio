@@ -32,9 +32,10 @@ import "./IntroArticle.css"
 
 let a = 0;
 const TEXTS = [
-    "Full Stack Web Developer",
-    "Web Designer",
-    "UI Designer"
+    "Full Stack Web Developer"
+    // ,
+    // "Web Designer",
+    // "UI Designer"
 ];
 const TEXTS2 = [
     "JavaScript",
@@ -180,7 +181,7 @@ const Home = () => {
                                 <h1 className="text-center text-white mb-5 text-dark" id="portfolio-div" style={{ fontFamily: "Train One , cursive", paddingTop:"50px" }}>About</h1>
                             </Reveal>
                             <Reveal up>
-                            <p id="intro-section-summary-paragraph">Skilled professional with a demonstrated history of client facing work and completing team projects.On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!<br></br> 2+ years of <TextTransition
+                            <p id="intro-section-summary-paragraph">Skilled professional with a demonstrated history of client facing work and completing team projects. On top of my Bachelors Degree,  I recently earned a Full Stack Web Development certificate from the University of Arizona. I am ready to transform your ingenious business idea into reality!<br></br> 2+ years of <TextTransition
                             text={TEXTS2[index2 % TEXTS2.length]}
                             springConfig={presets.molasses}
                             inline={true}
@@ -242,7 +243,7 @@ const Home = () => {
                     </section>
                     <section className="col-12 col-lg-4">
                         <Reveal up>
-                            <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, IndexedDB, Service Worker" link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
+                            <PortfolioCard title="Budget Calculator" content="Having trouble keeping track of your budget? I got the perfect calculator with graphic visual that can solve your problem." picture={BudgetCalculator} tech="TECH: JQuery, Chart.js, MongoDB, IndexedDB, Service Worker..." link="https://budget-data.herokuapp.com/" class="img-fluid shadow-lg mt-4">
                             </PortfolioCard>
                         </Reveal>
                     </section>
