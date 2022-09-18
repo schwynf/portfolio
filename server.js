@@ -13,7 +13,7 @@ const mongoose = require("mongoose");
 const emailController = require("./controllers/email");
 
 //database connection
-const dbConnection = (process.env.NODE_ENV === 'production') ? process.env.MONGO_DB : 'mongodb://localhost:27017/portfolio';
+const dbConnection = (process.env.NODE_ENV === 'production') ? process.env.MONGO_DB : process.env.MONGO_DB;
 mongoose.connect(dbConnection, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //socket connection
@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Add routes
 app.get("/pdf", async function (req, res, next) {
-  res.sendFile(path.join(__dirname, "./client/src/images/schwynFrancis-resume.pdf"));
+  res.sendFile(path.join(__dirname, "./client/src/images/SchwynFrancisResume.pdf"));
 });
 app.use([emailController]);
 app.use((req, res) => {

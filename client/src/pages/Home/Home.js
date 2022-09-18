@@ -39,7 +39,7 @@ const TEXTS = [
 ];
 const TEXTS2 = [
     "JavaScript",
-    "Python",
+    "PHP",
 ];
 
 const Home = () => {
@@ -86,11 +86,11 @@ const Home = () => {
         today = today.getTime();
         today = today / 1000 / 60 / 60 / 24;
         //Birthday
-        let bDay = new Date("sept 4, 2021");
+        let bDay = new Date("sept 4, 2023");
         bDay = bDay.getTime();
         bDay = bDay / 1000 / 60 / 60 / 24;
         //Wedding day
-        let wDay = new Date("oct 9, 2021");
+        let wDay = new Date("oct 9, 2022");
         wDay = wDay.getTime();
         wDay = wDay / 1000 / 60 / 60 / 24;
         //Coding start day
