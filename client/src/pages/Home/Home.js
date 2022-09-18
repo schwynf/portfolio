@@ -321,7 +321,7 @@ const Home = () => {
                         <Counter title=" Days Coding" counter={counter.coding}></Counter>
                     </aside>
                     <aside className=" col-6 col-sm-3 ss">
-                        <Counter title="Wedding Countdown" counter={counter.wedding}></Counter>
+                        <Counter title="Anniversary Countdown" counter={counter.wedding}></Counter>
                     </aside>
                     <aside className=" col-6 col-sm-3 ss">
                         <Counter title="Active Users On Website" counter={counter.activeUsers}></Counter>
